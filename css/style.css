@@ -2945,10 +2945,19 @@ a.box-link:hover .btn img, .box-link.btn:hover img{
 
 .download-section .btn{font-size: 16px;}
 .d-name {
-    height: 65px;
+    height: 83px;
     width: 100%;
     overflow: hidden;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 4;
     display: -webkit-box;
     -webkit-box-orient: vertical;
+}
+.termsBox a {
+    text-decoration: underline;
+}
+
+.b-none{border: none;}
+
+@media(max-width:991px){
+    .d-name{height: auto;}
 }
