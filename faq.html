@@ -102,7 +102,7 @@
                 </ul>
               </li>
               <li class="btn-dist"><a href="#" class="btn btn-border border-gradient">Login </a></li>
-              <li><a href="#" class="btn btn-primary">Sign up</a></li>
+              <li><a href="register.html" class="btn btn-primary">Sign up</a></li>
             </ul>
           </div>
         </div>
@@ -942,54 +942,19 @@
     $(this).siblings(".faq-answer").slideToggle();
     $(this).parents(".faqs-box").toggleClass("active");
   });
-
-  // $("#faqSearch").on("input", function(){
-  //   let searchVal =  $(this).val();
-  
-  //   let questionTag = $(".faq-questions .flex-wrap h3").text();
-
-  //   if(searchVal )
-
-
-  // })
-
-  function searchBar() {
-    // $('#faqSearch').on('keyup', function() {
-    //   let searchString = $(this).val();
-    //   $(".faq-questions .flex-wrap h3").each(function(index, value) {            
-    //     console.log(index);   
-    //     currentName = $(value).text();
-
-    //     if( currentName.toUpperCase().indexOf(searchString.toUpperCase()) > -1) {
-    //         $(value).parents(".faqs-box").show();
-    //         $(value).parents(".faq-questions").siblings(".faq-answer").slideDown();
-    //         $(value).parents(".faqs-box").addClass("active");      
-    //       } else {
-    //         $(value).parents(".faqs-box").hide();
-    //         $(value).parents(".faq-questions").siblings(".faq-answer").slideUp();
-    //         $(value).parents(".faqs-box").removeClass("active");
-    //       }
-
-        
-    //   });
-    // });
+  function searchBar() {    
     $('#faqSearch').on('input', function() {
-
         var searchText = $(this).val();
         console.log(searchText);
-
         $(".faq-questions .flex-wrap h3").each(function(){
-
             var currentLiText = $(this).text().toUpperCase(),
                 showCurrentLi = currentLiText.indexOf(searchText.toUpperCase()) !== -1;
                 $(this).parents(".faqs-box").toggle(showCurrentLi);
                 $(this).parents(".faq-questions").siblings(".faq-answer").toggle();
-                $(this).parents(".faqs-box").toggleClass("active");                
-            
+                $(this).parents(".faqs-box").toggleClass("active");                            
         });     
     });
   };
-
   searchBar();
             
 

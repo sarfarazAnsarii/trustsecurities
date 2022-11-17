@@ -3,14 +3,13 @@
 <head>
   <title>Downloads | Trust Securities</title>
   <meta name="robots" content="noindex,nofollow">
-<meta charset="utf-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">  
 
   <!-- Google font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-
 
   <!-- Css style -->
   <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -33,7 +32,6 @@
   <meta name="msapplication-TileColor" content="#AF862E">
   <meta name="msapplication-TileImage" content="images/faveicons/ms-icon-144x144.png">
   <meta name="theme-color" content="#AF862E">
-
 </head>
 <body>
 
@@ -102,7 +100,7 @@
                 </ul>
               </li>
               <li class="btn-dist"><a href="#" class="btn btn-border border-gradient">Login </a></li>
-              <li><a href="#" class="btn btn-primary">Sign up</a></li>
+              <li><a href="register.html" class="btn btn-primary">Sign up</a></li>
             </ul>
           </div>
         </div>
@@ -2051,35 +2049,27 @@
   </a>
 </div>
 
-
 <script src="js/jquery.min.js"></script>
 <script src="js/custom.js"></script>
 
 <script type="text/javascript">
-
-
 $(".download-condition").on("click", function(){
   let downloadData =  $(this).attr("d-data");
   $("#donwloadLInk").attr("href", ""+downloadData+"");
   $("#donwloadLInk").attr("d-data", ""+downloadData+"");
-});
- 
-$(".dwTermsAndCondition").on("change", function(){
-if($(this).prop("checked")==false){
-  $(this).parents(".termsBox").siblings(".index-btn").find(".downloadLink").attr("href","javascript:void(0)");
-  $("#termsALert").show();
-  $(this).parents(".termsBox").siblings(".index-btn").find(".downloadLink").removeAttr("target","_blank");
-}else{
-
-  let downloadLInk = $(this).parents(".termsBox").siblings(".index-btn").find(".downloadLink").attr("d-data");
-  $(this).parents(".termsBox").siblings(".index-btn").find(".downloadLink").attr("href",""+downloadLInk+"");
-
-  $("#termsALert").hide();
-  $(this).parents(".termsBox").siblings(".index-btn").find(".downloadLink").attr("target","_blank");
-}
 })
-   
-
+$(".dwTermsAndCondition").on("change", function(){
+  if($(this).prop("checked")==false){
+    $(this).parents(".termsBox").siblings(".index-btn").find(".downloadLink").attr("href","javascript:void(0)");
+    $("#termsALert").show();
+    $(this).parents(".termsBox").siblings(".index-btn").find(".downloadLink").removeAttr("target","_blank");
+  }else{
+    let downloadLInk = $(this).parents(".termsBox").siblings(".index-btn").find(".downloadLink").attr("d-data");
+    $(this).parents(".termsBox").siblings(".index-btn").find(".downloadLink").attr("href",""+downloadLInk+"");
+    $("#termsALert").hide();
+    $(this).parents(".termsBox").siblings(".index-btn").find(".downloadLink").attr("target","_blank");
+  }
+})
 </script>
 
 </body>
