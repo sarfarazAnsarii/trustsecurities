@@ -1890,7 +1890,7 @@ header.active + .main-section {
 
 
 @media(max-width: 768px){
-    .title{font-size: 1.5rem;}
+    .title{font-size: 1.9rem;}
     .title-2{font-size: 1.2rem;}
     .text{
         font-size: 1rem;
@@ -2955,3 +2955,7 @@ a.box-link:hover .btn img, .box-link.btn:hover img{
 @media(max-width:991px){
     .d-name{height: auto;}
 }
+
+
+.tab-list{display: none;}
+.tab-list.active{display: block;}

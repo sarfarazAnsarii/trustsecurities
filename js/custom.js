@@ -77,5 +77,22 @@ $(".ds-close").on("click", function () {
 
 });
 
+
+
+$(".tab-item li a").on("click", function(e){
+	e.preventDefault()
+	$(this).parent().addClass("active");
+	$(this).parent().siblings().removeClass("active");
+	let hrefData =  $(this).attr("href").split("#")[1];
+	// console.log(hrefData);
+	$(this).parents(".tab-section").find(".tab-list[id="+hrefData+"]").fadeIn();
+	$(this).parents(".tab-section").find(".tab-list[id!="+hrefData+"]").hide();
+	if(hrefData=="partner"){
+		$("#dc_code").focus();
+	}else if(hrefData=="client"){
+		$("#pan").focus();
+	}
+})
+
 var fullYear = new Date().getFullYear();
-document.getElementById("fullYear").textContent = fullYear
+document.getElementById("fullYear").textContent = fullYear;
