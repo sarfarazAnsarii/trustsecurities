@@ -1,86 +1,132 @@
-$(document).ready(function() {                   
-  $("#contact-form").validate({
+$(document).ready(function() {    
+
+  $("#whatsappOpt").on("change", function(){
+    if($(this).prop("checked")==false){
+        $(this).val("un subscribed");
+    }else{
+       $(this).val("Subscribed"); 
+    }
+  })  
+  $("#registerForm").validate({
     rules:{
      
-      inputName: {
+      name: {
           required: true
       },              
-      inputEmail: {
+      email: {
           required: true
       },
-      inputNumber: {
+      mobile: {
           required: true
-      }      
+      },
+
+      termsCondition: {
+        required: true
+      }   
       
     },
     messages: {                
-        inputName: {
+        name: {
             required: "Please enter your full name."
         },
-        inputEmail: {
+        email: {
             required: "Please enter your email address."
         },
-        inputNumber: {
+        mobile: {
             required: "Please enter your mobile number."
-        }                                               
+        },
+        termsCondition: {
+            required: "Please accept the terms and conditions"
+        }                                             
+    },
+
+    errorElement: "div",
+    errorPlacement: function(error, element) {
+        if(element.attr("name")=="termsCondition"){
+            error.appendTo("#termsError");
+        }else{
+            error.insertAfter(element);
+        }        
     },
   
-    submitHandler: function (form) {    
-
-        // function after_form_submitted(data) {
-        //     if (data.result == 'success') {                            
-        //         $("#reused_form").text('Submit');      
-        //         location.href = "https://trustsecurities.in/primary_bond_list.php"
-        //     }
-        //     else {
-        //         $('#error_message').append('<ul></ul>');
-        //         jQuery.each(data.errors, function (key, val) {
-        //             $('#error_message ul').append('<li>' + key + ':' + val + '</li>');
-        //         });
-        //         $('#success_message').hide();            
-        //         //reverse the response on the button
-        //         $("#reused_form").text('Error...');
-        //     }//else
-        // }
-        
-
-
-
-    // $form = $(this);
-
-        $("#reused_form").text('Processing...');      
-
-        var inputName = $("#inputName").val();
-        var inputNumber = $("#inputNumber").val();
-        var inputEmail = $("#inputEmail").val();
-       
+    submitHandler: function (form) {
+        $("#registerBtn").text('Processing...');
+        var name = $("#name").val();
+        var mobile = $("#mobile").val();
+        var email = $("#email").val();
+        var whatsApp = $("#whatsappOpt").val();
         const person = {
-            name: inputName,                 
-            email: inputEmail,
-            mobile:inputNumber            
-        }     
-       
-
+            name: name,                 
+            email: mobile,
+            mobile:email,
+            whatsApp: whatsApp,        
+        }
         console.log(person);        
-
         $.ajax({
-            url:"https://api.apispreadsheets.com/data/20tcEyvwetnN4YOr/",
+            url:"https://api.apispreadsheets.com/data/HjKnZOLJqlDeDv9V/",
             type:"post",
             data:person,
-            success: function(){
-                // alert("Form Data Submitted :)")
-                $("#reused_form").text('Submit');
+            success: function(){ 
+
+                $("#registerBtn").text('Submit');
+                $("#registerArea").remove();
+                $("#otpArea").fadeIn();
             },
             error: function(){
                 // alert("There was an error :(")
-                $("#reused_form").text('Error...');
+                $("#registerBtn").text('Error...');
             }
         });       
     }
 
+  });
 
-
-  });          
+  $("#optForm").validate({
+    rules:{     
+      mobileOTP: {
+          required: true
+      },              
+      emailOTP: {
+          required: true
+      }        
+    },
+    messages: {                
+        mobileOTP: {
+            required: "Please enter your mobile OTP."
+        },
+        emailOTP: {
+            required: "Please enter your email OTP."
+        }                                          
+    },
+    errorElement: "div",
+    errorPlacement: function(error, element) {
+        error.insertAfter(element);
+    },  
+    submitHandler: function (form) {
+        $("#submitOTP").text('Processing...');
+        var mobileOTP = $("#mobileOTP").val();
+        var emailOTP = $("#emailOTP").val();
+        const verifyOTP = {
+            mobileOTP: mobileOTP,                 
+            emailOTP: emailOTP,                  
+        }
+        console.log(verifyOTP);      
+        $.ajax({
+            url:"https://api/",
+            type:"post",
+            data:verifyOTP,
+            success: function(){ 
+                $("#submitOTP").text('Verified');
+            },
+            error: function(){
+                // alert("There was an error :(")
+                $("#submitOTP").text('Error...');
+            }
+        });       
+    }
+  });      
 });
+
+
 
 

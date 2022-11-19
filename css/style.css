@@ -1420,6 +1420,16 @@ img, span, label{
 .text-right{text-align: right;}
 .text-left{text-align: left;}
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
 
 .form-control {
     display: block;
@@ -1496,7 +1506,11 @@ select.form-control:focus::-ms-value {
 .bg-light-gray{background-color: var(--gray-light)}
 .white-text{color: var(--white);}
 .alert{color: var(--red);font-size: .8rem;font-weight: var(--w-600);display: none;}
-
+.sucess-text {
+    color: var(--green);
+    font-size: 1rem;
+    font-weight: var(--w-600);
+}
 /*new css*/
 
 
@@ -2895,7 +2909,7 @@ footer{
     margin: 0;
     font-weight: var(--w-600);
 }
-label.error {
+div.error {
     font-size: .85rem;
     color: red;
     font-weight: var(--w-600);
