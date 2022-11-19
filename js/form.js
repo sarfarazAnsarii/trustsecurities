@@ -6,7 +6,7 @@ $(document).ready(function() {
     }else{
        $(this).val("Subscribed"); 
     }
-  })  
+  });
   $("#registerForm").validate({
     rules:{
      
@@ -55,13 +55,26 @@ $(document).ready(function() {
         var mobile = $("#mobile").val();
         var email = $("#email").val();
         var whatsApp = $("#whatsappOpt").val();
+
+        var mobileOTP = Math.floor(1000 + Math.random() * 1234);
+        var emailOTP = Math.floor(1000 + Math.random() * 4321);
+
+        // console.log(mobileOTP);
+
         const person = {
             name: name,                 
             email: mobile,
             mobile:email,
-            whatsApp: whatsApp,        
+            whatsApp: whatsApp,
+            otp:{
+                mobileOTP: mobileOTP,
+                emailOTP: emailOTP
+            }
+
         }
-        console.log(person);        
+        console.log(person);
+        localStorage.setItem("person", JSON.stringify(person));
+
         $.ajax({
             url:"https://api.apispreadsheets.com/data/HjKnZOLJqlDeDv9V/",
             type:"post",
@@ -81,6 +94,10 @@ $(document).ready(function() {
 
   });
 
+
+  
+
+
   $("#optForm").validate({
     rules:{     
       mobileOTP: {
@@ -98,19 +115,51 @@ $(document).ready(function() {
             required: "Please enter your email OTP."
         }                                          
     },
+
+
     errorElement: "div",
     errorPlacement: function(error, element) {
-        error.insertAfter(element);
-    },  
+        error.insertAfter(element);        
+    },
+
+    
+
+
+
     submitHandler: function (form) {
         $("#submitOTP").text('Processing...');
         var mobileOTP = $("#mobileOTP").val();
         var emailOTP = $("#emailOTP").val();
-        const verifyOTP = {
-            mobileOTP: mobileOTP,                 
-            emailOTP: emailOTP,                  
-        }
-        console.log(verifyOTP);      
+        var personData =  JSON.parse(localStorage.getItem("person"));
+        console.log(JSON.stringify(personData.otp.emailOTP));
+        console.log(JSON.stringify(personData.otp.mobileOTP));
+
+        // function mobileOTPFucn(){
+        //     var personData =  JSON.parse(localStorage.getItem("person"));
+
+        //     //  console.log(JSON.stringify(personData.otp.emailOTP));
+        //     console.log(JSON.stringify(personData.otp.mobileOTP));
+
+        //     var inputNumber = $("#mobileOTP").val();
+
+        //     if(inputNumber==personData.otp.mobileOTP){
+        //         alert("Sucess");
+        //     }else{
+        //         alert("Failed");
+        //     }
+        // }
+
+        // mobileOTPFucn();
+
+        // console.log(personData.otp.emailOTP)
+
+        // const verifyOTP = {
+        //     mobileOTP: mobileOTP,                 
+        //     emailOTP: emailOTP,                  
+        // }
+
+
+
         $.ajax({
             url:"https://api/",
             type:"post",
@@ -126,6 +175,9 @@ $(document).ready(function() {
     }
   });      
 });
+
+
+// mobile OTP Generator
 
 
 
