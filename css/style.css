@@ -2811,11 +2811,20 @@ footer{
 
 
 .form-input {
-    margin-bottom: 1rem;
+   height: 75px;
 }
 .form-input:last-child {
-    margin-bottom: 0;
+    height: auto;
 }
+.form-input.user-terms {
+    height: auto;
+    margin-bottom: 1rem;
+}
+.form-input.forgot-psw {
+    height: 100px;
+}
+
+.form-input.otp-text{height: auto;margin-bottom: 1rem}
 .over-hide{overflow: hidden;}
 .md-hading {
     padding: 1rem 1.5rem;
@@ -2973,3 +2982,8 @@ a.box-link:hover .btn img, .box-link.btn:hover img{
 
 .tab-list{display: none;}
 .tab-list.active{display: block;}
+
+.sticky-bottom{
+    position: sticky;
+    bottom: 0;
+}
