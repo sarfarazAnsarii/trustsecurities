@@ -130,35 +130,10 @@ $(document).ready(function() {
         $("#submitOTP").text('Processing...');
         var mobileOTP = $("#mobileOTP").val();
         var emailOTP = $("#emailOTP").val();
+
         var personData =  JSON.parse(localStorage.getItem("person"));
         console.log(JSON.stringify(personData.otp.emailOTP));
         console.log(JSON.stringify(personData.otp.mobileOTP));
-
-        // function mobileOTPFucn(){
-        //     var personData =  JSON.parse(localStorage.getItem("person"));
-
-        //     //  console.log(JSON.stringify(personData.otp.emailOTP));
-        //     console.log(JSON.stringify(personData.otp.mobileOTP));
-
-        //     var inputNumber = $("#mobileOTP").val();
-
-        //     if(inputNumber==personData.otp.mobileOTP){
-        //         alert("Sucess");
-        //     }else{
-        //         alert("Failed");
-        //     }
-        // }
-
-        // mobileOTPFucn();
-
-        // console.log(personData.otp.emailOTP)
-
-        // const verifyOTP = {
-        //     mobileOTP: mobileOTP,                 
-        //     emailOTP: emailOTP,                  
-        // }
-
-
 
         $.ajax({
             url:"https://api/",
