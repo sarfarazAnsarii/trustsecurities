@@ -1591,7 +1591,7 @@ select.form-control:focus::-ms-value {
 
 
 .p-relative{position: relative;}
-.brand-color{color: var(--brand-color)}
+.brand-color{color: var(--brand-color) !important}
 .gray-color{color: var(--dark-gray)}
 .light-gray-color{color: var(--gray-2);}
 .font14{font-size: 0.90rem;}
@@ -1758,6 +1758,34 @@ header.active .main-header{
     padding-right: 0.4rem;
     font-size: .75rem;
     }
+
+    .toggleMenu {
+        width: 2rem;
+        height: 1.6rem;
+    }
+    .toggleMenu span {
+        width: 2rem;
+        background: var(--brand-color);
+        height: 0.15rem;
+        display: block;
+        position: relative;
+        transition: .3s all;
+    }
+    .toggleMenu span:nth-child(2){
+        margin: 0.4rem 0
+    }
+    .toggleMenu.active span:nth-child(1) {
+        transform: rotate(45deg);
+        position: relative;
+        top: 11px;
+    }
+    .toggleMenu.active span:nth-child(3) {
+        transform: rotate(-45deg);
+        top: 9px;
+    }
+    .toggleMenu.active span:nth-child(2) {
+        display: none;
+    }
 }
 
 @media(max-width: 768px){
@@ -1806,33 +1834,7 @@ header.active .main-header{
         padding: 0.4rem;
     }
     .hidden-xs{display: block;}
-    .toggleMenu {
-        width: 2rem;
-        height: 1.6rem;
-    }
-    .toggleMenu span {
-        width: 2rem;
-        background: var(--brand-color);
-        height: 0.15rem;
-        display: block;
-        position: relative;
-        transition: .3s all;
-    }
-    .toggleMenu span:nth-child(2){
-        margin: 0.4rem 0
-    }
-    .toggleMenu.active span:nth-child(1) {
-        transform: rotate(45deg);
-        position: relative;
-        top: 11px;
-    }
-    .toggleMenu.active span:nth-child(3) {
-        transform: rotate(-45deg);
-        top: 9px;
-    }
-    .toggleMenu.active span:nth-child(2) {
-        display: none;
-    }
+    
     .main-header{
         top: 0;
         position: fixed;
@@ -2726,7 +2728,7 @@ footer{
 .input-label > div {
     line-height: 1rem;
 }
-.input-label span {
+.input-label span, .name-text {
     font-weight: var(--w-600);
 }
 .filter-list li {

@@ -2070,6 +2070,25 @@ $(".dwTermsAndCondition").on("change", function(){
     $(this).parents(".termsBox").siblings(".index-btn").find(".downloadLink").attr("target","_blank");
   }
 })
+
+const image = $(".bonds-card .index-btn a").map(function (){
+    return console.log($(this).attr("d-data"));
+});
+
+// const image = $(".brand-img img").map(function (){
+//     return console.log($(this).attr("src"));
+// });
+
+// console.log(image);
+
+// const title = $(".d-name h3").map(function (){
+//     return console.log($(this).text());
+// });
+
+// console.log(title);
+
+
+
 </script>
 
 </body>
