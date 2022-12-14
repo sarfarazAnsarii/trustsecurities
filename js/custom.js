@@ -94,5 +94,5 @@ $(".tab-item li a").on("click", function(e){
 	}
 })
 
-// var fullYear = new Date().getFullYear();
-// document.getElementById("fullYear").textContent = fullYear;
+var fullYear = new Date().getFullYear();
+document.getElementById("fullYear").textContent = fullYear;
