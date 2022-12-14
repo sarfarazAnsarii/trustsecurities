@@ -1,11 +1,40 @@
 $(document).mouseup(function(e) 
 {
-    var container = $("#searchBox");       
+    var container = $("#searchBox");  
+    var dashProfile = $("#dashProfile")     
     if (!container.is(e.target) && container.has(e.target).length === 0) 
     {
         container.hide();
         container.parents(".search-box").removeClass("active");
+        dashProfile.hide();
     }
+});
+$("#ds-search").on("keyup", function(){
+
+    $("#searchBox").fadeIn();
+
+    var searchText = $(this).val();
+
+    $("#searchBox .search-list li a span").each(function(){
+        
+
+        var currentLiText = $(this).text(),
+            showCurrentLi = currentLiText.toLowerCase().indexOf(searchText.toLowerCase()) !== -1;
+
+            $(this).parents("li").toggle(showCurrentLi);
+
+            if(currentLiText.toLowerCase().indexOf(searchText.toLowerCase()) !== -1){
+                $("#searchBox .not-found").hide();
+                $("#searchBox .not-found").html('');
+
+            }else{
+                
+                $("#searchBox .not-found").show();
+                $("#searchBox .not-found").html('<li><a><img src="images/dashboard/icons/not-found.svg"><span>Not Found "'+searchText+'"</span></a></li>');
+            }
+
+    });     
+
 });
 
 $("#scrollTop").on("click", function(e){
@@ -49,4 +78,19 @@ $("#dashHeaderMenu").on("click", function(){
     $(this).parents(".ds-wrap").toggleClass("active");
     $(this).parents(".ds-wrap").siblings(".ds-sidebar").toggleClass("active");
     $("#daToggleMenu").toggleClass("active")
+});
+
+$(".ds-search-icon-mob").on("click", function(){
+    $("#searchArea").addClass("active");
+    $("#ds-search").focus();
+});
+
+
+
+$(".ds-search-close").on("click", function(){
+    $("#searchArea").removeClass("active");
+});
+
+$("#dashProfileTab").on("click", function(){
+    $("#dashProfile").fadeIn();
 });

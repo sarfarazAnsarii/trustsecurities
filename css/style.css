@@ -1964,9 +1964,10 @@ header.active + .main-section {
     width: 100%;
     color: var(--dark-gray);
     font-size: 1rem;
-    padding: 0.3rem 1.5rem;
-    display: block;
-    text-decoration: none
+    padding: 0.5rem 1.5rem;
+    display: flex;
+    text-decoration: none;
+    align-items: baseline;
 }
 .search-list li a:hover{
     background-color: var(--gray-light)
@@ -1978,6 +1979,8 @@ header.active + .main-section {
 .search-list li a img {
     width: 1rem;
     margin-right: 0.5rem;
+    position: relative;
+    top: 2px;
 }
 .search-mode {
     position: absolute;

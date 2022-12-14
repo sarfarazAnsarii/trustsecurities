@@ -123,22 +123,90 @@
                       <span></span>
                       <span></span>
                     </div>
-                    <div class="ds-main-search flex-wrap flex-center">
-                      <img width="17px" height="17px" src="images/icons/search-gray.svg">
-                      <input class="ds-search" type="text" placeholder="Search by ISIN / Issuer / Company" name="ds-search" id="ds-search" />
-                    </div>
-                    <div class="ml-auto flex-wrap flex-center ds-profile">
-                      <div class="mr-1">
-                        <img src="images/dashboard/menu-icons/profile.svg" />
+                    <div class="ds-search-box" id="searchArea">
+                      <div class="ds-main-search flex-wrap flex-center">
+                          <img class="ds-search-icon" width="17px" height="17px" src="images/icons/search-gray.svg">
+                          <img class="ds-search-icon-mob d-none" width="17px" height="17px" src="images/icons/search-gray.svg">
+                          <input class="ds-search" type="text" placeholder="Search by ISIN / Issuer / Company" name="ds-search" id="ds-search" />
+                          <img class="d-none ds-search-close" src="images/icons/close-icon.svg" />
                       </div>
-                      <div class="ds-name">
-                        <div class="font12 sucess-text">Verified</div>
-
-                        <div class="flex-wrap flex-center">
-                          <span class="name-text mr-1">Sarfaraz Ansari</span>
-                          <img width="17" height="7" src="images/dashboard/caret.svg">
+                      <div class="search-mode" id="searchBox">
+                        <ul class="search-list overflow-item">
+                            <li>
+                              <a href="bond-detail.html">
+                                <img src="images/icons/search-gray.svg">
+                                <span>Hero Fincorp Limited</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="bond-detail.html">
+                                <img src="images/icons/search-gray.svg">
+                                <span>Union Bank of India</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="bond-detail.html">
+                                <img src="images/icons/search-gray.svg">
+                                <span>Up Power Corporation Limited</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="bond-detail.html">
+                                <img src="images/icons/search-gray.svg">
+                                <span>Aditya Birla Sun Life Insurance Company Limited</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="bond-detail.html">
+                                <img src="images/icons/search-gray.svg">
+                                <span>HERO FINCORP LIMITED</span>
+                              </a>
+                            </li>
+                        </ul>
+                        <ul class="search-list not-found">
+                          
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="ds-profile">
+                      <div class="ml-auto flex-wrap flex-center" id="dashProfileTab">
+                        <div class="mr-1">
+                          <img src="images/dashboard/menu-icons/profile.svg" />
                         </div>
-                      </div>                    
+                        <div class="ds-name">
+                          <div class="font12 sucess-text">Verified</div>
+
+                          <div class="flex-wrap flex-center">
+                            <span class="name-text mr-1">Sarfaraz Ansari</span>
+                            <img width="17" height="7" src="images/dashboard/caret.svg">
+                          </div>
+                        </div> 
+                      </div> 
+                      <div class="ds-search-box">
+                        <div class="search-mode" id="dashProfile">
+                          <ul class="search-list profile-activity">
+                            <li>
+                              <a href="#">
+                                <img src="images/dashboard/icons/profile.svg">
+                                <span>View Profile</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#">
+                                <img src="images/dashboard/icons/setting.svg">
+                                <span>Account Setting</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#">
+                                <img src="images/dashboard/icons/logout.svg">
+                                <span>Sign out</span>
+                              </a>
+                            </li>                            
+                          </ul> 
+                        </div>
+                      </div>
+                                       
                     </div>
                   </div>
                 </section>
