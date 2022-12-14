@@ -94,3 +94,9 @@ $(".ds-search-close").on("click", function(){
 $("#dashProfileTab").on("click", function(){
     $("#dashProfile").fadeIn();
 });
+
+$(".ds-nav-items > li a").on("click", function(){
+    $(this).siblings(".ds-drop-down").slideToggle();
+    $(this).toggleClass("active");
+    $(this).parent().siblings().children("a").removeClass("active");
+});

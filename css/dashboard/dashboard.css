@@ -113,6 +113,19 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
+.ds-drop-down{list-style: none;display: none;}
+.ds-drop-down li a {
+    padding: 0.3rem 1rem 0.3rem 3rem;
+}
+
+.ds-nav-items li a.active{
+    color: var(--brand-color);
+    background-color: var(--light-brand);
+}
+
+.ds-drop-down-list li a{
+    padding: 0.3rem 1rem 0.3rem 3.5rem;
+}
 
 @media(max-width:992px){
     .ds-search{display: none;}
@@ -207,7 +220,7 @@ header.ds-main-header {
 
 .ds-heading-box{
     width: 100%;   
-    padding: 2rem 0 1.2rem 0;
+    padding: 1rem 0 1.2rem 0;
 }
 .porfolio-card .b-title p{font-size: .8rem}
 .porfolio-card .b-title h3{
@@ -261,7 +274,7 @@ header.ds-main-header {
     padding: 1.5rem 0 1.5rem 1.5rem;
 }
 
-.bonds-cards .bondsLists .item {
+.bonds-cards .bondsLists .item, .profile-section {
     padding-bottom: 1rem;
 }
 
