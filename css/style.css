@@ -1500,6 +1500,7 @@ select.form-control:focus::-ms-value {
 }
 
 .d-block{display: block;width: 100%;}
+.d-inline-block{display: inline-block;}
 
 .bg-white{background-color: var(--white)}
 .bg-light-gold{background-color: var(--light-brand)}

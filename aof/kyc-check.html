@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>KYC Check | Trust Securities</title>
+  <meta name="robots" content="noindex,nofollow">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
+
+  <!-- Google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Css style -->
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+  <link rel="stylesheet" type="text/css" href="../css/aof/aof.css">
+
+  <!-- fave icons -->
+  <link rel="apple-touch-icon" sizes="57x57" href="../images/faveicons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="../images/faveicons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="../images/faveicons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="../images/faveicons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="../images/faveicons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="../images/faveicons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="../images/faveicons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="../images/faveicons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../images/faveicons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/faveicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="../images/faveicons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../images/faveicons/favicon-16x16.png">
+  
+  <meta name="msapplication-TileColor" content="#AF862E">
+  <meta name="msapplication-TileImage" content="images/faveicons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#AF862E">
+
+</head>
+<body>
+
+<header>
+  <section class="main-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="flex-wrap flex-center">
+            <div class="brand">
+              <a href="index.html">
+                <img class="img-fluid" width="117" height="63" src="../images/trust-logo.svg" alt="Trust Securities">
+              </a>
+            </div>           
+            <div class="ds-profile ml-auto">
+              <div class="flex-wrap flex-center" id="dashProfileTab">
+                <div class="mr-1">
+                  <img src="../images/dashboard/menu-icons/profile.svg">
+                </div>
+                <div class="ds-name">                  
+                  <div class="flex-wrap flex-center">
+                    <span class="name-text mr-1">Sarfaraz Ansari</span>
+                    <img width="17" height="7" src="../images/dashboard/caret.svg">
+                  </div>
+                  <div class="font12">Code:- FRM00448</div>
+                </div> 
+              </div> 
+              <div class="ds-search-box">
+                <div class="search-mode" id="dashProfile" style="display: none;">
+                  <ul class="search-list profile-activity">
+                    <li>
+                      <a href="tel:022-2656 7536">
+                        <img src="../images/aof/aof-call.svg">
+                        <div>
+                          <h4>Call KYC Help line</h4>
+                          <span>022-2656 7536</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="mailto:ekyc.help@trustgroup.in">
+                        <img src="../images/aof/aof-mail.svg">
+                        <div>
+                          <h4>Email KYC Help line</h4>
+                          <span>ekyc.help@trustgroup.in</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li>
+                      <div class="aof-line"></div>
+                    </li>
+                    <li>
+                      <a href="">
+                        <img src="../images/aof/aof-logout.svg">
+                        <div>
+                          <h4>Logout</h4>                          
+                        </div>
+                      </a>
+                    </li>                            
+                  </ul> 
+                </div>
+              </div>                               
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</header>
+
+<section class="form-section aof-form-main">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 m-auto">
+        <div class="bonds-card p-20">
+          <div class="text-right">
+            <div class="font14">
+              Steps: 1 - 7 <span class="light-gray-color m-lr-1"> | </span> 14% <span class="circle-loader ml-1"></span>
+            </div>
+          </div>
+          <div class="mt-1">
+            <h3 class="title-3">KYC Check 
+              <div class="info-item" id="stepsList">
+                <img class="info" src="../images/aof/info.svg" />
+              </div>
+            </h3>
+            <div class="ds-search-box kyc-status p-relative">
+              <div class="search-mode slideDown" id="kycStatus">
+                <ul class="profile-activity">
+                  <li class="active">
+                    <h4>KYC Check</h4>
+                    <span>Enter personal and family details to proceed</span>
+                  </li>
+                  <li>
+                    <h4>Profile Creation</h4>
+                    <span>Enter profile Details for next step</span>
+                  </li>
+                  <li>
+                    <h4>Bank and Icome Details</h4>
+                    <span>Enter Bank and Income Details for bank verification</span>
+                  </li>
+                </ul> 
+              </div>
+            </div>
+            
+            <span class="font14 light-gray-color">Finish the steps for Investing in Bonds</span>
+          </div>
+          <div class="mt-1">
+            <div class="gradient-line inherit"></div>
+          </div>
+          <div class="form-section mt-2">
+            <form>
+              <div class="form-input">
+                <input type="text" class="form-control" name="PAN" id="pan" placeholder="PAN" required="">
+              </div>
+              
+              <div class="form-input">
+                <h4>Date of Birth</h4>
+                <div class="flex-wrap flex-center mt-1">
+                  <div class="dd">
+                    <input type="text" class="form-control" name="dd" id="dd" placeholder="dd" required="">
+                  </div>
+                  <div class="mm">
+                    <input type="text" class="form-control" name="mm" id="mm" placeholder="mm" required="">
+                  </div>                  
+                  <div class="yyyy">
+                    <input type="text" class="form-control" name="yyyy" id="yyyy" placeholder="yyyy" required="">
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-input">
+                <input type="tel" class="form-control" value="7208707204" name="mobile" id="mobile" placeholder="Mobile" required="">
+                
+                <div class="mt-1 p-relative d-none new-input" id="newMobile">
+                  <input type="tel" class="form-control" name="new_mobile" id="new_mobile" placeholder="Mobile">
+                  <div class="close-input">
+                    <img src="../images/icons/close-icon.svg">
+                  </div>
+                </div>
+                <div class="text-right mt-1 add-new-field">
+                  <button class="btn btn-sucess" id="addNewMobile">Add New</button>
+                </div>
+              </div>
+
+              <div class="form-input">
+                <input type="email" class="form-control" value="sarfaraz.ansari@trustgroup.in" name="email" id="email" placeholder="Email" required="">
+                
+                <div class="mt-1 p-relative d-none new-input" id="newEmail">
+                  <input type="email" class="form-control" name="new_email" id="new_email" placeholder="Email">
+                  <div class="close-input">
+                    <img src="../images/icons/close-icon.svg">
+                  </div>
+                </div>
+                <div class="text-right mt-1 add-new-field">
+                  <button class="btn btn-sucess"  id="addNewEmail">Add New</button>
+                </div>
+              </div>
+
+              <div class="form-input">
+                <h4>Mobile Details</h4>
+                <div class="mt-1 radio-group">
+                  <label><input checked class="radio" type="radio" name="mobile_details" id="m_self"> Self</label>
+                  <label><input class="radio" type="radio" name="mobile_details" id="m_family"> Family</label>
+                  <div class="mt-1 d-none" id="family_mobile_input">
+                    <input type="tel" class="form-control" name="family_mobile" id="family_mobile" placeholder="Mobile" required="">
+                  </div>                  
+                </div>
+              </div>
+
+              <div class="form-input">
+                <h4>Email Details</h4>
+                <div class="mt-1 radio-group">
+                  <label><input checked class="radio" type="radio" name="email_details" id="e_self"> Self</label>
+                  <label><input class="radio" type="radio" name="email_details" id="e_family"> Family</label>
+                </div>
+                <div class="mt-1 d-none" id="family_email_input">
+                    <input type="email" class="form-control" name="family_email" id="family_email" placeholder="Email" required="">
+                  </div>  
+              </div>
+
+
+              <div class="form-input">
+                <h4 class="d-inline-block mr-1">Are you a US Citizen?</h4>
+                <div class="radio-group d-inline-block">
+                  <label><input checked class="radio" type="radio" name="us_citizen" id="us_citizen_no"> No</label>
+                  <label><input class="radio" type="radio" name="us_citizen" id="us_citizen_yes"> Yes</label>                               
+                </div>
+              </div>
+
+              <div class="form-input">     
+                <div class="radio-group">         
+                  <label class="form-check font14">
+                      <input checked="" class="radio" type="checkbox" name="auth_inter_exchange" id="auth_inter_exchange">
+                      <span>Authentication for InterExchange </span>
+                  </label>
+                  <label class="form-check font14">
+                      <input checked class="radio" type="checkbox" name="e_confirmation" id="e_confirmation">
+                      <span>E-Confirmation </span>
+                  </label>
+                  <div class="mt-1">
+                    <label class="form-check font14">
+                      <input checked class="radio" type="checkbox" name="auth_fund_securities" id="auth_fund_securities">
+                      <span>Authentication for Fund Securities </span>
+                    </label>
+                  </div>
+                  <div class="mt-1">
+                    <label class="form-check font14">
+                      <input checked class="radio" type="checkbox" name="terms_condition" id="terms_condition">
+                      <span>
+                        <em>
+                          I hereby give my consent to use my Aadhar / Virtual ID details (as applicable) for the purpose of e-Signing my account opening form. 
+                        </em>
+                      </span>
+                    </label>
+                  </div>
+                  <div class="mt-1">
+                    <ul class="font12 form-list">
+                      <li>
+                        By submitting my PAN, I authorize TRUST GROUP to fetch my data from KYC Registration Agency.
+                      </li>
+                      <li>
+                        Currently this process is applicable only for opening individual trading account and single holder Demat accounts for resident individuals. Soon we shall allow for NRIs and multiple holders in Demat account.
+                      </li>
+                      <li>
+                        Please note that by submitting the above mentioned details, you are authorizing us to Call/SMS you even though you may be registered under DNC. We shall Call/SMS you for a period of 12 months.
+                      </li>
+                    </ul>
+                  </div>
+                </div>    
+              </div>
+
+
+
+              <div class="form-input">
+                <button class="btn btn-primary d-block">Next <img class="ml-1" src="../images/aof/arrow-right.svg" /></button>
+              </div> 
+                                  
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<footer class="p-0">
+  <div class="copyright mt-2">
+    <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <p class="cp-list">
+              © <span id="fullYear"></span> All Rights Reserved.
+            </p>     
+          </div>
+          <div class="col-lg-6">
+            <ul class="cp-list">
+              <li><a href="#">Terms of use</a></li>
+              <li><a href="#">Disclaimer</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Regulatory</a></li>
+              <li><a href="#">Disclosures</a></li>
+            </ul>
+          </div>
+        </div>
+    </div>
+  </div>
+</footer>
+
+<div class="fixed-btm">
+  <div class="question-chat-box">
+    <div class="answer-chat-box d-none" id="answerChatBox">
+      <div class="bonds-card">
+        <div class="help-head">
+          <div class="flex-wrap flex-center">
+            <img class="mr-1" src="../images/aof/help.svg" /><h3>Help</h3>
+          </div>
+        </div>
+        <div class="help-body p-1">
+          <h3 class="brand-color">KYC Check</h3>
+          <p class="mt-1"><strong>Input:</strong></p>
+          <ul class="help-list mt-1">
+            <li>Insert Date of Birth.</li>
+            <li>Insert PAN Number</li>
+            <li>Mobile Family : Please select appropriate relationship from dropdown</li>
+            <li>Email Family : Please select appropriate relationship from dropdown</li>
+          </ul>
+          <h3 class="brand-color mt-1">Help</h3>
+          <p class="mt-1 font14">
+            If already registered on CVL / NDML : Your Name, Address and other details would be fetched and available on Profile Creation page for verification If not registered on CVL / NDML : 1] Please put your Aadhar number, Data would be fetched from Digi locker and populated on Profile creation page for verification. 2] You will receive OTP on Aadhar Registered Mobile for Authentication. If neither registered on CVL / NDML or Aadhar- You can put details manually and proceed
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="q-img text-right" id="questionMark">
+      <img src="../images/aof/question-mark.svg" alt="Question Mark">
+    </div>    
+  </div>
+  
+</div>
+
+
+<script src="../js/jquery.min.js"></script>
+<script src="../js/aof/aof.js"></script>
+
+
+<script type="text/javascript">
+  $("input[name=mobile_details]").change(function(){
+    let m_family = $(this).attr("id");
+    if(m_family == "m_family"){
+      $("#family_mobile_input").fadeIn();
+      $("#family_mobile").focus();
+    }else{
+      $("#family_mobile_input").hide();
+    }
+  });
+
+  $("input[name=email_details]").change(function(){
+    let m_family = $(this).attr("id");
+    if(m_family == "e_family"){
+      $("#family_email_input").fadeIn();
+      $("#family_email").focus();
+    }else{
+      $("#family_email_input").hide();
+    }
+  });
+
+
+  $("#addNewMobile").on("click", function(Event){
+    Event.preventDefault()
+    $("#newMobile").fadeIn();
+    $("#new_mobile").focus();
+    $(this).parent(".add-new-field").hide();
+  });
+  $("#addNewEmail").on("click", function(Event){
+    Event.preventDefault()
+    $("#newEmail").fadeIn();
+    $("#new_email").focus();
+    $(this).parent(".add-new-field").hide();
+  });
+
+  $(".close-input").on("click", function(){
+    $(this).parent(".new-input").hide();
+    $(this).parent().siblings(".add-new-field").fadeIn();
+  })
+
+
+  
+
+</script>
+
+
+</body>
+</html>
