@@ -46,7 +46,7 @@
 
 @media(max-width:992px){
     .ds-profile .ds-search-box .search-mode{
-        left: -50px;
+        left: -84px;
     }
 }
 
@@ -87,7 +87,6 @@
 }
 
 .kyc-status .search-mode {
-    display: block;
     top: 8px;
     width: 360px;
     box-shadow: 4px -3px 18px rgb(0 0 0 / 10%);
@@ -154,4 +153,8 @@
 .info-item:hover{background-color: var(--gray-light);}
 .info-item img {
     width: 20px;
+}
+.aof-form-main{margin-top: 2rem}
+@media(max-width:768px){
+    .aof-form-main{margin-top: 6rem}
 }
