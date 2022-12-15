@@ -98,18 +98,18 @@
               </ul>
               <div class="tab-list active" id="client">
                 <div class="form-section pb-2">
-                  <form>
+                  <form id="loginForm">
                     <div class="form-input">
-                      <input type="text" class="form-control" name="PAN" id="pan" placeholder="PAN" required>
+                      <input type="text" class="form-control" name="pan_number" id="pan_number" placeholder="PAN" minlength="10" maxlength="10" required>
                     </div>
                     <div class="form-input forgot-psw">
-                      <input type="password" class="form-control" name="password" id="password" placeholder="Password" required>
+                      <input type="password" class="form-control" name="password" id="password" placeholder="Password" minlength="6" maxlength="6" required>
                       <div class="text-right termsBox">
                         <a href="#">Forgot password?</a>
                       </div>
                     </div>                  
                     <div class="form-input">
-                      <button class="btn btn-primary d-block">LOGIN</button>
+                      <button class="btn btn-primary d-block" id="loginBtn">LOGIN</button>
                     </div>
                     <div class="pb-1">
                       <div class="beak-line-or text-center light-gray-color">
@@ -150,7 +150,8 @@
 
 <script src="js/jquery.min.js"></script>
 <script src="js/custom.js"></script>
-
+<script src="js/validate.min.js"></script>
+<script src="js/form.js"></script>
 
 
 

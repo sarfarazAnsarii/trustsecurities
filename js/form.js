@@ -8,8 +8,7 @@ $(document).ready(function() {
     }
   });
   $("#registerForm").validate({
-    rules:{
-     
+    rules:{     
       name: {
           required: true
       },              
@@ -70,7 +69,6 @@ $(document).ready(function() {
                 mobileOTP: mobileOTP,
                 emailOTP: emailOTP
             }
-
         }
         console.log(person);
         localStorage.setItem("person", JSON.stringify(person));
@@ -88,6 +86,71 @@ $(document).ready(function() {
             error: function(){
                 // alert("There was an error :(")
                 $("#registerBtn").text('Error...');
+            }
+        });       
+    }
+
+  });
+
+
+  $("#loginForm").validate({
+    rules:{     
+      pan_number: {
+          required: true
+      },              
+      password: {
+          required: true
+      }
+      
+    },
+    messages: {                
+        pan_number: {
+            required: "Please enter your PAN Number."
+        },
+        password: {
+            required: "Please enter your password"
+        }                                            
+    },
+
+    errorElement: "div",
+    errorPlacement: function(error, element) {
+        error.insertAfter(element);     
+    },
+  
+    submitHandler: function (form) {
+        $("#loginBtn").text('Processing...');
+        var pan_number = $("#pan_number").val();
+        var password = $("#password").val();
+       
+        var mobileOTP = Math.floor(1000 + Math.random() * 1234);
+        // var emailOTP = Math.floor(1000 + Math.random() * 4321);
+
+        // console.log(mobileOTP);
+
+        const person = {
+            pan_number: pan_number,                 
+            password: password,          
+            otp:{
+                mobileOTP: mobileOTP
+           
+            }
+        }
+        console.log(person);
+        localStorage.setItem("person", JSON.stringify(person));
+
+        $.ajax({
+            url:"https://api.apispreadsheets.com/data/HjKnZOLJqlDeDv9V/",
+            type:"post",
+            data:person,
+            success: function(){ 
+                $("#loginBtn").text('Submit');
+                // $("#registerArea").remove();
+                $("#otpArea").fadeIn();
+                window.location.replace("dashboard.html");
+            },
+            error: function(){
+                // alert("There was an error :(")
+                $("#loginBtn").text('Error...');
             }
         });       
     }
