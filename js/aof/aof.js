@@ -27,13 +27,11 @@ $("#stepsList").on("click", function(){
     $("#kycStatus").slideToggle();
 });
 
-$("#questionMark").on("click", function(){
-    
+$("#questionMark").on("click", function(){    
     if($(this).children("img").attr("src")=="../images/aof/question-mark.svg"){
       $(this).children("img").attr("src", "../images/aof/close-mark.svg");
     }else{
       $(this).children("img").attr("src", "../images/aof/question-mark.svg");
     }
     $("#answerChatBox").slideToggle("fast");
-
   });

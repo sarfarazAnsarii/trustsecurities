@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>KYC Check | Trust Securities</title>
+  <title>Bank and Income Details | Trust Securities</title>
   <meta name="robots" content="noindex,nofollow">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">  
@@ -109,15 +109,16 @@
     <div class="row">
       <div class="col-lg-6 m-auto">
         <div class="flex-wrap flex-center">
-          
+          <div class="back-page">
+            <a href="profile-creation.html" class="btn btn-border"><img src="../images/aof/back-arrow.svg"> Back</a>
+          </div>
           <div class="font14 ml-auto">
-            Steps: 1 - 7 <span class="light-gray-color m-lr-1"> | </span> 14% <span class="circle-loader ml-1"></span>
+            Steps: 3 - 7 <span class="light-gray-color m-lr-1"> | </span> 42% <span class="circle-loader ml-1"></span>
           </div>
         </div>
-        <div class="bonds-card p-20 mt-1">
-          
-          <div >
-            <h3 class="title-3">KYC Check 
+        <div class="bonds-card p-20 mt-1">          
+          <div>
+            <h3 class="title-3">Bank and Income Details  
               <div class="info-item" id="stepsList">
                 <img class="info" src="../images/aof/info.svg" />
               </div>
@@ -127,13 +128,13 @@
                 <ul class="profile-activity">
                   <li class="active">
                     <h4>KYC Check</h4>
-                    <span>Enter personal and family details to proceed</span>
+                    <span>Enter personal and family details to proceed </span>
                   </li>
-                  <li>
+                  <li class="active">
                     <h4>Profile Creation</h4>
                     <span>Enter profile Details for next step</span>
                   </li>
-                  <li>
+                  <li class="active">
                     <h4>Bank and Icome Details</h4>
                     <span>Enter Bank and Income Details for bank verification</span>
                   </li>
@@ -152,128 +153,161 @@
           </div>
           <div class="form-section">
             <form>
+              
               <div class="form-input">
-                <input type="text" class="form-control" name="PAN" id="pan" placeholder="PAN" required="">
+                <input type="text" class="form-control" name="ifsc_code" id="ifsc_code" placeholder="IFSC Code">
+              </div>
+
+              <div class="form-input">
+                <input type="text" class="form-control" name="micr_code" id="micr_code" placeholder="MICR Code">
+              </div>
+
+              <div class="form-input">
+                <input type="text" class="form-control" name="bank_Name" id="bank_Name" placeholder="Bank Name">
+              </div>
+
+              <div class="form-input">
+                <input type="text" class="form-control" name="branch_name" id="branch_name" placeholder="Branch Name">
+              </div>
+
+              <div class="form-input">
+                <h4>Account Type</h4>
+                <div class="mt-1 radio-group">
+                  <label><input required checked class="radio" type="radio" name="account_type" id="saving"> Saving</label>
+                  <label><input required class="radio" type="radio" name="account_type" id="current"> Current</label>                                   
+                </div>
+              </div>
+
+              <div class="form-input">
+                <input type="number" class="form-control" name="bank_account_number" id="bank_account_number" placeholder="Bank Account number" required>
+              </div>
+
+              <div class="form-input">
+                <input type="number" class="form-control" name="re_bank_account_number" id="re_bank_account_number" placeholder="Re Enter Bank Account number" required>
+              </div>
+
+              <div class="form-input">
+                <h4 class="brand-color">Income Details</h4>
+                <div class="mt-1">
+                  <input type="text" class="form-control" name="annual_income" id="annual_income" placeholder="Annual Income">
+                </div>
+              </div>
+
+              <div class="form-input">
+                <input type="text" class="form-control" name="net_worth_details" id="net_worth_details" placeholder="Net worth Details">
+              </div>
+
+              <div class="form-input">
+                <h4>Income / Net worth Date</h4>
+                <div class="mt-05">
+                  <input type="date" class="form-control" name="net_worth_date" id="net_worth_date" placeholder="dd-mm-yyyy" min="1997-01-01" max="2022-12-31" placeholder="Annual Income">
+                </div>
+              </div>
+
+              <div class="form-input">
+                <h4>Correspondence Address Type</h4>
+                <div class="mt-05">
+                  <select class="form-control">
+                    <option disabled selected>Select Address Type</option>
+                    <option>Residential address</option>
+                    <option>Current residence</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-input">
+                <h4>Permanent Address Type</h4>
+                <div class="mt-05">
+                  <select class="form-control">
+                    <option disabled selected>Select Address Type</option>
+                    <option>Residential address</option>
+                    <option>Current residence</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-input">
+                <h4>Declaration Date</h4>
+                <div class="mt-05">
+                  <input type="date" class="form-control" name="declaration_date" id="declaration_date" placeholder="dd-mm-yyyy" min="1997-01-01" max="2022-12-31" placeholder="Annual Income">
+                </div>
+              </div>
+
+              <div class="form-input">
+                <input type="text" class="form-control" name="declaration_place" id="declaration_place" placeholder="Declaration Place">
+              </div>
+
+              <div class="form-input">
+                <h4 class="brand-color">Other Details</h4>
+                <div class="mt-1">
+                  <h4 >Documents Sub. Proof</h4>
+                  <div class="mt-05">
+                    <select class="form-control">
+                    <option disabled selected>Select Documents Sub. Proof</option>
+                    <option>Self Certified Copies Submitted (Originals Verified)</option>
+                  </select>
+                  </div>
+                </div>
               </div>
               
               <div class="form-input">
-                <h4>Date of Birth</h4>
-                <div class="flex-wrap flex-center mt-1">
-                  <div class="dd">
-                    <input type="number" minlength="2" maxlength="2" class="form-control" name="dd" id="dd" placeholder="dd" required="">
-                  </div>
-                  <div class="mm">
-                    <input type="number"  minlength="2" maxlength="2"  class="form-control" name="mm" id="mm" placeholder="mm" required="">
-                  </div>                  
-                  <div class="yyyy">
-                    <input type="number"  minlength="4" maxlength="4"  class="form-control" name="yyyy" id="yyyy" placeholder="yyyy" required="">
-                  </div>
-                </div>
+                <input type="text" class="form-control" name="gst_number" id="gst_number" placeholder="GST number (enter, if provided)">
               </div>
 
               <div class="form-input">
-                <input type="tel" class="form-control" value="7208707204" name="mobile" id="mobile" placeholder="Mobile" required="">
-                
-                <div class="mt-1 p-relative d-none new-input" id="newMobile">
-                  <input type="tel" class="form-control" name="new_mobile" id="new_mobile" placeholder="Mobile">
-                  <div class="close-input">
-                    <img src="../images/icons/close-icon.svg">
-                  </div>
-                </div>
-                <div class="text-right mt-1 add-new-field">
-                  <button class="btn btn-sucess" id="addNewMobile">Add New</button>
-                </div>
-              </div>
-
-              <div class="form-input">
-                <input type="email" class="form-control" value="sarfaraz.ansari@trustgroup.in" name="email" id="email" placeholder="Email" required="">
-                
-                <div class="mt-1 p-relative d-none new-input" id="newEmail">
-                  <input type="email" class="form-control" name="new_email" id="new_email" placeholder="Email">
-                  <div class="close-input">
-                    <img src="../images/icons/close-icon.svg">
-                  </div>
-                </div>
-                <div class="text-right mt-1 add-new-field">
-                  <button class="btn btn-sucess"  id="addNewEmail">Add New</button>
-                </div>
-              </div>
-
-              <div class="form-input">
-                <h4>Mobile Details</h4>
+                <h4>Political connected</h4>
                 <div class="mt-1 radio-group">
-                  <label><input checked class="radio" type="radio" name="mobile_details" id="m_self"> Self</label>
-                  <label><input class="radio" type="radio" name="mobile_details" id="m_family"> Family</label>
-                  <div class="mt-1 d-none" id="family_mobile_input">
-                    <input type="tel" class="form-control" name="family_mobile" id="family_mobile" placeholder="Mobile" required="">
-                  </div>                  
+                  <label><input checked class="radio" type="radio" name="political_connected" id="political_connected_yes"> Yes</label>
+                  <label><input class="radio" type="radio" name="political_connected" id="political_connected_no"> No</label>                                   
+                </div>
+              </div>
+
+              <div class="form-input">                
+                <h4 >Education</h4>
+                  <div class="mt-05">
+                    <select class="form-control">
+                    <option disabled selected>Select Education</option>
+                    <option>Under Graduate</option>
+                    <option>Graduate</option>
+                    <option>Masters</option>
+                  </select>
+                  </div>
+              </div>
+
+              <div class="form-input">                
+                <h4 >Authorization Type</h4>
+                  <div class="mt-05">
+                    <select class="form-control">
+                    <option disabled selected>Select Authorization</option>
+                    <option>Under Graduate</option>
+                    <option>Graduate</option>
+                    <option>Masters</option>
+                  </select>
+                  </div>
+              </div>
+
+              <div class="form-input">
+                <h4 class="brand-color">Prior Experience Details</h4>
+                <div class="mt-1">
+                  <h4>Prior Experience</h4>
+                  <div class="radio-group mt-05">
+                    <label><input checked class="radio" type="radio" name="prior_experience" id="prior_experience_yes"> Yes</label>
+                    <label><input class="radio" type="radio" name="prior_experience" id="prior_experience_no"> No</label>                                   
+                  </div>
                 </div>
               </div>
 
               <div class="form-input">
-                <h4>Email Details</h4>
-                <div class="mt-1 radio-group">
-                  <label><input checked class="radio" type="radio" name="email_details" id="e_self"> Self</label>
-                  <label><input class="radio" type="radio" name="email_details" id="e_family"> Family</label>
-                </div>
-                <div class="mt-1 d-none" id="family_email_input">
-                    <input type="email" class="form-control" name="family_email" id="family_email" placeholder="Email" required="">
-                  </div>  
-              </div>
-
-
-              <div class="form-input">
-                <h4 class="d-inline-block mr-1">Are you a US Citizen?</h4>
-                <div class="radio-group d-inline-block">
-                  <label><input checked class="radio" type="radio" name="us_citizen" id="us_citizen_no"> No</label>
-                  <label><input class="radio" type="radio" name="us_citizen" id="us_citizen_yes"> Yes</label>                               
-                </div>
-              </div>
-
-              <div class="form-input">     
-                <div class="radio-group">         
-                  <label class="form-check font14">
-                      <input checked="" class="radio" type="checkbox" name="auth_inter_exchange" id="auth_inter_exchange">
-                      <span>Authentication for InterExchange </span>
-                  </label>
-                  <label class="form-check font14">
-                      <input checked class="radio" type="checkbox" name="e_confirmation" id="e_confirmation">
-                      <span>E-Confirmation </span>
-                  </label>
-                  <div class="mt-1">
-                    <label class="form-check font14">
-                      <input checked class="radio" type="checkbox" name="auth_fund_securities" id="auth_fund_securities">
-                      <span>Authentication for Fund Securities </span>
-                    </label>
-                  </div>
-                  <div class="mt-1">
-                    <label class="form-check font14">
-                      <input checked class="radio" type="checkbox" name="terms_condition" id="terms_condition">
-                      <span>
-                        <em>
-                          I hereby give my consent to use my Aadhar / Virtual ID details (as applicable) for the purpose of e-Signing my account opening form. 
-                        </em>
-                      </span>
-                    </label>
-                  </div>
-                  <div class="mt-1">
-                    <ul class="font12 form-list">
-                      <li>
-                        By submitting my PAN, I authorize TRUST GROUP to fetch my data from KYC Registration Agency.
-                      </li>
-                      <li>
-                        Currently this process is applicable only for opening individual trading account and single holder Demat accounts for resident individuals. Soon we shall allow for NRIs and multiple holders in Demat account.
-                      </li>
-                      <li>
-                        Please note that by submitting the above mentioned details, you are authorizing us to Call/SMS you even though you may be registered under DNC. We shall Call/SMS you for a period of 12 months.
-                      </li>
-                    </ul>
-                  </div>
-                </div>    
+                <input type="text" class="form-control" name="years_of_experience" id="years_of_experience" placeholder="Years of experience">
               </div>
 
               <div class="form-input">
-                <a class="btn btn-primary d-block" href="profile-creation.html">NEXT <img class="ml-1" src="../images/aof/arrow-right.svg" /></a>
+                <input type="text" class="form-control" name="Years_in_other_Investment" id="Years_in_other_Investment" placeholder="Years in other Investment Related Fields">
+              </div>
+             
+              
+              <div class="form-input">
+                <a class="btn btn-primary d-block" href="trading-segment.html">NEXT <img class="ml-1" src="../images/aof/arrow-right.svg" /></a>
               </div> 
                                   
             </form>
@@ -318,7 +352,7 @@
           </div>
         </div>
         <div class="help-body p-1">
-          <h3 class="brand-color">KYC Check</h3>
+          <h3 class="brand-color">Profile Creation</h3>
           <p class="mt-1"><strong>Input:</strong></p>
           <ul class="help-list mt-1">
             <li>Insert Date of Birth.</li>
@@ -344,46 +378,6 @@
 <script src="../js/jquery.min.js"></script>
 <script src="../js/aof/aof.js"></script>
 
-<script type="text/javascript">
-  $("input[name=mobile_details]").change(function(){
-    let m_family = $(this).attr("id");
-    if(m_family == "m_family"){
-      $("#family_mobile_input").fadeIn();
-      $("#family_mobile").focus();
-    }else{
-      $("#family_mobile_input").hide();
-    }
-  });
-
-  $("input[name=email_details]").change(function(){
-    let m_family = $(this).attr("id");
-    if(m_family == "e_family"){
-      $("#family_email_input").fadeIn();
-      $("#family_email").focus();
-    }else{
-      $("#family_email_input").hide();
-    }
-  });
-
-  $("#addNewMobile").on("click", function(Event){
-    Event.preventDefault()
-    $("#newMobile").fadeIn();
-    $("#new_mobile").focus();
-    $(this).parent(".add-new-field").hide();
-  });
-  $("#addNewEmail").on("click", function(Event){
-    Event.preventDefault()
-    $("#newEmail").fadeIn();
-    $("#new_email").focus();
-    $(this).parent(".add-new-field").hide();
-  });
-
-  $(".close-input").on("click", function(){
-    $(this).parent(".new-input").hide();
-    $(this).parent().siblings(".add-new-field").fadeIn();
-  })
-
-</script>
 
 
 </body>

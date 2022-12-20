@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>KYC Check | Trust Securities</title>
+  <title>Trading Segment | Trust Securities</title>
   <meta name="robots" content="noindex,nofollow">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">  
@@ -109,15 +109,16 @@
     <div class="row">
       <div class="col-lg-6 m-auto">
         <div class="flex-wrap flex-center">
-          
+          <div class="back-page">
+            <a href="bank-and-income-details.html" class="btn btn-border"><img src="../images/aof/back-arrow.svg"> Back</a>
+          </div>
           <div class="font14 ml-auto">
-            Steps: 1 - 7 <span class="light-gray-color m-lr-1"> | </span> 14% <span class="circle-loader ml-1"></span>
+            Steps: 3 - 7 <span class="light-gray-color m-lr-1"> | </span> 42% <span class="circle-loader ml-1"></span>
           </div>
         </div>
-        <div class="bonds-card p-20 mt-1">
-          
-          <div >
-            <h3 class="title-3">KYC Check 
+        <div class="bonds-card p-20 mt-1">          
+          <div>
+            <h3 class="title-3">Trading Segment  
               <div class="info-item" id="stepsList">
                 <img class="info" src="../images/aof/info.svg" />
               </div>
@@ -127,17 +128,17 @@
                 <ul class="profile-activity">
                   <li class="active">
                     <h4>KYC Check</h4>
-                    <span>Enter personal and family details to proceed</span>
+                    <span>Enter personal and family details to proceed </span>
                   </li>
-                  <li>
+                  <li class="active">
                     <h4>Profile Creation</h4>
                     <span>Enter profile Details for next step</span>
                   </li>
-                  <li>
+                  <li class="active">
                     <h4>Bank and Icome Details</h4>
                     <span>Enter Bank and Income Details for bank verification</span>
                   </li>
-                  <li>
+                  <li class="active">
                     <h4>Trading Segment</h4>
                     <span>Please verify all blank fields </span>
                   </li>
@@ -152,128 +153,96 @@
           </div>
           <div class="form-section">
             <form>
+              
+              
+
               <div class="form-input">
-                <input type="text" class="form-control" name="PAN" id="pan" placeholder="PAN" required="">
+                <h4>Segment Type</h4>
+                <div class="mt-1 radio-group">
+                  <label><input required checked class="radio" type="radio" name="segment_type" id="NSCCL"> NSCCL</label>
+                  <label><input required class="radio" type="radio" name="segment_type" id="ICCL"> ICCL</label>                                   
+                </div>
               </div>
+
+              <div class="form-input">
+                <h4 class="brand-color">Existing DP Details</h4>
+                <div class="mt-1">
+                  <h4>Do you have Existing Account in DP?</h4>
+                  <div class="mt-05">
+                    <div class="radio-group">
+                      <label><input required checked class="radio" type="radio" name="existing_dp_account" id="existing_dp_account_yes"> Yes</label>
+                      <label><input required class="radio" type="radio" name="existing_dp_account" id="existing_dp_account_no"> No</label>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+
+              
+
+              <div class="form-input">
+                <h4>DP ID</h4>
+                <div class="mt-05">
+                  <select class="form-control">
+                    <option disabled selected>Select DP Id</option>
+                    <option>DS-795097</option>
+                    <option>DS-795097</option>
+                  </select>
+                </div>
+              </div>
+
+              
+
+              <div class="form-input">
+                <input type="text" class="form-control" name="dp_name" id="dp_name" placeholder="DP Name">
+              </div>
+
+              <div class="form-input">
+                <input type="text" class="form-control" name="dp_Code_id" id="dp_Code_id" placeholder="DP Code / BO ID">
+              </div>
+
+              
+
+              <div class="form-input">
+                <h4>Do you want to Open same Account in DP?</h4>
+                <div class="mt-05 radio-group">
+                  <label><input checked class="radio" type="radio" name="same_account_in_dp" id="same_account_in_dp_yes"> Yes</label>
+                  <label><input class="radio" type="radio" name="same_account_in_dp" id="same_account_in_dp_no"> No</label>                                   
+                </div>
+              </div>
+
+              <div class="form-input">                
+                <h4 >Select DP</h4>
+                  <div class="mt-05">
+                    <select class="form-control">
+                    <option disabled selected>Select DP Id</option>
+                    <option>Samco Securities Limited</option>
+                    <option>5 Paisa Private Limited</option>
+                    <option>Zerodha</option>
+                  </select>
+                  </div>
+              </div>
+
+              
+
+              <div class="form-input">                
+                <h4>POA Flag</h4>
+                  <div class="radio-group mt-05">
+                    <label><input checked class="radio" type="radio" name="poa_flag" id="poa_flag_yes"> Yes</label>
+                    <label><input class="radio" type="radio" name="poa_flag" id="poa_flag_no"> No</label>                                   
+                </div>
+              </div>
+
+              <div class="form-input">
+                <h4>Brokerage Scheme</h4>
+                <div class="mt-05">
+                  <input type="text" class="form-control" name="brokerage_scheme" id="brokerage_scheme" placeholder="Not Applicable">
+                </div>
+              </div>
+            
               
               <div class="form-input">
-                <h4>Date of Birth</h4>
-                <div class="flex-wrap flex-center mt-1">
-                  <div class="dd">
-                    <input type="number" minlength="2" maxlength="2" class="form-control" name="dd" id="dd" placeholder="dd" required="">
-                  </div>
-                  <div class="mm">
-                    <input type="number"  minlength="2" maxlength="2"  class="form-control" name="mm" id="mm" placeholder="mm" required="">
-                  </div>                  
-                  <div class="yyyy">
-                    <input type="number"  minlength="4" maxlength="4"  class="form-control" name="yyyy" id="yyyy" placeholder="yyyy" required="">
-                  </div>
-                </div>
-              </div>
-
-              <div class="form-input">
-                <input type="tel" class="form-control" value="7208707204" name="mobile" id="mobile" placeholder="Mobile" required="">
-                
-                <div class="mt-1 p-relative d-none new-input" id="newMobile">
-                  <input type="tel" class="form-control" name="new_mobile" id="new_mobile" placeholder="Mobile">
-                  <div class="close-input">
-                    <img src="../images/icons/close-icon.svg">
-                  </div>
-                </div>
-                <div class="text-right mt-1 add-new-field">
-                  <button class="btn btn-sucess" id="addNewMobile">Add New</button>
-                </div>
-              </div>
-
-              <div class="form-input">
-                <input type="email" class="form-control" value="sarfaraz.ansari@trustgroup.in" name="email" id="email" placeholder="Email" required="">
-                
-                <div class="mt-1 p-relative d-none new-input" id="newEmail">
-                  <input type="email" class="form-control" name="new_email" id="new_email" placeholder="Email">
-                  <div class="close-input">
-                    <img src="../images/icons/close-icon.svg">
-                  </div>
-                </div>
-                <div class="text-right mt-1 add-new-field">
-                  <button class="btn btn-sucess"  id="addNewEmail">Add New</button>
-                </div>
-              </div>
-
-              <div class="form-input">
-                <h4>Mobile Details</h4>
-                <div class="mt-1 radio-group">
-                  <label><input checked class="radio" type="radio" name="mobile_details" id="m_self"> Self</label>
-                  <label><input class="radio" type="radio" name="mobile_details" id="m_family"> Family</label>
-                  <div class="mt-1 d-none" id="family_mobile_input">
-                    <input type="tel" class="form-control" name="family_mobile" id="family_mobile" placeholder="Mobile" required="">
-                  </div>                  
-                </div>
-              </div>
-
-              <div class="form-input">
-                <h4>Email Details</h4>
-                <div class="mt-1 radio-group">
-                  <label><input checked class="radio" type="radio" name="email_details" id="e_self"> Self</label>
-                  <label><input class="radio" type="radio" name="email_details" id="e_family"> Family</label>
-                </div>
-                <div class="mt-1 d-none" id="family_email_input">
-                    <input type="email" class="form-control" name="family_email" id="family_email" placeholder="Email" required="">
-                  </div>  
-              </div>
-
-
-              <div class="form-input">
-                <h4 class="d-inline-block mr-1">Are you a US Citizen?</h4>
-                <div class="radio-group d-inline-block">
-                  <label><input checked class="radio" type="radio" name="us_citizen" id="us_citizen_no"> No</label>
-                  <label><input class="radio" type="radio" name="us_citizen" id="us_citizen_yes"> Yes</label>                               
-                </div>
-              </div>
-
-              <div class="form-input">     
-                <div class="radio-group">         
-                  <label class="form-check font14">
-                      <input checked="" class="radio" type="checkbox" name="auth_inter_exchange" id="auth_inter_exchange">
-                      <span>Authentication for InterExchange </span>
-                  </label>
-                  <label class="form-check font14">
-                      <input checked class="radio" type="checkbox" name="e_confirmation" id="e_confirmation">
-                      <span>E-Confirmation </span>
-                  </label>
-                  <div class="mt-1">
-                    <label class="form-check font14">
-                      <input checked class="radio" type="checkbox" name="auth_fund_securities" id="auth_fund_securities">
-                      <span>Authentication for Fund Securities </span>
-                    </label>
-                  </div>
-                  <div class="mt-1">
-                    <label class="form-check font14">
-                      <input checked class="radio" type="checkbox" name="terms_condition" id="terms_condition">
-                      <span>
-                        <em>
-                          I hereby give my consent to use my Aadhar / Virtual ID details (as applicable) for the purpose of e-Signing my account opening form. 
-                        </em>
-                      </span>
-                    </label>
-                  </div>
-                  <div class="mt-1">
-                    <ul class="font12 form-list">
-                      <li>
-                        By submitting my PAN, I authorize TRUST GROUP to fetch my data from KYC Registration Agency.
-                      </li>
-                      <li>
-                        Currently this process is applicable only for opening individual trading account and single holder Demat accounts for resident individuals. Soon we shall allow for NRIs and multiple holders in Demat account.
-                      </li>
-                      <li>
-                        Please note that by submitting the above mentioned details, you are authorizing us to Call/SMS you even though you may be registered under DNC. We shall Call/SMS you for a period of 12 months.
-                      </li>
-                    </ul>
-                  </div>
-                </div>    
-              </div>
-
-              <div class="form-input">
-                <a class="btn btn-primary d-block" href="profile-creation.html">NEXT <img class="ml-1" src="../images/aof/arrow-right.svg" /></a>
+                <a class="btn btn-primary d-block" href="nominee-details.html">NEXT <img class="ml-1" src="../images/aof/arrow-right.svg" /></a>
               </div> 
                                   
             </form>
@@ -318,7 +287,7 @@
           </div>
         </div>
         <div class="help-body p-1">
-          <h3 class="brand-color">KYC Check</h3>
+          <h3 class="brand-color">Profile Creation</h3>
           <p class="mt-1"><strong>Input:</strong></p>
           <ul class="help-list mt-1">
             <li>Insert Date of Birth.</li>
@@ -344,46 +313,7 @@
 <script src="../js/jquery.min.js"></script>
 <script src="../js/aof/aof.js"></script>
 
-<script type="text/javascript">
-  $("input[name=mobile_details]").change(function(){
-    let m_family = $(this).attr("id");
-    if(m_family == "m_family"){
-      $("#family_mobile_input").fadeIn();
-      $("#family_mobile").focus();
-    }else{
-      $("#family_mobile_input").hide();
-    }
-  });
 
-  $("input[name=email_details]").change(function(){
-    let m_family = $(this).attr("id");
-    if(m_family == "e_family"){
-      $("#family_email_input").fadeIn();
-      $("#family_email").focus();
-    }else{
-      $("#family_email_input").hide();
-    }
-  });
-
-  $("#addNewMobile").on("click", function(Event){
-    Event.preventDefault()
-    $("#newMobile").fadeIn();
-    $("#new_mobile").focus();
-    $(this).parent(".add-new-field").hide();
-  });
-  $("#addNewEmail").on("click", function(Event){
-    Event.preventDefault()
-    $("#newEmail").fadeIn();
-    $("#new_email").focus();
-    $(this).parent(".add-new-field").hide();
-  });
-
-  $(".close-input").on("click", function(){
-    $(this).parent(".new-input").hide();
-    $(this).parent().siblings(".add-new-field").fadeIn();
-  })
-
-</script>
 
 
 </body>
