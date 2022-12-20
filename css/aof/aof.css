@@ -454,6 +454,10 @@
     background: #ece3d4;
 }
 
+.k-upload .k-upload-files .k-file-name{
+    max-width: 150px;
+}
+
 .k-button span img {
     width: 16px;
     margin-right: 0.8rem;
