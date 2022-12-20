@@ -530,3 +530,38 @@
         margin-bottom: 1rem;
     }
 }
+
+.full-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 999;
+    background: rgb(0 0 0 / 30%);
+    display: flex;
+    align-items: center;
+    text-align: center;    
+}
+
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 5px solid var(--white);
+    border-bottom-color: var(--brand-color);
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    margin: auto;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+} 

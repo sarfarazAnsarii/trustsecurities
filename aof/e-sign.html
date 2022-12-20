@@ -173,25 +173,24 @@
               <div class="form-input text-center m-0">
                 <img class="img-fluid e-sing-document" src="../images/aof/dummy-esign-image.jpg" alt="" />
               </div>
+                <div class="form-input index-btn p-relative overlay-doc">
 
-              <div class="form-input index-btn p-relative overlay-doc">
+                  <div class="text-center mb-2" id="vewDocuemnt">
+                    <button class="btn btn-border white">View</button>
+                  </div>
 
-                <div class="text-center mb-2" id="vewDocuemnt">
-                  <button class="btn btn-border white">View</button>
-                </div>
-
-                <div class="mb-1">
-                  <label class="form-check font14">
-                    <input checked class="radio" type="checkbox" name="terms_condition" id="terms_condition">
-                    <span>
-                      <em>
-                        By continue i agree to e-sign using my Aadhar number 
-                      </em>
-                    </span>
-                  </label>
-                </div>
-                <a class="btn btn-primary d-block" href="kyc-confirmation.html">PROCEED <img class="ml-1" src="../images/aof/arrow-right.svg" /></a>
-              </div> 
+                  <div class="mb-1">
+                    <label class="form-check font14">
+                      <input checked class="radio" type="checkbox" name="terms_condition" id="terms_condition" required>
+                      <span>
+                        <em>
+                          By continue i agree to e-sign using my Aadhar number 
+                        </em>
+                      </span>
+                    </label>
+                  </div>
+                  <button class="btn btn-primary d-block st-open-modal" id="e-sign-modal">Process with e-sign</button>
+                </div> 
             </div>
           </div>
         </div>
@@ -200,6 +199,21 @@
   </div>
 </section>
 
+<div class="st-modal" data-modal="e-sign-modal">
+  <div class="ds-card-box">
+    <div class="square-card">
+      <div class="ds-close">
+        <img src="../images/icons/close-icon.svg">
+      </div>
+      <div class="md-hading b-bottom">
+        <img width="50" height="50" src="../images/aof/check-green.svg" alt="Check icon" />
+        <h3 class="title-2 mt-1" id="dataTitle">E-Sign Sucessfull</h3>   
+        <p>Redirecting to...</p>     
+      </div>
+      
+    </div>
+  </div>
+</div>
 
 <footer class="p-0">
   <div class="copyright mt-2">
@@ -255,6 +269,13 @@
   </div>  
 </div>
 
+<div class="d-none" id="loader">
+  <div class="full-loader">
+    <span class="loader"></span>
+  </div>
+</div>
+
+
 <script src="../js/jquery.min.js"></script>
 <script src="../js/aof/aof.js"></script>
 
@@ -263,6 +284,28 @@
     $(this).parents(".doc-wrapper").removeClass("active");
     $(this).hide();
   });  
+
+
+  $(".st-open-modal").on("click", function () {
+
+    $("#loader").show();
+    var dataModal = $(this).attr("id");
+    setTimeout(function(){
+      $("body").addClass("over-hide");
+      $("body").find('.st-modal[data-modal="' + dataModal + '"]').addClass("active");
+      $("#loader").fadeOut();
+    },5000)
+
+    
+    
+  });
+
+  $(".ds-close").on("click", function () {
+    $(this).parents(".st-modal").removeClass("active");
+    $("body").removeClass("over-hide");
+
+  });
+
 </script>
 
 

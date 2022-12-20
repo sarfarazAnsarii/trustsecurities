@@ -34,4 +34,6 @@ $("#questionMark").on("click", function(){
       $(this).children("img").attr("src", "../images/aof/question-mark.svg");
     }
     $("#answerChatBox").slideToggle("fast");
-  });
+});
+
+
