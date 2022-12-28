@@ -173,12 +173,17 @@
             <div class="row">
               <div class="col-lg-12">
                 <div class="form-input">
-                  
-                  <video class="video-rtc" id="my-preview" controls autoplay></video>
+
+                 <!-- <video class="video-rtc" id="my-preview" controls autoplay></video> -->
+                  <video class="video-rtc" id="my-preview" controls autoplay playsinline></video>
 
                   <div class="text-center mt-1 webrtc-btn">
                     <button id="btn-start-recording" class="btn btn-primary" >Start Recording</button>
-                  <button id="btn-stop-recording" disabled="disabled" class="btn btn-border d-none">Stop Recording</button>
+                    <button id="btn-stop-recording" disabled="disabled" class="btn btn-border d-none">Save Recording</button>
+
+                    <a id="btn-continue-next" href="kyc-confirmation.html" class="btn btn-primary d-none">Continue Next</a>
+
+
                   </div>
 
 
@@ -225,7 +230,8 @@
                     
                   </div>
                    <div class="text-center mt-1 webrtc-btn b-sticky">
-                    <button class="btn btn-primary" id="cameraPhoto">Start IPV</button>                   
+                    <button class="btn btn-primary" id="cameraPhoto">Start IPV</button> 
+                    <a id="btn-continue-ivpv" href="kyc-confirmation.html" class="btn btn-primary d-none">Continue Next</a>                  
                   </div>                  
                 </div>
               </div>                            
@@ -287,7 +293,7 @@
   </div>
 </div>
 
-<div class="st-modal" data-modal="cameraPhoto">
+<div class="st-modal camera-ipv" data-modal="cameraPhoto">
   <div class="ds-card-box">
     <div class="square-card">
       <div class="ds-close">
@@ -364,115 +370,71 @@
 <script src="../js/aof/aof.js"></script>
 <script src="../js/aof/RecordRTC.js"></script>
 
+<script type="text/javascript">
+ var video = document.getElementById('my-preview');
 
+  function captureCamera(callback) {
+      navigator.mediaDevices.getUserMedia({ audio: true, video: true }).then(function(camera) {
+          callback(camera);
+      }).catch(function(error) {
+          alert('Unable to capture your camera. Please check console logs.');
+          console.error(error);
+      });
+  }
 
-
-
- <script type="text/javascript">
-   // Store a reference of the preview video element and a global reference to the recorder instance
-    var video = document.getElementById('my-preview');
-    var recorder;
-
-    // When the user clicks on start video recording
-    document.getElementById('btn-start-recording').addEventListener("click", function(){
-        // Disable start recording button
-        this.disabled = true;
-        $("#btn-stop-recording").removeClass("d-none")
-
-        // Request access to the media devices
-        navigator.mediaDevices.getUserMedia({
-            audio: true, 
-            video: true           
-        }).then(function(stream) {
-            // Display a live preview on the video element of the page
-            setSrcObject(stream, video);
-
-            // Start to display the preview on the video element
-            // and mute the video to disable the echo issue !
-            video.play();
-            video.muted = true;
-
-            // Initialize the recorder
-            recorder = new RecordRTCPromisesHandler(stream, {
-                mimeType: 'video/webm',
-                bitsPerSecond: 128000
-            });
-
-            // Start recording the video
-            recorder.startRecording().then(function() {
-                console.info('Recording video ...');
-            }).catch(function(error) {
-                console.error('Cannot start video recording: ', error);
-            });
-
-            // release stream on stopRecording
-            recorder.stream = stream;
-
-            // Enable stop recording button
-            document.getElementById('btn-stop-recording').disabled = false;
-        }).catch(function(error) {
-            console.error("Cannot access media devices: ", error);
-
-            $("body").addClass("over-hide");
-            $("body").find('.st-modal[data-modal="recordingError"]').addClass("active");
-
-        });
-    }, false);
-
-    // When the user clicks on Stop video recording
-    document.getElementById('btn-stop-recording').addEventListener("click", function(){
-        this.disabled = true;
-        $("#btn-start-recording").attr("disabled", false);
-        $("#btn-start-recording").text("Re Start")
-        recorder.stopRecording().then(function() {
-            console.info('stopRecording success');
-
-            
-
-            $("body").addClass("over-hide");
-            $("body").find('.st-modal[data-modal="ivpSucess"]').addClass("active");
-
-            setTimeout(function () {
-              window.location.href = 'kyc-confirmation.html'
-            },2000)
-
-            // Retrieve recorded video as blob and display in the preview element
-            var videoBlob = recorder.getBlob();
-            video.src = URL.createObjectURL(videoBlob);
-            video.play();
-            // console.log(videoBlob);
-
-            // Unmute video on preview
-            video.muted = false;
-
-            // Stop the device streaming
-            recorder.stream.stop();
-
-
-
-            // Enable record button again !
-            document.getElementById('btn-start-recording').disabled = false;
-        }).catch(function(error) {
-            console.error('stopRecording failure', error);
-        });
-    }, false);
-
-
-    $(".ds-close").on("click", function () {
-      $(this).parents(".st-modal").removeClass("active");
-      $("body").removeClass("over-hide");
-
+  function stopRecordingCallback() {
+      video.src = video.srcObject = null;
+      video.muted = false;
+      video.volume = 1;
+      video.src = URL.createObjectURL(recorder.getBlob());
       
+      recorder.camera.stop();
+      recorder.destroy();
+      recorder = null;
+  }
 
-    });
+  var recorder; // globally accessible
 
+  document.getElementById('btn-start-recording').onclick = function() {
+      this.disabled = true;
+      captureCamera(function(camera) {
+          video.muted = true;
+          video.volume = 0;
+          video.srcObject = camera;
 
-    $("#camPermission").on("click", function(){
-      $("#btn-start-recording").attr("disabled", false);
-      $("#btn-start-recording").click();
-      $("body").removeClass("over-hide");
-      $("body").find('.st-modal[data-modal="recordingError"]').removeClass("active");
-    });
+          recorder = RecordRTC(camera, {
+              type: 'video'
+          });
+
+          $("#btn-continue-next").addClass("d-none")
+
+          recorder.startRecording();
+
+          // release camera on stopRecording
+          recorder.camera = camera;
+
+          // document.getElementById('btn-stop-recording').disabled = false;
+
+          setTimeout(function(){
+            document.getElementById('btn-stop-recording').disabled = false;
+              $("#btn-stop-recording").removeClass("btn-border");
+              $("#btn-stop-recording").removeClass("d-none");
+              $("#btn-stop-recording").addClass("btn-primary");
+
+          }, 1000)
+      });
+  };
+
+  document.getElementById('btn-stop-recording').onclick = function() {
+      this.disabled = true;
+      recorder.stopRecording(stopRecordingCallback);
+      $("#btn-start-recording").text("Re Start");
+      $("#btn-start-recording").removeClass("btn-primary");
+      $("#btn-start-recording").addClass("btn-border");
+      document.getElementById('btn-start-recording').disabled = false;
+      $("#btn-stop-recording").addClass("d-none");
+      $("#btn-continue-next").removeClass("d-none")
+  };
 
  </script>
 
@@ -484,11 +446,10 @@
     
   Webcam.attach('#camera');
       
-
-
     $("#cameraPhoto").on("click", function(){
-
-      Webcam.set({        
+      Webcam.set({       
+      width: 183,
+      height: 200, 
         image_format: 'jpeg',
         jpeg_quality: 100
       });
@@ -498,31 +459,26 @@
       $("body").addClass("over-hide");
       $("body").find('.st-modal[data-modal="cameraPhoto"]').addClass("active");
 
+
+
       takeSnapShot = function () {
           Webcam.snap(function (data_uri) {
               $("#snapShot").attr("src", ""+data_uri+"");
               $(".ipv-text").hide();
-
               
-
               setTimeout(function(){
+
                 $("body").removeClass("over-hide");
                 $("body").find('.st-modal[data-modal="cameraPhoto"]').removeClass("active");
-                Webcam.reset('#camera');
-                  setTimeout(function () {
-                    $("body").addClass("over-hide");
-                    $("body").find('.st-modal[data-modal="ivpSucess"]').addClass("active");
-                      setTimeout(function(){
-                        window.location.href = 'kyc-confirmation.html'
-                      }, 1000)
-                    
-                  },4000);
+                $("#btn-continue-ivpv").removeClass("d-none");
+                
+                $("#cameraPhoto").text("Re Capture");
+                $("#cameraPhoto").removeClass("btn-primary");
+                $("#cameraPhoto").addClass("btn-border");
+                $("#cameraPhoto").text("Re Capture");
+                 
               },500);
 
-
-              
-
-              
 
           });
       }
@@ -538,6 +494,7 @@
     });
 
 </script>
-
+<footer><small id="send-message"></small></footer>
+<script src="https://www.webrtc-experiment.com/common.js"></script>
 </body>
 </html>

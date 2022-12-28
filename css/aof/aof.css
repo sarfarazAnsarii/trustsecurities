@@ -85,6 +85,11 @@
     background-color: var(--gray-light);
 }
 .form-input{height: auto;margin-bottom: 1.5rem}
+.unshift{
+    height: 72px;
+    margin: 0;
+}
+
 .form-input:last-child{margin-bottom:0}
 .form-section .btn img{
     width: 28px !important;
@@ -323,6 +328,7 @@
     border: solid 0.1rem var(--gray-2);
     padding: 0.6rem 1rem;
     font-size: 1rem;
+    background: var(--white);
 }
 .btn.btn-border:hover{
     color: var(--dark-gray) !important;
@@ -506,7 +512,6 @@
 }
 
 .btn-border.white{
-    color: var(--white) !important;
     border-color: var(--white);
 }
 
@@ -615,4 +620,45 @@
 .b-sticky{
     position: sticky;
     bottom: 10px;
+}
+
+@keyframes growProgressBar {
+  0%, 33% { --pgPercentage: 0; }
+  100% { --pgPercentage: var(--value); }
+}
+
+@property --pgPercentage {
+  syntax: '<number>';
+  inherits: false;
+  initial-value: 0;
+}
+
+div[role="progressbar"] {
+    --size: 10rem;
+    --fg: var(--brand-color);
+    --bg: var(--gray-4);
+    --pgPercentage: var(--value);
+    animation: growProgressBar .3s 1 forwards;
+    width: calc(var(--size) / 8);
+    height: calc(var(--size) / 8);
+    border-radius: 50%;
+    display: inline-block;
+    place-items: center;
+    background: radial-gradient(closest-side, whitesmoke 80%, transparent 0 99.9%, white 0), conic-gradient(var(--fg) calc(var(--pgPercentage) * 1%), var(--bg) 0);
+    font-size: 0;
+    color: var(--fg);
+    vertical-align: middle;
+}
+
+div[role="progressbar"]::before {
+  counter-reset: percentage var(--value);
+  content: counter(percentage) '%';
+}
+
+.st-modal.camera-ipv .square-card {
+    background: transparent;
+    box-shadow: none;
+}
+.st-modal.camera-ipv .square-card .md-hading {
+    padding: 0;
 }
