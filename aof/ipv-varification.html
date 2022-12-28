@@ -172,7 +172,7 @@
           <div class="form-section">
             <div class="row">
               <div class="col-lg-12">
-                <div class="form-input">
+                <div class="form-input web-rtc-box">
 
                  <!-- <video class="video-rtc" id="my-preview" controls autoplay></video> -->
                   <video class="video-rtc" id="my-preview" controls autoplay playsinline></video>
@@ -396,6 +396,11 @@
   var recorder; // globally accessible
 
   document.getElementById('btn-start-recording').onclick = function() {
+
+      $(this).parent(".webrtc-btn").addClass("active");
+      $(this).parents(".web-rtc-box").addClass("active");
+
+
       this.disabled = true;
       captureCamera(function(camera) {
           video.muted = true;

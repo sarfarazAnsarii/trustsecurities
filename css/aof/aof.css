@@ -662,3 +662,25 @@ div[role="progressbar"]::before {
 .st-modal.camera-ipv .square-card .md-hading {
     padding: 0;
 }
+
+@media(max-width:575px){
+    .web-rtc-box.active .video-rtc {
+        width: 100%;
+        height: calc(100% - 65px);
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 999;
+        background: #000;
+    }
+    .web-rtc-box.active .webrtc-btn {
+        position: fixed;
+        bottom: 0px;
+        left: 0;
+        right: 0;
+        background: #000;
+        z-index: 9;
+        padding: 9px 0;
+        z-index: 999;
+    }
+}
