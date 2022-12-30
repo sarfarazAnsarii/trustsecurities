@@ -15,6 +15,11 @@
   <link rel="stylesheet" type="text/css" href="../css/style.css">
   <link rel="stylesheet" type="text/css" href="../css/aof/aof.css">
 
+  <!-- datepicker css-->  
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+  
+
   <!-- fave icons -->
   <link rel="apple-touch-icon" sizes="57x57" href="../images/faveicons/apple-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="../images/faveicons/apple-icon-60x60.png">
@@ -590,14 +595,14 @@
                   </div>
                   <div class="form-input">
                     <h4>Proof Issue Date</h4>                    
-                    <div class="mt-1">                      
-                      <input type="date" class="form-control" name="orrespondence_address_proof_issue_date" id="orrespondence_address_proof_issue_date" placeholder="dd-mm-yyyy" value="" min="1997-01-01" max="2022-12-31">
+                    <div class="mt-1">
+                      <input type="text" class="form-control datepicker" name="correspondence_address_proof_issue_date" id="correspondence_address_proof_issue_date" placeholder="dd-mm-yyyy" value="10/24/1984" />
                     </div>
                   </div>
                   <div class="form-input">
                     <h4>Proof Expiry Date</h4>                    
                     <div class="mt-1">                      
-                      <input type="date" class="form-control" name="orrespondence_address_proof_expiry_date" id="orrespondence_address_proof_expiry_date" placeholder="dd-mm-yyyy" value="" min="1997-01-01" max="2050-12-31" />
+                      <input type="text" class="form-control datepicker" name="correspondence_address_proof_expiry_date" id="correspondence_address_proof_expiry_date" placeholder="dd-mm-yyyy" value="10/24/1984" />
                     </div>
                   </div>
                 </div>
@@ -914,13 +919,13 @@
                   <div class="form-input">
                     <h4>Proof Issue Date</h4>                    
                     <div class="mt-1">                      
-                      <input type="date" class="form-control" name="permanent_address_proof_issue_date" id="permanent_address_proof_issue_date" placeholder="dd-mm-yyyy" value="" min="1997-01-01" max="2022-12-31">
+                      <input type="text" class="form-control datepicker" name="permanent_address_proof_issue_date" id="permanent_address_proof_issue_date" value="10/24/1984">
                     </div>
                   </div>
                   <div class="form-input">
                     <h4>Proof Expiry Date</h4>                    
                     <div class="mt-1">                      
-                      <input type="date" class="form-control" name="permanent_address_proof_expiry_date" id="permanent_address_proof_expiry_date" placeholder="dd-mm-yyyy" value="" min="1997-01-01" max="2050-12-31" />
+                      <input type="text" class="form-control datepicker" name="permanent_address_proof_issue_date" id="permanent_address_proof_issue_date" value="10/24/1984">
                     </div>
                   </div>
                 </div>
@@ -997,6 +1002,23 @@
 
 <script src="../js/jquery.min.js"></script>
 <script src="../js/aof/aof.js"></script>
+
+<!-- datepicker js -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+  
+  <script>
+  $(function() {
+    $('.datepicker').daterangepicker({
+        singleDatePicker: true,
+        showDropdowns: true,
+        minYear: 1901,
+        "autoApply": true,
+         "showISOWeekNumbers": true
+    });
+  });
+  </script>
+
 
 <script type="text/javascript">
   

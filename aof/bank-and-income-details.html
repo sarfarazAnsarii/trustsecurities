@@ -15,6 +15,9 @@
   <link rel="stylesheet" type="text/css" href="../css/style.css">
   <link rel="stylesheet" type="text/css" href="../css/aof/aof.css">
 
+  <!-- datepicker css-->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
   <!-- fave icons -->
   <link rel="apple-touch-icon" sizes="57x57" href="../images/faveicons/apple-icon-57x57.png">
   <link rel="apple-touch-icon" sizes="60x60" href="../images/faveicons/apple-icon-60x60.png">
@@ -200,7 +203,7 @@
               <div class="form-input">
                 <h4>Income / Net worth Date</h4>
                 <div class="mt-05">
-                  <input type="date" class="form-control" name="net_worth_date" id="net_worth_date" placeholder="dd-mm-yyyy" min="1997-01-01" max="2022-12-31" placeholder="Annual Income">
+                  <input type="text" class="form-control datepicker" name="permanent_address_proof_issue_date" id="permanent_address_proof_issue_date" value="10/24/1984">
                 </div>
               </div>
 
@@ -229,7 +232,7 @@
               <div class="form-input">
                 <h4>Declaration Date</h4>
                 <div class="mt-05">
-                  <input type="date" class="form-control" name="declaration_date" id="declaration_date" placeholder="dd-mm-yyyy" min="1997-01-01" max="2022-12-31" placeholder="Annual Income">
+                  <input type="text" class="form-control datepicker" name="permanent_address_proof_issue_date" id="permanent_address_proof_issue_date" value="10/24/1984">
                 </div>
               </div>
 
@@ -377,6 +380,23 @@
 <script src="../js/jquery.min.js"></script>
 <script src="../js/aof/aof.js"></script>
 
+<!-- datepicker js -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+
+
+
+  <script>
+  $(function() {
+    $('.datepicker').daterangepicker({
+        singleDatePicker: true,
+        showDropdowns: true,
+        minYear: 1901,
+        "autoApply": true,
+         "showISOWeekNumbers": true
+    });
+  });
+  </script>
 
 
 </body>

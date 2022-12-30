@@ -94,6 +94,17 @@
 .form-section .btn img{
     width: 28px !important;
 }
+
+.datepicker {
+    background: url(../../images/aof/calendar-icon.png) no-repeat 96% 15px;
+    background-size: 13px;
+    background-color: var(--gray-light);
+}
+
+.daterangepicker td.active{
+    background-color: var(--brand-color) !important;
+}
+
 .btn:hover img {
     filter: none;
 }
