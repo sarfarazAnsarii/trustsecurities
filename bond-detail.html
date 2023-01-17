@@ -156,9 +156,9 @@
                 </li>
                 <li>
                   ISIN 
-                  <span class="info-tag ml-02">INE0M2307032</span>
-                  <span class="copy-item ml-02">
-                    <img src="images/icons/copy-icon.svg" alt="copy">
+                  <span class="info-tag ml-02" id="isinNumber">INE0M2307032</span>
+                  <span class="ml-02 p-relative tooltip-wrap" id="copyTetx">
+                    <img tooltip="Copy" src="images/icons/copy-icon.svg" class="copy-item tooltip">
                   </span>
                 </li>
               </ul>
@@ -217,13 +217,13 @@
                     <div class="col-lg-6 col-sm-6">
                       <div class="unit-box">
                         <div class="flex-wrap flex-center">
-                          <div class="plus" id="plus">
+                          <div class="plus" id="plusUnits">
                             <img src="images/icons/plus-icon.svg" alt="plus">
                           </div>
                           <div class="total-units title-2">
-                            <span>11</span> Units
+                            <span id="units">4</span> Units
                           </div>
-                          <div class="minus" id="minus">
+                          <div class="minus" id="minusUnits">
                             <img src="images/icons/minus-icon.svg" alt="plus">
                           </div>
                         </div>
@@ -954,6 +954,60 @@
     $(".owl-slider .owl-next").html('<img class="img-fluid" src="images/icons/arrow-right-icon.svg" />');
 
  </script>   
+
+
+
+ <script type="text/javascript">
+    
+
+    var units = 4;
+
+    $("#plusUnits").on("click", function(){
+      units++;      
+      $("#units").text(units);
+    });
+    $("#minusUnits").on("click", function(){
+      if (units > 0) {
+        units--;
+      }
+      $("#units").text(units);
+    });
+
+
+    $("#copyTetx").on("click", function(){
+
+      var text = $("#isinNumber").text();
+      var input = document.createElement("input");
+
+      input.setAttribute("value", text);
+      document.body.appendChild(input);
+      input.select();
+      document.execCommand("copy");
+      document.body.removeChild(input);
+      // alert("Text copied: " + text);
+
+      $(this).children(".tipdata").text("Copied")
+      
+    });
+
+    // function toolTip() {
+    //   let tText =  $(this).attr("title");
+    //   console.log(tText);
+    // }
+
+    $(".tooltip").mouseover(function(){
+      let tText =  $(this).attr("tooltip");
+      $(this).parent().append('<div class="tipdata">'+tText+'</div>');
+    })
+
+    $(".tooltip").mouseleave(function(){              
+        $(this).parent(".tooltip-wrap").find(".tipdata").remove();
+    })
+
+
+
+
+ </script>
 
 </body>
 </html>
