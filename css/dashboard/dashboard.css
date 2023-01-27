@@ -75,6 +75,9 @@
     font-size: 1rem;
     font-weight: 600;
 }
+
+
+
 .logo-icon{display: none;}
 
 
@@ -106,6 +109,8 @@
     padding-left: 55px;
 }
 
+
+
 .toggle-btn{display: none;}
 .name-text {
     width: 125px;
@@ -126,6 +131,7 @@
 .ds-drop-down-list li a{
     padding: 0.3rem 1rem 0.3rem 3.5rem;
 }
+
 
 @media(max-width:992px){
     .ds-search{display: none;}
