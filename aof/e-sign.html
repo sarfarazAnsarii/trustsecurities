@@ -290,9 +290,11 @@
     $("#loader").show();
     var dataModal = $(this).attr("id");
     setTimeout(function(){
-      $("body").addClass("over-hide");
-      $("body").find('.st-modal[data-modal="' + dataModal + '"]').addClass("active");
+      // $("body").addClass("over-hide");
+      // $("body").find('.st-modal[data-modal="' + dataModal + '"]').addClass("active");
       $("#loader").fadeOut();
+      window.location.href = 'thank-you.html';
+
     },5000)
 
     
