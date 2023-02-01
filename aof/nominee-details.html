@@ -506,7 +506,8 @@
   });
 
 
-  $("body .nominee_proof_document").change(function(){    
+  $(document).on("change", ".nominee_proof_document", function(){
+    // alert();
     let nominee_proof_document = $(this).val();
     // console.log(nominee_proof_document);
 
