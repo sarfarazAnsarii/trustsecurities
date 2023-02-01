@@ -334,6 +334,7 @@
     border-radius: 0.5rem;
     border: 1px solid var(--gray-2);
     padding: 1.5rem;
+    background: var(--gray-light);
 }
 .btn.btn-border{
     border: solid 0.1rem var(--gray-2);
@@ -492,6 +493,10 @@
     border: solid 0.1rem var(--gray-3);
     cursor: default;
     color: var(--gray-3) !important;
+}
+
+.btn-default {
+    color: var(--brand-color) !important;
 }
 
 

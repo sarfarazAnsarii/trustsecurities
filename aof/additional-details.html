@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Trading Segment | Trust Securities</title>
+  <title>Additional Details | Trust Securities</title>
   <meta name="robots" content="noindex,nofollow">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">  
@@ -14,6 +14,11 @@
   <!-- Css style -->
   <link rel="stylesheet" type="text/css" href="../css/style.css">
   <link rel="stylesheet" type="text/css" href="../css/aof/aof.css">
+
+  <!-- datepicker css-->  
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+  
 
   <!-- fave icons -->
   <link rel="apple-touch-icon" sizes="57x57" href="../images/faveicons/apple-icon-57x57.png">
@@ -110,15 +115,15 @@
       <div class="col-lg-6 m-auto">
         <div class="flex-wrap flex-center">
           <div class="back-page">
-            <a href="bank-and-income-details.html" class="btn btn-border"><img src="../images/aof/back-arrow.svg"> Back</a>
+            <a href="trading-segment.html" class="btn btn-border"><img src="../images/aof/back-arrow.svg"> Back</a>
           </div>
           <div class="font14 ml-auto">
-            Steps: 3 - 7 <span class="light-gray-color m-lr-1"> | </span> 42% <span class="circle-loader ml-1"></span>
+            Steps: 2 - 7 <span class="light-gray-color m-lr-1"> | </span> 28% <span class="circle-loader ml-1"></span>
           </div>
         </div>
         <div class="bonds-card p-20 mt-1">          
           <div>
-            <h3 class="title-3">Trading Segment  
+            <h3 class="title-3">Additional Details 
               <div class="info-item" id="stepsList">
                 <img class="info" src="../images/aof/info.svg" />
               </div>
@@ -134,11 +139,11 @@
                     <h4>Profile Creation</h4>
                     <span>Enter profile Details for next step</span>
                   </li>
-                  <li class="active">
+                  <li>
                     <h4>Bank and Icome Details</h4>
                     <span>Enter Bank and Income Details for bank verification</span>
                   </li>
-                  <li class="active">
+                  <li>
                     <h4>Trading Segment</h4>
                     <span>Please verify all blank fields </span>
                   </li>
@@ -153,96 +158,88 @@
           </div>
           <div class="form-section">
             <form>
-              
+
               
 
               <div class="form-input">
-                <h4>Segment Type</h4>
-                <div class="mt-1 radio-group">
-                  <label><input required checked class="radio" type="radio" name="segment_type" id="NSCCL"> NSCCL</label>
-                  <label><input required class="radio" type="radio" name="segment_type" id="ICCL"> ICCL</label>                                   
-                </div>
-              </div>
-
-              <!-- <div class="form-input">
-                <h4 class="brand-color">Existing DP Details</h4>
-                <div class="mt-1">
-                  <h4>Do you have Existing Account in DP?</h4>
-                  <div class="mt-05">
-                    <div class="radio-group">
-                      <label><input required checked class="radio" type="radio" name="existing_dp_account" id="existing_dp_account_yes"> Yes</label>
-                      <label><input required class="radio" type="radio" name="existing_dp_account" id="existing_dp_account_no"> No</label>
-                    </div>
+                <h4>Status</h4>
+                <div class="border-box mt-1">
+                  <div class="form-input">
+                    
+                      <div class="radio-group">
+                        <label class="d-block"><input checked class="radio" type="radio" name="status" id="residentIndividual"> Resident Individual</label>
+                        <label class="d-block mt-05"><input class="radio" type="radio" name="status" id="nonResidentIndividual"> Non Resident Individual</label> 
+                        <label class="d-block mt-05"><input class="radio" type="radio" name="status" id="foreignNational"> Foreign National</label>                                   
+                      </div>
                   </div>
                 </div>
                 
-              </div> -->
-
-              
+              </div>
 
               <div class="form-input">
-                <h4>DP ID</h4>
-                <div class="mt-05">
-                  <select class="form-control">
-                    <option disabled selected>Select DP Id</option>
-                    <option>DS-795097</option>
-                    <option>DS-795097</option>
+                <h4>Nationality</h4>
+                <div class="mt-1">
+                  <select class="form-control" id="nationality">
+                    <option selected disabled>Select Nationality</option>
+                    <option value="indian">Indian</option>
+                    <option value="other">Other</option>                    
                   </select>
                 </div>
-              </div>
-
-              
-
-              <div class="form-input">
-                <input type="text" class="form-control" name="dp_name" id="dp_name" placeholder="DP Name">
-              </div>
-
-              <div class="form-input">
-                <input type="text" class="form-control" name="dp_Code_id" id="dp_Code_id" placeholder="DP Code / BO ID">
-              </div>
-
-              
-
-              <!-- <div class="form-input">
-                <h4>Do you want to Open same Account in DP?</h4>
-                <div class="mt-05 radio-group">
-                  <label><input checked class="radio" type="radio" name="same_account_in_dp" id="same_account_in_dp_yes"> Yes</label>
-                  <label><input class="radio" type="radio" name="same_account_in_dp" id="same_account_in_dp_no"> No</label>                                   
+                <div class="mt-1 d-none" id="nationality_other_box">
+                  <input type="text" class="form-control pan_name" name="nationality_other" id="nationality_other" placeholder="Other Nationality">
                 </div>
               </div>
 
-              <div class="form-input">                
-                <h4 >Select DP</h4>
-                  <div class="mt-05">
-                    <select class="form-control">
-                    <option disabled selected>Select DP Id</option>
-                    <option>Samco Securities Limited</option>
-                    <option>5 Paisa Private Limited</option>
-                    <option>Zerodha</option>
+              <div class="form-input">
+                <h4>Marital status</h4>
+                <div class="mt-1 radio-group">
+                  <label><input checked class="radio" type="radio" name="marital-status" id="marital_married"> Married</label>
+                  <label><input class="radio" type="radio" name="marital-status" id="marital_single"> Single</label>                                   
+                </div>
+              </div>
+
+              <div class="form-input">
+                <h4>Gross Annual Income</h4>
+                <div class="mt-1">
+                  <select class="form-control" id="annualincome">
+                    <option selected disabled>Select Gross Annual Income</option>
+                    <option value="1 Lac">Below 1 Lac</option>
+                    <option value="1-5 Lacs">1-5 Lacs</option>                
+                    <option value="5-10 Lacs">5-10 Lacs</option>                
+                    <option value="10-25 Lacs">10-25 Lacs</option>                
+                    <option value="25-50 Lacs">25-50 Lacs</option>                
+                    <option value="50 Lacs-1 Cr">50 Lacs-1 Cr</option>              
+                    <option value="50 Lacs-1 Cr">More than 1 Cr</option>              
                   </select>
-                  </div>
-              </div>
-
-              
-
-              <div class="form-input">                
-                <h4>POA Flag</h4>
-                  <div class="radio-group mt-05">
-                    <label><input checked class="radio" type="radio" name="poa_flag" id="poa_flag_yes"> Yes</label>
-                    <label><input class="radio" type="radio" name="poa_flag" id="poa_flag_no"> No</label>                                   
+                </div>
+                <div class="mt-1 d-none" id="nationality_other_box">
+                  <input type="text" class="form-control pan_name" name="nationality_other" id="nationality_other" placeholder="Other Nationality">
                 </div>
               </div>
 
               <div class="form-input">
-                <h4>Brokerage Scheme</h4>
-                <div class="mt-05">
-                  <input type="text" class="form-control" name="brokerage_scheme" id="brokerage_scheme" placeholder="Not Applicable">
+                <h4>Please tick, if applicable</h4>
+                <div class="mt-1 radio-group">
+                  <label><input class="radio" type="radio" name="applicable_pep_rpep" id="PEP_applicable"> PEP</label>
+                  <label><input class="radio" type="radio" name="applicable_pep_rpep" id="RPEP_applicable"> RPEP</label>                                   
                 </div>
-              </div> -->
-            
+              </div>
+
+              <div class="form-input">
+                <input type="text" class="form-control" name="net_worth_details" id="net_worth_details" placeholder="Net worth Details">
+              </div>
+
+              <div class="form-input">
+                <h4>Income / Net worth Date</h4>
+                <div class="mt-05">
+                  <input type="text" class="form-control datepicker" name="permanent_address_proof_issue_date" id="permanent_address_proof_issue_date" placeholder="Enter Date" value="">
+                </div>
+              </div>
+
+              
               
               <div class="form-input b-sticky">
-                <a class="btn btn-primary d-block" href="additional-details.html">NEXT <img class="ml-1" src="../images/aof/arrow-right.svg" /></a>
+                <a class="btn btn-primary d-block" href="nominee-details.html">NEXT <img class="ml-1" src="../images/aof/arrow-right.svg" /></a>
               </div> 
                                   
             </form>
@@ -313,7 +310,58 @@
 <script src="../js/jquery.min.js"></script>
 <script src="../js/aof/aof.js"></script>
 
+<!-- datepicker js -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
 
+
+
+  <script>
+  $(function() {
+    $('.datepicker').daterangepicker({
+       
+        singleDatePicker: true,        
+        autoApply:false,
+        // autoclose: true,
+        format: 'dd-mm-yyyy'
+      
+    });
+  });
+
+  $(document).ready(function(){
+    $(".datepicker").val("");
+  })
+
+  
+
+  </script>
+
+
+<script type="text/javascript">
+  
+  
+
+  $("#nationality").change(function(){
+    let nationality = $(this).val();
+    if(nationality == "other"){
+      $("#nationality_other_box").fadeIn();
+      $("#nationality_other").focus();
+    }else{
+      $("#nationality_other_box").hide();
+    }
+  });
+
+  $("#occupation").change(function(){
+    let occupation = $(this).val();
+    if(occupation == "other"){
+      $("#occupation_other_box").fadeIn();
+      $("#occupation_other").focus();
+    }else{
+      $("#occupation_other_box").hide();
+    }
+  });
+
+</script>
 
 
 </body>

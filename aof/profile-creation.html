@@ -162,8 +162,8 @@
                 <h4>Address Proof</h4>
                 <div class="mt-1">
                   <select class="form-control">
-                    <option selected disabled>Select Proof</option>
-                    <option>Aadhar Card</option>
+                    <option disabled>Select Proof</option>
+                    <option selected>Aadhar Card</option>
                     <option>Election Commission ID Card</option>
                     <option>Driving License</option>
                     <option>Passport</option>
@@ -175,78 +175,7 @@
                 <input type="text" class="form-control" name="new_id_address" id="new_id_address" placeholder="Address Proof ID">
               </div>
 
-              <div class="form-input">
-                <h4>Title</h4>
-                <div class="mt-1 radio-group">
-                  <label><input checked class="radio" type="radio" name="name_title" id="title_mr"> Mr.</label>
-                  <label><input class="radio" type="radio" name="name_title" id="title_mrs"> Mrs.</label>                                   
-                </div>
-              </div>
-
-              <div class="form-input">
-                <input type="text" class="form-control pan_name" name="first_name" id="first_name" placeholder="First Name">
-              </div>
-
-              <div class="form-input">
-                <input type="text" class="form-control pan_name" name="middle_name" id="middle_name" placeholder="Middle Name">
-              </div>
-
-              <div class="form-input">
-                <input type="text" class="form-control pan_name" name="last_name" id="last_name" placeholder="Last Name">
-              </div>
-
-              <div class="form-input d-none" id="pan_name_area">
-                <h4>Your Name As per PAN</h4>
-                <p class="form-control mt-1 brand-color">
-                  <strong><span id="pan_first_name"></span> <span id="pan_middle_name"></span> <span id="pan_last_name"></span> </strong>
-                </p>                
-              </div>
-
-              <div class="form-input">
-                <div class="border-box">
-                  <div class="form-input">
-                    <h4>Relation Type</h4>
-                    <div class="mt-05">
-                      <select class="form-control">
-                        <option selected disabled>Select Relation</option>
-                        <option>Father</option>
-                        <option>Spouse</option>
-                        <option>Mother</option>
-                        <option>Son</option>
-                      </select>
-                    </div>
-                  </div>
-                  <div class="form-input">
-                    <h4>Title</h4>
-                    <div class="mt-1 radio-group">
-                      <label><input checked class="radio" type="radio" name="relation_name_title" id="relation_title_mr"> Mr.</label>
-                      <label><input class="radio" type="radio" name="relation_name_title" id="relation_title_mrs"> Mrs.</label>                                   
-                    </div>
-                  </div>
-                  <div class="form-input">
-                    <input type="text" class="form-control pan_name" name="spouse_and_father_name" id="spouse_and_father_name" placeholder="Spouse/Father Name">
-                  </div>
-                  <div class="form-input">
-                    <input type="text" class="form-control pan_name" name="mother_name" id="mother_name" placeholder="Mother Full Name">
-                  </div>
-                </div>
-              </div>
-
-              <div class="form-input">
-                <h4>Gender</h4>
-                <div class="mt-1 radio-group">
-                  <label><input checked class="radio" type="radio" name="gender" id="gen_male"> Male</label>
-                  <label><input class="radio" type="radio" name="gender" id="gen_female"> Female</label>                                   
-                </div>
-              </div>
-
-              <div class="form-input">
-                <h4>Marital status</h4>
-                <div class="mt-1 radio-group">
-                  <label><input checked class="radio" type="radio" name="marital-status" id="marital_married"> Married</label>
-                  <label><input class="radio" type="radio" name="marital-status" id="marital_single"> Single</label>                                   
-                </div>
-              </div>
+              <!----Fileds move to kyc-check---->
 
               <div class="form-input">
                 <h4>Nationality</h4>
@@ -593,7 +522,7 @@
                       <option value="AO">Kolhapur</option>                      
                     </select>
                   </div>
-                  <div class="form-input">
+               <!--    <div class="form-input">
                     <h4>Proof Issue Date</h4>                    
                     <div class="mt-1">
                       <input type="text" class="form-control datepicker" name="correspondence_address_proof_issue_date" id="correspondence_address_proof_issue_date" placeholder="dd-mm-yyyy" value="10/24/1984" />
@@ -604,7 +533,7 @@
                     <div class="mt-1">                      
                       <input type="text" class="form-control datepicker" name="correspondence_address_proof_expiry_date" id="correspondence_address_proof_expiry_date" placeholder="dd-mm-yyyy" value="10/24/1984" />
                     </div>
-                  </div>
+                  </div> -->
                 </div>
               </div>
 
@@ -916,18 +845,7 @@
                       <option value="AO">Kolhapur</option>                      
                     </select>
                   </div>
-                  <div class="form-input">
-                    <h4>Proof Issue Date</h4>                    
-                    <div class="mt-1">                      
-                      <input type="text" class="form-control datepicker" name="permanent_address_proof_issue_date" id="permanent_address_proof_issue_date" value="10/24/1984">
-                    </div>
-                  </div>
-                  <div class="form-input">
-                    <h4>Proof Expiry Date</h4>                    
-                    <div class="mt-1">                      
-                      <input type="text" class="form-control datepicker" name="permanent_address_proof_issue_date" id="permanent_address_proof_issue_date" value="10/24/1984">
-                    </div>
-                  </div>
+                  
                 </div>
               </div>
               
@@ -1022,32 +940,7 @@
 
 <script type="text/javascript">
   
-  $("#first_name").on("input", function(){
-    $("#pan_first_name").text($(this).val());
-
-    if($(this).val()==''){
-      $("#pan_name_area").hide();
-    }else{
-      $("#pan_name_area").show();
-    }
-
-  });
-  $("#middle_name").on("input", function(){
-    $("#pan_middle_name").text($(this).val());
-    if($(this).val()==''){
-      $("#pan_name_area").hide();
-    }else{
-      $("#pan_name_area").show();
-    }
-  });
-  $("#last_name").on("input", function(){
-    $("#pan_last_name").text($(this).val());
-    if($(this).val()==''){
-      $("#pan_name_area").hide();
-    }else{
-      $("#pan_name_area").show();
-    }
-  });
+  
 
   $("#nationality").change(function(){
     let nationality = $(this).val();

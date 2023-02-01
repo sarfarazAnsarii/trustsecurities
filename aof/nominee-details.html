@@ -113,7 +113,7 @@
       <div class="col-lg-6 m-auto">
         <div class="flex-wrap flex-center">
           <div class="back-page">
-            <a href="trading-segment.html" class="btn btn-border"><img src="../images/aof/back-arrow.svg"> Back</a>
+            <a href="additional-details.html" class="btn btn-border"><img src="../images/aof/back-arrow.svg"> Back</a>
           </div>
           <div class="font14 ml-auto">
             Steps: 3 - 7 <span class="light-gray-color m-lr-1"> | </span> 42% <span class="circle-loader ml-1"></span>
@@ -255,6 +255,81 @@
                     </div>
                   </div>
                 </div>
+                <div class="form-input nominee_upload_box">
+                  <div class="form-input">
+                    <h4>Nominee Identification details</h4>
+                    <div class="mt-1">
+                      <select class="form-control nominee_proof_document" id="nominee_proof_document">
+                        <option selected disabled>Select Nominee Identification details</option>
+                        <option>Photograph & Signature</option>
+                        <option>PAN Card</option>                
+                        <option>Aadhaar Card</option>                
+                        <option>Saving Bank account No.</option>                
+                        <option>Proof of Identity</option>                
+                        <option>Demat Account ID</option>                       
+                      </select>
+                    </div>  
+                  </div> 
+                  <div class="form-input d-none nominee_proof_upload">
+                    <h4>Nominee Proof</h4>
+                    <p class="font14 document-name">Photograph and Signature</p>
+                    <div class="upload-single-wrapper p-relative mt-1">
+                      <div class="border-dotted text-center p-20">
+                        <img src="../images/aof/image-icon.svg" alt="Image icon">
+                        <div class="mt-1">
+                          <h4>Drop your image here, or <span class="brand-color">Browse</span>
+                          </h4>
+                          <p class="font12 light-gray-color">Supports: JPG, JPEG2000, PNG, PDF</p>
+                        </div>
+                        <input class="upload-input" id="uploadInput" type="file" name="upload_nominee_proof">
+                        <div class="upload-check d-none updCheck" id="updCheck">
+                          <div class="flex-wrap flex-center">
+                            <div class="flex-wrap flex-center">
+                              <img src="../images/aof/check-mark.svg" alt="Check Maek">
+                              <div class="upd-text ml-1 uploadPath">image 001.jpg</div>
+                            </div>
+                            <div class="delete pointer ml-auto deleteUpload">
+                              <img src="../images/aof/dustbin.svg" alt="Dustbin">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>               
+                </div>
+                <div class="form-input">
+                  <input type="email" class="form-control nominee-share" id="nominee_share_per" name="nominee_share_per" placeholder="% of Shares">
+                  <div class="text-right mt-05">
+                    <ul class="shar_per">
+                      <li>25%</li>
+                      <li>50%</li>
+                      <li>75%</li>
+                      <li>100%</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="form-input">
+                  <h4>Relation with the applicant</h4>
+                  <div class="mt-05">
+                    <select class="form-control">
+                      <option selected="" disabled="">Select Relation</option>
+                      <option>Father</option>
+                      <option>Spouse</option>
+                      <option>Mother</option>
+                      <option>Son</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-input">
+                  <input type="tel" class="form-control" name="nominee_tell_number" id="nominee_tell_number" placeholder="Mobile / Telephone no of nominee ">
+                </div>
+
+                <div class="form-input">
+                  <input type="tel" class="form-control" name="nominee_email_id" id="nominee_email_id" placeholder="Email Id of nominee ">
+                </div>
+                
                 <div class="form-input minominee-box">
                   <div class="form-input">
                     <div class="mt-1">
@@ -268,25 +343,23 @@
                       </label>
                     </div>
                   </div>
-                  <div class="form-input minor-nominee-data"></div>                  
-                </div>
-
-                <div class="form-input">
-                  <div class="more-nominee-wrapper" id="moreNomineeList">
-                    
+                  <div class="form-input minor-nominee-data">
+                   
                   </div>
-                  <div class="alert text-center mt-1" id="moreNomineeAlert">Only Three Nominees are allowed</div>
-                </div>
 
-                <div class="form-input">
-                  <div class="bg-light-brand p-1 text-center">
-                    <button class="btn btn-border" id="add_more_nominee">+ Add more Nominee</button>
+                  <div class="form-input">
+                    <div class="more-nominee-wrapper" id="moreNomineeList">
+                      
+                    </div>
+                    <div class="alert text-center mt-1" id="moreNomineeAlert">Only Three Nominees are allowed</div>
+                  </div>
+
+                  <div class="form-input">
+                    <div class="bg-light-brand p-1 text-center">
+                      <button class="btn btn-border" id="add_more_nominee">+ Add more Nominee</button>
+                    </div>
                   </div>
                 </div>
-
-
-
-              </div>
               
               <div class="form-input b-sticky">
                 <a class="btn btn-primary d-block" href="document-upload.html">NEXT <img class="ml-1" src="../images/aof/arrow-right.svg" /></a>
@@ -384,7 +457,7 @@
 
   $(document).on("change",".minor_niminee", function(){
     if($(this).prop("checked")==true){
-      $(this).parents(".minominee-box").find(".minor-nominee-data").html('<div class="form-input mt-1"><div class="form-input"><h4>Set Up Date</h4><div class="mt-05"><input type="text" class="form-control datepicker" id="nominee_setup_date" name="nominee_setup_date" value="10/24/1984"></div></div><div class="form-input"><input type="tel" class="form-control" id="nominee_mobile_number" name="nominee_mobile_number" placeholder="Mobile Number"></div><div class="form-input"><input type="email" class="form-control" id="nominee_email_id" name="nominee_email_id" placeholder="Email Id"></div><div class="form-input"><h4>Relationship</h4><div class="mt-05"><select class="form-control"><option selected disabled>Select Relation</option><option>Father</option><option>Spouse</option><option>Mother</option><option>Son</option></select></div></div><div class="form-input">  <h4>Residual Flag</h4><div class="radio-group mt-05"><label><input required class="radio" type="radio" name="nominee_residual_flag" id="nominee_residual_flag_yes"> Yes</label><label><input required checked class="radio" type="radio" name="nominee_residual_flag" id="nominee_residual_flag_no"> No</label></div></div><div class="form-input"><input type="email" class="form-control" id="nominee_uid" name="nominee_uid" placeholder="UID"></div><div class="form-input"><input type="email" class="form-control" id="nominee_vid" name="nominee_vid" placeholder="VID"></div><div class="form-input"><input type="email" class="form-control nominee-share" id="nominee_share_per" name="nominee_share_per" placeholder="% of Shares"><div class="text-right mt-05"><ul class="shar_per"><li>25%</li><li>50%</li><li>75%</li><li>100%</li></ul></div></div><div class="form-input"><div class="form-input"><h4>Nominee Proof</h4><p class="font14 light-gray-color">Photograph and Signature</p><div class="upload-single-wrapper p-relative mt-1"><div class="border-dotted text-center p-20"><img src="../images/aof/image-icon.svg" alt="Image icon" /><div class="mt-1"><h4>Drop your image here, or <span class="brand-color">Browse</span></h4><p class="font12 light-gray-color">Supports: JPG, JPEG2000, PNG, PDF</p></div><input class="upload-input" id="uploadInput" type="file" name="upload_nominee_proof" id="upload_nominee_proof"><div class="upload-check d-none updCheck" id="updCheck"><div class="flex-wrap flex-center"><div class="flex-wrap flex-center"><img src="../images/aof/check-mark.svg" alt="Check Maek" /><div class="upd-text ml-1 uploadPath">image 001.jpg</div></div><div class="delete pointer ml-auto deleteUpload"><img src="../images/aof/dustbin.svg" alt="Dustbin" /></div></div></div></div></div></div><div class="form-input"><h4 class="brand-color">Nominee Guardian Details</h4><div class="mt-1"><h4>Title</h4><div class="mt-05"><div class="radio-group mt-05"><label><input required class="radio" type="radio" name="ominee_guardian_title" id="nominee_guardian_title_mr"> Mr.</label><label><input required checked class="radio" type="radio" name="ominee_guardian_title" id="nominee_guardian_title_mrs"> Mr.</label></div></div></div></div><div class="form-input"><input type="text" class="form-control" name="nominee_guardian_first_name" id="nominee_guardian_first_name" placeholder="First Name"></div><div class="form-input"><input type="text" class="form-control" name="nominee_guardian_middle_name" id="nominee_guardian_middle_name" placeholder="Middle Name"></div><div class="form-input"><input type="text" class="form-control" name="nominee_guardian_last_name" id="nominee_guardian_last_name" placeholder="Last Name"></div><div class="form-input"><input type="text" class="form-control" name="nominee_guardian_address_1" id="nominee_guardian_address_1" placeholder="Address 1"></div><div class="form-input"><input type="text" class="form-control" name="nominee_guardian_address_2" id="nominee_guardian_address_2" placeholder="Address 2"></div><div class="form-input"><input type="text" class="form-control" name="nominee_guardian_address_3" id="nominee_guardian_address_3" placeholder="Address 3"></div><div class="form-input"><select class="form-control mt-05"><option selected disabled>Select Country</option><option value="AF">Afghanistan</option><option value="AX">Aland Islands</option><option value="AL">Albania</option><option value="DZ">Algeria</option><option value="AS">American Samoa</option><option value="AD">Andorra</option><option value="AO">Angola</option><option value="AI">Anguilla</option><option value="AQ">Antarctica</option><option value="AG">Antigua and Barbuda</option><option value="ZM">Zambia</option><option value="ZW">Zimbabwe</option></select></div><div class="form-input"><select class="form-control mt-05"><option selected disabled>Select State</option><option value="AF">Andhra Pradesh</option><option value="AX">Arunachal Pradesh</option><option value="AL">Assam</option><option value="DZ">Bihar</option><option value="AS">Chhattisgarh</option><option value="AD">Goa</option><option value="AO">Gujarat</option>                      </select></div><div class="form-input"><select class="form-control mt-05"><option selected disabled>Select City</option><option value="AF">Mumbai</option><option value="AX">Pune</option><option value="AL">Aurangabad</option><option value="DZ">Nashik</option><option value="AS">Nagpur</option><option value="AD">Pune</option><option value="AO">Kolhapur</option></select></div><div class="form-input"><input type="text" class="form-control" name="nominee_guardian_pincode" id="nominee_guardian_pincode" placeholder="Pincode"></div><div class="form-input"><input type="text" class="form-control" name="nominee_guardian_pan" id="nominee_guardian_pan" placeholder="PAN"></div><div class="form-input"><h4>Date of Birth</h4><div class="flex-wrap flex-center mt-1"><div class="dd"><input type="number" minlength="2" maxlength="2" class="form-control" name="nominee_guardian_dd" id="nominee_guardian_dd" placeholder="dd" required=""></div><div class="mm"><input type="number"  minlength="2" maxlength="2"  class="form-control" name="nominee_guardian_mm" id="nominee_guardian_mm" placeholder="mm" required=""></div><div class="yyyy"><input type="number"  minlength="4" maxlength="4"  class="form-control" name="nominee_guardian_yyyy" id="nominee_guardian_yyyy" placeholder="yyyy" required=""></div></div></div><div class="form-input"><input type="tel" class="form-control" id="nominee_guardian_mobile_number" name="nominee_mobile_number" placeholder="Mobile Number"></div><div class="form-input"><input type="email" class="form-control" id="nominee_guardian_email_id" name="nominee_email_id" placeholder="Email Id"></div><div class="form-input"><h4>Relationship</h4><div class="mt-05"><select class="form-control"><option selected disabled>Select Relation</option><option>Father</option><option>Spouse</option><option>Mother</option><option>Son</option></select></div></div><div class="form-input">  <h4>Residual Flag</h4><div class="radio-group mt-05"><label><input required class="radio" type="radio" name="nominee_guardian_residual_flag" id="nominee_guardian_residual_flag_yes"> Yes</label><label><input required checked class="radio" type="radio" name="nominee_guardian_residual_flag" id="nominee_guardian_residual_flag_no"> No</label></div></div><div class="form-input"><input type="email" class="form-control" id="nominee_guardian_uid" name="nominee_guardian_uid" placeholder="UID"></div><div class="form-input"><input type="email" class="form-control" id="nominee_guardian_vid" name="nominee_guardian_vid" placeholder="VID"></div><div class="form-input"><input type="email" class="form-control nominee-share" id="nominee_guardian_share_per" name="nominee_guardian_share_per" placeholder="% of Shares"><div class="text-right mt-05"><ul class="shar_per"><li>25%</li><li>50%</li><li>75%</li><li>100%</li></ul></div></div></div>')
+      $(this).parents(".minominee-box").find(".minor-nominee-data").html('<div class="form-input mt-1"> <div class="form-input"> <input type="tel" class="form-control" id="nominee_mobile_number" name="nominee_mobile_number" placeholder="Mobile Number"> </div> <div class="form-input"> <input type="email" class="form-control" id="nominee_email_id" name="nominee_email_id" placeholder="Email Id"> </div> <div class="form-input"> <h4>Relationship</h4> <div class="mt-05"> <select class="form-control"> <option selected disabled>Select Relation</option> <option>Father</option> <option>Spouse</option> <option>Mother</option> <option>Son</option> </select> </div> </div> <div class="form-input"> <div class="form-input"> <h4 class="brand-color">Nominee Guardian Details</h4> <div class="mt-1"> <h4>Title</h4> <div class="mt-05"> <div class="radio-group mt-05"> <label> <input required="" class="radio" type="radio" name="ominee_guardian_title" id="nominee_guardian_title_mr"> Mr. </label> <label> <input required="" checked="" class="radio" type="radio" name="ominee_guardian_title" id="nominee_guardian_title_mrs"> Mr. </label> </div> </div> </div> </div> <div class="form-input"> <input type="text" class="form-control" name="nominee_guardian_first_name" id="nominee_guardian_first_name" placeholder="First Name"> </div> <div class="form-input"> <input type="text" class="form-control" name="nominee_guardian_middle_name" id="nominee_guardian_middle_name" placeholder="Middle Name"> </div> <div class="form-input"> <input type="text" class="form-control" name="nominee_guardian_last_name" id="nominee_guardian_last_name" placeholder="Last Name"> </div> <div class="form-input"> <input type="text" class="form-control" name="nominee_guardian_pincode" id="nominee_guardian_pincode" placeholder="Pincode"> </div> <div class="form-input"> <h4>Relationship</h4> <div class="mt-05"> <select class="form-control"> <option selected disabled>Select Relation</option> <option>Father</option> <option>Spouse</option> <option>Mother</option> <option>Son</option> </select> </div> </div> <div class="form-input"> <input type="tel" class="form-control" name="mobile_number_of_gardian" id="mobile_number_of_gardian" placeholder="Mobile/Telephone n.o of guardian"> </div> <div class="form-input"> <input type="tel" class="form-control" name="email_of_gardian" id="email_of_gardian" placeholder="Email of Guardian"> </div> <div class="form-input nominee_upload_box"> <div class="form-input"> <h4>Guardian Identification details</h4> <div class="mt-1"> <select class="form-control nominee_proof_document" id="guardian_proof_document"> <option selected="" disabled="">Select Guardian Identification details </option> <option>Photograph &amp; Signature</option> <option>PAN Card</option> <option>Aadhaar Card</option> <option>Saving Bank account No.</option> <option>Proof of Identity</option> <option>Demat Account ID</option> </select> </div> </div> <div class="form-input d-none nominee_proof_upload"> <h4>Nominee Proof</h4> <p class="font14 document-name">Photograph and Signature</p> <div class="upload-single-wrapper p-relative mt-1"> <div class="border-dotted text-center p-20"> <img src="../images/aof/image-icon.svg" alt="Image icon"> <div class="mt-1"> <h4>Drop your image here, or <span class="brand-color">Browse</span> </h4> <p class="font12 light-gray-color">Supports: JPG, JPEG2000, PNG, PDF</p> </div> <input class="upload-input" id="uploadInput" type="file" name="upload_nominee_proof"> <div class="upload-check d-none updCheck" id="updCheck"> <div class="flex-wrap flex-center"> <div class="flex-wrap flex-center"> <img src="../images/aof/check-mark.svg" alt="Check Maek"> <div class="upd-text ml-1 uploadPath">image 001.jpg</div> </div> <div class="delete pointer ml-auto deleteUpload"> <img src="../images/aof/dustbin.svg" alt="Dustbin"> </div> </div> </div> </div> </div> </div> </div> </div> </div>')
     }else{
       $(this).parents(".minominee-box").find(".minor-nominee-data").html('')
     }
@@ -403,7 +476,7 @@
         $("#moreNomineeAlert").fadeOut();
       }, 1000)
     }else{
-      $("#moreNomineeList").append('<div class="border-box nominee-list"><div class="form-input"><h4>Title</h4><div class="radio-group mt-05"><label><input required class="radio" type="radio" name="nominee_title" id="nominee_mr"> Mr.</label><label><input required checked class="radio" type="radio" name="nominee_title" id="nominee_mrs"> Mrs.</label></div></div><div class="form-input"><input type="text" class="form-control" name="nominee_first_name" id="nominee_first_name" placeholder="First Name"></div><div class="form-input"><input type="text" class="form-control" name="nominee_middle_name" id="nominee_middle_name" placeholder="Middle Name"></div><div class="form-input"><input type="text" class="form-control" name="nominee_last_name" id="nominee_last_name" placeholder="Last Name"></div><div class="form-input"><input type="text" class="form-control" name="nominee_address_1" id="nominee_address_1" placeholder="Address 1"></div><div class="form-input"><input type="text" class="form-control" name="nominee_address_2" id="nominee_address_2" placeholder="Address 2"></div><div class="form-input"><input type="text" class="form-control" name="nominee_address_3" id="nominee_address_3" placeholder="Address 3"></div><div class="form-input"><select class="form-control mt-05"><option selected disabled>Select Country</option><option value="AF">Afghanistan</option><option value="AX">Aland Islands</option><option value="AL">Albania</option><option value="DZ">Algeria</option><option value="AS">American Samoa</option><option value="AD">Andorra</option><option value="AO">Angola</option><option value="AI">Anguilla</option><option value="AQ">Antarctica</option><option value="AG">Antigua and Barbuda</option><option value="AR">Argentina</option><option value="AM">Armenia</option><option value="AW">Aruba</option><option value="AU">Australia</option></select></div><div class="form-input"><select class="form-control mt-05"><option selected disabled>Select State</option><option value="AF">Andhra Pradesh</option><option value="AX">Arunachal Pradesh</option><option value="AL">Assam</option><option value="DZ">Bihar</option><option value="AS">Chhattisgarh</option><option value="AD">Goa</option><option value="AO">Gujarat</option>                      </select></div><div class="form-input"><select class="form-control mt-05"><option selected disabled>Select City</option><option value="AF">Mumbai</option><option value="AX">Pune</option><option value="AL">Aurangabad</option><option value="DZ">Nashik</option><option value="AS">Nagpur</option><option value="AD">Pune</option><option value="AO">Kolhapur</option>                      </select></div><div class="form-input"><input type="text" class="form-control" name="nominee_pincode" id="nominee_pincode" placeholder="Pincode"></div><div class="form-input"><input type="text" class="form-control" name="nominee_pan" id="nominee_pan" placeholder="PAN"></div><div class="form-input"><h4>Date of Birth</h4><div class="flex-wrap flex-center mt-1"><div class="dd"><input type="number" minlength="2" maxlength="2" class="form-control" name="nominee_dd" id="nominee_dd" placeholder="dd" required=""></div><div class="mm"><input type="number"  minlength="2" maxlength="2"  class="form-control" name="nominee_mm" id="nominee_mm" placeholder="mm" required=""></div>                  <div class="yyyy"><input type="number"  minlength="4" maxlength="4"  class="form-control" name="nominee_yyyy" id="nominee_yyyy" placeholder="yyyy" required=""></div></div></div><div class="form-input minominee-box m-0"><div class="form-input m-0"><div class="mt-1"><label class="form-check font14"><input class="radio minor_niminee" type="checkbox" name="minor_niminee" id="minor_niminee"><span class="ml-1"><strong>If Nominee is Minor </strong></span></label></div></div><div class="form-input minor-nominee-data"></div></div><div class="form-input remove-nominee"><img src="../images/icons/close-icon.svg" /></div></div>');
+      $("#moreNomineeList").append('<div class="border-box nominee-list"><div class="form-input"> <h4>Title</h4> <div class="radio-group mt-05"> <label><input required class="radio" type="radio" name="nominee_title" id="nominee_mr"> Mr.</label> <label><input required checked class="radio" type="radio" name="nominee_title" id="nominee_mrs"> Mrs.</label> </div> </div> <div class="form-input"> <input type="text" class="form-control" name="nominee_first_name" id="nominee_first_name" placeholder="First Name"> </div> <div class="form-input"> <input type="text" class="form-control" name="nominee_middle_name" id="nominee_middle_name" placeholder="Middle Name"> </div> <div class="form-input"> <input type="text" class="form-control" name="nominee_last_name" id="nominee_last_name" placeholder="Last Name"> </div> <div class="form-input"> <input type="text" class="form-control" name="nominee_address_1" id="nominee_address_1" placeholder="Address 1"> </div> <div class="form-input"> <input type="text" class="form-control" name="nominee_address_2" id="nominee_address_2" placeholder="Address 2"> </div> <div class="form-input"> <input type="text" class="form-control" name="nominee_address_3" id="nominee_address_3" placeholder="Address 3"> </div> <div class="form-input"> <select class="form-control mt-05"> <option selected disabled>Select Country</option> <option value="AF">Afghanistan</option> <option value="AX">Aland Islands</option> <option value="AL">Albania</option> <option value="DZ">Algeria</option> <option value="AS">American Samoa</option> <option value="AD">Andorra</option> <option value="AO">Angola</option> <option value="AI">Anguilla</option> <option value="AQ">Antarctica</option> <option value="AG">Antigua and Barbuda</option> <option value="AR">Argentina</option> <option value="AM">Armenia</option> <option value="AW">Aruba</option> <option value="AU">Australia</option> </select> </div> <div class="form-input"> <select class="form-control mt-05"> <option selected disabled>Select State</option> <option value="AF">Andhra Pradesh</option> <option value="AX">Arunachal Pradesh</option> <option value="AL">Assam</option> <option value="DZ">Bihar</option> <option value="AS">Chhattisgarh</option> <option value="AD">Goa</option> <option value="AO">Gujarat</option> </select> </div> <div class="form-input"> <select class="form-control mt-05"> <option selected disabled>Select City</option> <option value="AF">Mumbai</option> <option value="AX">Pune</option> <option value="AL">Aurangabad</option> <option value="DZ">Nashik</option> <option value="AS">Nagpur</option> <option value="AD">Pune</option> <option value="AO">Kolhapur</option> </select> </div> <div class="form-input"> <input type="text" class="form-control" name="nominee_pincode" id="nominee_pincode" placeholder="Pincode"> </div> <div class="form-input"> <input type="text" class="form-control" name="nominee_pan" id="nominee_pan" placeholder="PAN"> </div> <div class="form-input"> <h4>Date of Birth</h4> <div class="flex-wrap flex-center mt-1"> <div class="dd"> <input type="number" minlength="2" maxlength="2" class="form-control" name="nominee_dd" id="nominee_dd" placeholder="dd" required=""> </div> <div class="mm"> <input type="number" minlength="2" maxlength="2" class="form-control" name="nominee_mm" id="nominee_mm" placeholder="mm" required=""> </div> <div class="yyyy"> <input type="number" minlength="4" maxlength="4" class="form-control" name="nominee_yyyy" id="nominee_yyyy" placeholder="yyyy" required=""> </div> </div> </div> <div class="form-input nominee_upload_box"> <div class="form-input"> <h4>Nominee Identification details</h4> <div class="mt-1"> <select class="form-control nominee_proof_document" id="nominee_proof_document"> <option selected disabled>Select Nominee Identification details</option> <option>Photograph & Signature</option> <option>PAN Card</option> <option>Aadhaar Card</option> <option>Saving Bank account No.</option> <option>Proof of Identity</option> <option>Demat Account ID</option> </select> </div> </div> <div class="form-input d-none nominee_proof_upload"> <h4>Nominee Proof</h4> <p class="font14 document-name">Photograph and Signature</p> <div class="upload-single-wrapper p-relative mt-1"> <div class="border-dotted text-center p-20"> <img src="../images/aof/image-icon.svg" alt="Image icon"> <div class="mt-1"> <h4>Drop your image here, or <span class="brand-color">Browse</span> </h4> <p class="font12 light-gray-color">Supports: JPG, JPEG2000, PNG, PDF</p> </div> <input class="upload-input" id="uploadInput" type="file" name="upload_nominee_proof"> <div class="upload-check d-none updCheck" id="updCheck"> <div class="flex-wrap flex-center"> <div class="flex-wrap flex-center"> <img src="../images/aof/check-mark.svg" alt="Check Maek"> <div class="upd-text ml-1 uploadPath">image 001.jpg</div> </div> <div class="delete pointer ml-auto deleteUpload"> <img src="../images/aof/dustbin.svg" alt="Dustbin"> </div> </div> </div> </div> </div> </div> </div> <div class="form-input"> <input type="email" class="form-control nominee-share" id="nominee_share_per" name="nominee_share_per" placeholder="% of Shares"> <div class="text-right mt-05"> <ul class="shar_per"> <li>25%</li> <li>50%</li> <li>75%</li> <li>100%</li> </ul> </div> </div> <div class="form-input"> <h4>Relation with the applicant</h4> <div class="mt-05"> <select class="form-control"> <option selected="" disabled="">Select Relation</option> <option>Father</option> <option>Spouse</option> <option>Mother</option> <option>Son</option> </select> </div> </div> <div class="form-input"> <input type="tel" class="form-control" name="nominee_tell_number" id="nominee_tell_number" placeholder="Mobile / Telephone no of nominee "> </div> <div class="form-input"> <input type="tel" class="form-control" name="nominee_email_id" id="nominee_email_id" placeholder="Email Id of nominee "> </div> <div class="form-input minominee-box"> <div class="form-input"> <div class="mt-1"> <label class="form-check font14"> <input class="radio minor_niminee" type="checkbox" name="minor_niminee" id="minor_niminee"> <span class="ml-1"> <strong> If Nominee is Minor </strong> </span> </label> </div> </div> <div class="form-input minor-nominee-data"> </div></div></div>');
     }
 
   });
@@ -431,6 +504,18 @@
          "showISOWeekNumbers": true
     });
   });
+
+
+  $("body .nominee_proof_document").change(function(){    
+    let nominee_proof_document = $(this).val();
+    // console.log(nominee_proof_document);
+
+    $(this).parents(".nominee_upload_box").find(".nominee_proof_upload").show();
+    $(this).parents(".nominee_upload_box").find(".nominee_proof_upload").children(".document-name").html(nominee_proof_document);
+
+
+  })
+
   </script>
 
 

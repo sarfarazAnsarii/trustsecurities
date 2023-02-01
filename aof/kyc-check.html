@@ -200,6 +200,75 @@
               </div>
 
               <div class="form-input">
+                <h4>Title</h4>
+                <div class="mt-1 radio-group">
+                  <label><input checked class="radio" type="radio" name="name_title" id="title_mr"> Mr.</label>
+                  <label><input class="radio" type="radio" name="name_title" id="title_mrs"> Mrs.</label>                                   
+                </div>
+              </div>
+
+              <div class="form-input">
+                <input type="text" class="form-control pan_name" name="first_name" id="first_name" placeholder="First Name">
+              </div>
+
+              <div class="form-input">
+                <input type="text" class="form-control pan_name" name="middle_name" id="middle_name" placeholder="Middle Name">
+              </div>
+
+              <div class="form-input">
+                <input type="text" class="form-control pan_name" name="last_name" id="last_name" placeholder="Last Name">
+              </div>
+
+              <div class="form-input d-none" id="pan_name_area">
+                <h4>Your Name As per PAN</h4>
+                <p class="form-control mt-1 brand-color">
+                  <strong><span id="pan_first_name"></span> <span id="pan_middle_name"></span> <span id="pan_last_name"></span> </strong>
+                </p>                
+              </div>
+
+              <div class="form-input">
+                <h4>Gender</h4>
+                <div class="mt-1 radio-group">
+                  <label><input checked class="radio" type="radio" name="gender" id="gen_male"> Male</label>
+                  <label><input class="radio" type="radio" name="gender" id="gen_female"> Female</label>                                   
+                </div>
+              </div>
+
+              
+
+              <div class="form-input">
+                <div class="border-box">
+                  <div class="form-input">
+                    <h4>Relation Type</h4>
+                    <div class="mt-05">
+                      <select class="form-control">
+                        <option selected disabled>Select Relation</option>
+                        <option>Father</option>
+                        <option>Spouse</option>
+                        <option>Mother</option>
+                        <option>Son</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-input">
+                    <h4>Title</h4>
+                    <div class="mt-1 radio-group">
+                      <label><input checked class="radio" type="radio" name="relation_name_title" id="relation_title_mr"> Mr.</label>
+                      <label><input class="radio" type="radio" name="relation_name_title" id="relation_title_mrs"> Mrs.</label>                                   
+                    </div>
+                  </div>
+                  <div class="form-input">
+                    <input type="text" class="form-control pan_name" name="spouse_and_father_name" id="spouse_and_father_name" placeholder="Spouse/Father Name">
+                  </div>
+                  <div class="form-input">
+                    <input type="text" class="form-control pan_name" name="mother_name" id="mother_name" placeholder="Mother Full Name">
+                  </div>
+                </div>
+              </div>
+
+              
+
+              <!-- <div class="form-input">
                 <h4>Mobile Details</h4>
                 <div class="mt-1 radio-group">
                   <label><input checked class="radio" type="radio" name="mobile_details" id="m_self"> Self</label>
@@ -219,18 +288,18 @@
                 <div class="mt-1 d-none" id="family_email_input">
                     <input type="email" class="form-control" name="family_email" id="family_email" placeholder="Email" required="">
                   </div>  
-              </div>
+              </div> -->
 
 
-              <div class="form-input">
+              <!-- <div class="form-input">
                 <h4 class="d-inline-block mr-1">Are you a US Citizen?</h4>
                 <div class="radio-group d-inline-block">
                   <label><input checked class="radio" type="radio" name="us_citizen" id="us_citizen_no"> No</label>
                   <label><input class="radio" type="radio" name="us_citizen" id="us_citizen_yes"> Yes</label>                               
                 </div>
-              </div>
+              </div> -->
 
-              <div class="form-input">     
+              <!-- div class="form-input">     
                 <div class="radio-group">         
                   <label class="form-check font14">
                       <input checked="" class="radio" type="checkbox" name="auth_inter_exchange" id="auth_inter_exchange">
@@ -270,7 +339,7 @@
                     </ul>
                   </div>
                 </div>    
-              </div>
+              </div> -->
 
               <div class="form-input b-sticky">
                 <a class="btn btn-primary d-block" href="profile-creation.html">NEXT <img class="ml-1" src="../images/aof/arrow-right.svg" /></a>
@@ -382,6 +451,34 @@
     $(this).parent(".new-input").hide();
     $(this).parent().siblings(".add-new-field").fadeIn();
   })
+
+
+  $("#first_name").on("input", function(){
+    $("#pan_first_name").text($(this).val());
+
+    if($(this).val()==''){
+      $("#pan_name_area").hide();
+    }else{
+      $("#pan_name_area").show();
+    }
+
+  });
+  $("#middle_name").on("input", function(){
+    $("#pan_middle_name").text($(this).val());
+    if($(this).val()==''){
+      $("#pan_name_area").hide();
+    }else{
+      $("#pan_name_area").show();
+    }
+  });
+  $("#last_name").on("input", function(){
+    $("#pan_last_name").text($(this).val());
+    if($(this).val()==''){
+      $("#pan_name_area").hide();
+    }else{
+      $("#pan_name_area").show();
+    }
+  });
 
 </script>
 
