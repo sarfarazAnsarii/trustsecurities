@@ -79,9 +79,11 @@ $(document).ready(function() {
             data:person,
             success: function(){ 
 
-                $("#registerBtn").text('Submit');
-                $("#registerArea").remove();
-                $("#otpArea").fadeIn();
+                // $("#registerBtn").text('Submit');
+                // $("#registerArea").remove();
+                // $("#otpArea").fadeIn();
+
+                window.location.href = 'aof/kyc-check.html'
             },
             error: function(){
                 // alert("There was an error :(")
