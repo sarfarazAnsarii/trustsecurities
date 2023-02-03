@@ -116,7 +116,7 @@
         </div>
         <div class="bonds-card p-20 mt-1">
           
-          <div >
+          <div>
             <h3 class="title-3">KYC Check 
               <div class="info-item" id="stepsList">
                 <img class="info" src="../images/aof/info.svg" />
@@ -151,104 +151,114 @@
             <div class="gradient-line inherit"></div>
           </div>
           <div class="form-section">
-            <form>
+            <form id="kycCheck">
               <div class="form-input">
-                <input type="text" class="form-control" name="PAN" id="pan" placeholder="PAN" required="">
-              </div>
-              
-              <div class="form-input">
-                <h4>Date of Birth</h4>
-                <div class="flex-wrap flex-center mt-1">
-                  <div class="dd">
-                    <input type="number" minlength="2" maxlength="2" class="form-control" name="dd" id="dd" placeholder="dd" required="">
-                  </div>
-                  <div class="mm">
-                    <input type="number"  minlength="2" maxlength="2"  class="form-control" name="mm" id="mm" placeholder="mm" required="">
-                  </div>                  
-                  <div class="yyyy">
-                    <input type="number"  minlength="4" maxlength="4"  class="form-control" name="yyyy" id="yyyy" placeholder="yyyy" required="">
-                  </div>
-                </div>
+                <label class="form-label">Enter your PAN number</label>
+                <input type="text" class="form-control" name="PAN" id="pan" placeholder="PAN" title="Enter Valid Pan Number" pattern="[A-Z]{5}-[0-9]{4}-[A-Z]{1}">
+                <div class="error d-none mt-05" id="pan_erro">Enter valid PAN Number</div>
               </div>
 
-              <div class="form-input">
-                <input type="tel" class="form-control" value="7208707204" name="mobile" id="mobile" placeholder="Mobile" required="">
-                
-                <div class="mt-1 p-relative d-none new-input" id="newMobile">
-                  <input type="tel" class="form-control" name="new_mobile" id="new_mobile" placeholder="Mobile">
-                  <div class="close-input">
-                    <img src="../images/icons/close-icon.svg">
-                  </div>
-                </div>
-                <div class="text-right mt-1 add-new-field">
-                  <button class="btn btn-sucess" id="addNewMobile">Add New</button>
-                </div>
-              </div>
-
-              <div class="form-input">
-                <input type="email" class="form-control" value="sarfaraz.ansari@trustgroup.in" name="email" id="email" placeholder="Email" required="">
-                
-                <div class="mt-1 p-relative d-none new-input" id="newEmail">
-                  <input type="email" class="form-control" name="new_email" id="new_email" placeholder="Email">
-                  <div class="close-input">
-                    <img src="../images/icons/close-icon.svg">
-                  </div>
-                </div>
-                <div class="text-right mt-1 add-new-field">
-                  <button class="btn btn-sucess"  id="addNewEmail">Add New</button>
-                </div>
-              </div>
-
-              <div class="form-input">
-                <h4>Title</h4>
-                <div class="mt-1 radio-group">
-                  <label><input checked class="radio" type="radio" name="name_title" id="title_mr"> Mr.</label>
-                  <label><input class="radio" type="radio" name="name_title" id="title_mrs"> Mrs.</label>                                   
-                </div>
-              </div>
-
-              <div class="form-input">
-                <input type="text" class="form-control pan_name" name="first_name" id="first_name" placeholder="First Name">
-              </div>
-
-              <div class="form-input">
-                <input type="text" class="form-control pan_name" name="middle_name" id="middle_name" placeholder="Middle Name">
-              </div>
-
-              <div class="form-input">
-                <input type="text" class="form-control pan_name" name="last_name" id="last_name" placeholder="Last Name">
-              </div>
-
-              <div class="form-input d-none" id="pan_name_area">
-                <h4>Your Name As per PAN</h4>
-                <p class="form-control mt-1 brand-color">
-                  <strong><span id="pan_first_name"></span> <span id="pan_middle_name"></span> <span id="pan_last_name"></span> </strong>
-                </p>                
-              </div>
-
-              <div class="form-input">
-                <h4>Gender</h4>
-                <div class="mt-1 radio-group">
-                  <label><input checked class="radio" type="radio" name="gender" id="gen_male"> Male</label>
-                  <label><input class="radio" type="radio" name="gender" id="gen_female"> Female</label>                                   
-                </div>
-              </div>
-
-              
-
-              <div class="form-input">
-                <input type="text" class="form-control pan_name" name="spouse_and_father_name" id="spouse_and_father_name" placeholder="Spouse/Father Name">
-              </div>
-              <div class="form-input">
-                <input type="text" class="form-control pan_name" name="mother_name" id="mother_name" placeholder="Mother Full Name">
-              </div>
-
-              
-
-              
-              <div class="form-input b-sticky">
-                <a class="btn btn-primary d-block" href="profile-creation.html">NEXT <img class="ml-1" src="../images/aof/arrow-right.svg" /></a>
+              <div class="form-input b-sticky"> 
+                <!-- profile-creation.html -->
+                <button type="submit" class="btn btn-primary d-block" id="kycSubmitPan">NEXT <img class="ml-1" src="../images/aof/arrow-right.svg" /></button>
               </div> 
+              
+              <div class="d-none form-input" id="kycCheckView">
+                <div class="form-input">
+                  <h4>Date of Birth</h4>
+                  <div class="flex-wrap flex-center mt-1">
+                    <div class="dd unshift">
+                      <input type="number" minlength="2" maxlength="2" class="form-control" name="dd" id="dd" placeholder="dd" required="" title="2 char only">
+                    </div>
+                    <div class="mm unshift">
+                      <input type="number"  minlength="2" maxlength="2"  class="form-control" name="mm" id="mm" placeholder="mm" required="" title="2 char only">
+                    </div>                  
+                    <div class="yyyy unshift">
+                      <input type="number"  minlength="4" maxlength="4"  class="form-control" name="yyyy" id="yyyy" placeholder="yyyy" required="" title="4 char only">
+                    </div>
+                  </div>
+                </div>
+
+                <div class="form-input">
+                  <input type="tel" class="form-control" value="7208707204" name="mobile" id="mobile" placeholder="Mobile" required="">
+                  
+                  <div class="mt-1 p-relative d-none new-input" id="newMobile">
+                    <input type="tel" class="form-control" name="new_mobile" id="new_mobile" placeholder="Mobile">
+                    <div class="close-input">
+                      <img src="../images/icons/close-icon.svg">
+                    </div>
+                  </div>
+                  <div class="text-right mt-1 add-new-field">
+                    <button class="btn btn-sucess" id="addNewMobile">Add New</button>
+                  </div>
+                </div>
+
+                <div class="form-input">
+                  <input type="email" class="form-control" value="sarfaraz.ansari@trustgroup.in" name="email" id="email" placeholder="Email" required="">
+                  
+                  <div class="mt-1 p-relative d-none new-input" id="newEmail">
+                    <input type="email" class="form-control" name="new_email" id="new_email" placeholder="Email">
+                    <div class="close-input">
+                      <img src="../images/icons/close-icon.svg">
+                    </div>
+                  </div>
+                  <div class="text-right mt-1 add-new-field">
+                    <button class="btn btn-sucess"  id="addNewEmail">Add New</button>
+                  </div>
+                </div>
+
+                <div class="form-input">
+                  <h4>Title</h4>
+                  <div class="mt-1 radio-group">
+                    <label><input checked class="radio" type="radio" name="name_title" id="title_mr"> Mr.</label>
+                    <label><input class="radio" type="radio" name="name_title" id="title_mrs"> Mrs.</label>                                   
+                  </div>
+                </div>
+
+                <div class="form-input">
+                  <input type="text" class="form-control pan_name" name="first_name" id="first_name" placeholder="First Name">
+                </div>
+
+                <div class="form-input">
+                  <input type="text" class="form-control pan_name" name="middle_name" id="middle_name" placeholder="Middle Name">
+                </div>
+
+                <div class="form-input">
+                  <input type="text" class="form-control pan_name" name="last_name" id="last_name" placeholder="Last Name">
+                </div>
+
+                <div class="form-input d-none" id="pan_name_area">
+                  <h4>Your Name As per PAN</h4>
+                  <p class="form-control mt-1 brand-color">
+                    <strong><span id="pan_first_name"></span> <span id="pan_middle_name"></span> <span id="pan_last_name"></span> </strong>
+                  </p>                
+                </div>
+
+                <div class="form-input">
+                  <h4>Gender</h4>
+                  <div class="mt-1 radio-group">
+                    <label><input checked class="radio" type="radio" name="gender" id="gen_male"> Male</label>
+                    <label><input class="radio" type="radio" name="gender" id="gen_female"> Female</label>                                   
+                  </div>
+                </div>
+
+                <div class="form-input">
+                  <input type="text" class="form-control pan_name" name="spouse_and_father_name" id="spouse_and_father_name" placeholder="Spouse/Father Name">
+                </div>
+
+                <div class="form-input">
+                  <input type="text" class="form-control pan_name" name="mother_name" id="mother_name" placeholder="Mother Full Name">
+                </div>
+
+                <div class="form-input b-sticky"> 
+                  <!-- profile-creation.html -->
+                  <button type="submit" class="btn btn-primary d-block" id="kycSubmit">NEXT <img class="ml-1" src="../images/aof/arrow-right.svg" /></button>
+                </div> 
+
+
+              </div>
+
+              
                                   
             </form>
           </div>
@@ -310,15 +320,69 @@
     <div class="q-img text-right" id="questionMark">
       <img src="../images/aof/question-mark.svg" alt="Question Mark">
     </div>    
-  </div>
-  
+  </div>  
 </div>
+
+<div id="snackbar">Enter your PAN number</div>
 
 
 <script src="../js/jquery.min.js"></script>
 <script src="../js/aof/aof.js"></script>
+<script src="../js/validate.min.js"></script>
+<script src="../js/aof/kyc-check.js"></script>
+
+
 
 <script type="text/javascript">
+
+
+  $(document).ready(function(){
+    setTimeout(function(){
+      $("#pan").focus();      
+    },100)
+  });
+
+
+  function panValidation(){
+    
+  }
+
+
+  $("#pan").on("input", function(){
+    $(this).val($(this).val().toUpperCase());
+
+  })
+
+  $("#kycSubmitPan").on("click", function(){
+    // let panCardNo = $("#pan").val();
+    $("#pan").focus();
+
+    let panCardNo = $("#pan").val();
+    let regex = new RegExp(/^[A-Z]{5}[0-9]{4}[A-Z]{1}$/);
+    if (panCardNo == null) { 
+        $("#pan_erro").show()
+        $("#kycCheckView").hide();
+        $("#kycSubmitPan").hide();
+    }
+    if (regex.test(panCardNo) == true) {
+        
+        $("#pan_erro").hide();
+        $("#kycCheckView").show();
+        $("#kycSubmitPan").hide();
+        
+        
+    }
+    else {
+        
+        $("#pan_erro").show()
+        $("#kycCheckView").hide();
+        $("#kycSubmitPan").show();
+    }
+
+  })
+
+
+
   $("input[name=mobile_details]").change(function(){
     let m_family = $(this).attr("id");
     if(m_family == "m_family"){
@@ -384,6 +448,7 @@
       $("#pan_name_area").show();
     }
   });
+
 
 </script>
 

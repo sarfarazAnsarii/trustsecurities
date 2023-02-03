@@ -36,4 +36,14 @@ $("#questionMark").on("click", function(){
     $("#answerChatBox").slideToggle("fast");
 });
 
+$(document).ready(function(){
+    setTimeout(function(){
+      
+      $("#snackbar").addClass("show");      
+    },100)
 
+    setTimeout(function()
+      {         
+        $("#snackbar").removeClass("show");        
+      }, 3000);
+  });

@@ -95,6 +95,27 @@
     width: 28px !important;
 }
 
+.form-control.error {
+    border-color: var(--red);
+    position: relative;
+}
+
+div.error {
+    font-size: .75rem;
+    color: red;
+    font-weight: var(--w-400);
+    font-style: italic;
+    margin-top: 0.3rem;
+}
+
+
+.form-control.error {
+    background-image: url(../../images/aof/red-info.png) !important;
+    background-position: calc(100% - 13px) 16px !important;
+    background-repeat: no-repeat;
+    background-size: 16px !important;
+}
+
 .datepicker {
     background: url(../../images/aof/calendar-icon.png) no-repeat 96% 15px;
     background-size: 13px;
@@ -219,6 +240,11 @@
     }
 }
 
+
+.unshift{
+    height: 72px;
+    margin: 0;
+}
 
 .dd, .mm {
     width: 70px;
@@ -405,7 +431,15 @@
 .nominee-list:last-child{margin-bottom:0}
 .nominee-alert{display: block;}
 .form-section .bonds-card{overflow: unset;}
-
+.bonds-card{
+    box-shadow: 1px 1px 3px rgb(0 0 0 / 7%);
+}
+.form-label {
+    margin-bottom: 0.5rem;
+    display: block;
+    font-weight: 600;
+    font-size: 1rem;
+}
 .upload-help-text h4{font-size: 1.2rem}
 .upload-help-text p {
     color: var(--gray-2);
@@ -678,6 +712,36 @@ div[role="progressbar"]::before {
 .st-modal.camera-ipv .square-card .md-hading {
     padding: 0;
 }
+
+#snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: var(--dark-gray);
+    color: #fff;
+    text-align: center;
+    border-radius: 0.5rem;
+    padding: 1rem 1.5rem;
+    position: fixed;
+    z-index: 99;
+    left: calc(50% - 20px);
+    bottom: -60px;
+    font-size: .95rem;
+    font-weight: 600;
+    transition: 0.5s all;
+}
+
+#snackbar.show {
+  visibility: visible;
+  /*-webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;*/
+
+  bottom: 30px;
+
+
+}
+
+footer{display: none;}
 
 @media(max-width:575px){
     .web-rtc-box.active .video-rtc {

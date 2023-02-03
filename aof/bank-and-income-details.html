@@ -15,8 +15,6 @@
   <link rel="stylesheet" type="text/css" href="../css/style.css">
   <link rel="stylesheet" type="text/css" href="../css/aof/aof.css">
 
-  <!-- datepicker css-->
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
 
   <!-- fave icons -->
   <link rel="apple-touch-icon" sizes="57x57" href="../images/faveicons/apple-icon-57x57.png">
@@ -155,162 +153,53 @@
             <div class="gradient-line inherit"></div>
           </div>
           <div class="form-section">
-            <form>
+            <form id="bankAccountForm">
               <div class="form-input">
-                <input type="number" class="form-control" name="bank_account_number" id="bank_account_number" placeholder="Bank Account number" required>
+                <input type="number" class="form-control" name="bank_account_number" id="bank_account_number" placeholder="Bank Account number" required minlength="8" maxlength="16">
               </div>
-
-              <div class="form-input">
-                <input type="number" class="form-control" name="re_bank_account_number" id="re_bank_account_number" placeholder="Re Enter Bank Account number" required>
-              </div>
+              
               <div class="form-input">
                 <input type="text" class="form-control" name="ifsc_code" id="ifsc_code" placeholder="IFSC Code">
               </div>
 
               <div class="form-input">
-                <input type="text" class="form-control" name="micr_code" id="micr_code" placeholder="MICR Code">
-              </div>
-
-              <div class="form-input">
-                <input type="text" class="form-control" name="bank_Name" id="bank_Name" placeholder="Bank Name">
-              </div>
-
-              <div class="form-input">
-                <input type="text" class="form-control" name="branch_name" id="branch_name" placeholder="Branch Name">
-              </div>
-
-              <div class="form-input">
-                <h4>Account Type</h4>
-                <div class="mt-1 radio-group">
-                  <label><input required checked class="radio" type="radio" name="account_type" id="saving"> Saving</label>
-                  <label><input required class="radio" type="radio" name="account_type" id="current"> Current</label>                                   
+                  <div class="radio-group">
+                    <label class="form-check font14">
+                        <input class="radio" type="checkbox" name="optional_check" id="optional_check">
+                        <span>Other Bank Details (Optional)</span>
+                    </label>
+                  </div>
                 </div>
-              </div>
 
-              
+              <div class="form-input d-none" id="otherBankDetails">
+                <div class="form-input">
+                  <div class="border-box">
+                    <div class="form-input">
+                      <input type="text" class="form-control" name="micr_code" id="micr_code" placeholder="MICR Code">
+                    </div>
 
-              <!-- <div class="form-input">
-                <h4 class="brand-color">Income Details</h4>
-                <div class="mt-1">
-                  <input type="text" class="form-control" name="annual_income" id="annual_income" placeholder="Annual Income">
-                </div>
-              </div>
+                    <div class="form-input">
+                      <input type="text" class="form-control" name="bank_Name" id="bank_Name" placeholder="Bank Name">
+                    </div>
 
-              <div class="form-input">
-                <input type="text" class="form-control" name="net_worth_details" id="net_worth_details" placeholder="Net worth Details">
-              </div>
+                    <div class="form-input">
+                      <input type="text" class="form-control" name="branch_name" id="branch_name" placeholder="Branch Name">
+                    </div>
 
-              <div class="form-input">
-                <h4>Income / Net worth Date</h4>
-                <div class="mt-05">
-                  <input type="text" class="form-control datepicker" name="permanent_address_proof_issue_date" id="permanent_address_proof_issue_date" value="10/24/1984">
-                </div>
-              </div>
-
-              <div class="form-input">
-                <h4>Correspondence Address Type</h4>
-                <div class="mt-05">
-                  <select class="form-control">
-                    <option disabled selected>Select Address Type</option>
-                    <option>Residential address</option>
-                    <option>Current residence</option>
-                  </select>
-                </div>
-              </div>
-
-              <div class="form-input">
-                <h4>Permanent Address Type</h4>
-                <div class="mt-05">
-                  <select class="form-control">
-                    <option disabled selected>Select Address Type</option>
-                    <option>Residential address</option>
-                    <option>Current residence</option>
-                  </select>
-                </div>
-              </div>
-
-              <div class="form-input">
-                <h4>Declaration Date</h4>
-                <div class="mt-05">
-                  <input type="text" class="form-control datepicker" name="permanent_address_proof_issue_date" id="permanent_address_proof_issue_date" value="10/24/1984">
-                </div>
-              </div>
-
-              <div class="form-input">
-                <input type="text" class="form-control" name="declaration_place" id="declaration_place" placeholder="Declaration Place">
-              </div>
-
-              <div class="form-input">
-                <h4 class="brand-color">Other Details</h4>
-                <div class="mt-1">
-                  <h4 >Documents Sub. Proof</h4>
-                  <div class="mt-05">
-                    <select class="form-control">
-                    <option disabled selected>Select Documents Sub. Proof</option>
-                    <option>Self Certified Copies Submitted (Originals Verified)</option>
-                  </select>
+                    <div class="form-input">
+                      <h4>Account Type</h4>
+                      <div class="mt-1 radio-group">
+                        <label><input required checked class="radio" type="radio" name="account_type" id="saving"> Saving</label>
+                        <label><input required class="radio" type="radio" name="account_type" id="current"> Current</label>                                   
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
-              
-              <div class="form-input">
-                <input type="text" class="form-control" name="gst_number" id="gst_number" placeholder="GST number (enter, if provided)">
-              </div>
-
-              <div class="form-input">
-                <h4>Political connected</h4>
-                <div class="mt-1 radio-group">
-                  <label><input checked class="radio" type="radio" name="political_connected" id="political_connected_yes"> Yes</label>
-                  <label><input class="radio" type="radio" name="political_connected" id="political_connected_no"> No</label>                                   
-                </div>
-              </div>
-
-              <div class="form-input">                
-                <h4 >Education</h4>
-                  <div class="mt-05">
-                    <select class="form-control">
-                    <option disabled selected>Select Education</option>
-                    <option>Under Graduate</option>
-                    <option>Graduate</option>
-                    <option>Masters</option>
-                  </select>
-                  </div>
-              </div>
-
-              <div class="form-input">                
-                <h4 >Authorization Type</h4>
-                  <div class="mt-05">
-                    <select class="form-control">
-                    <option disabled selected>Select Authorization</option>
-                    <option>Under Graduate</option>
-                    <option>Graduate</option>
-                    <option>Masters</option>
-                  </select>
-                  </div>
-              </div>
-
-              <div class="form-input">
-                <h4 class="brand-color">Prior Experience Details</h4>
-                <div class="mt-1">
-                  <h4>Prior Experience</h4>
-                  <div class="radio-group mt-05">
-                    <label><input checked class="radio" type="radio" name="prior_experience" id="prior_experience_yes"> Yes</label>
-                    <label><input class="radio" type="radio" name="prior_experience" id="prior_experience_no"> No</label>                                   
-                  </div>
-                </div>
-              </div>
-
-              <div class="form-input">
-                <input type="text" class="form-control" name="years_of_experience" id="years_of_experience" placeholder="Years of experience">
-              </div>
-
-              <div class="form-input">
-                <input type="text" class="form-control" name="Years_in_other_Investment" id="Years_in_other_Investment" placeholder="Years in other Investment Related Fields">
-              </div>
-              -->
               
               <div class="form-input b-sticky">
-                <a class="btn btn-primary d-block" href="trading-segment.html">NEXT <img class="ml-1" src="../images/aof/arrow-right.svg" /></a>
+                <!-- trading-segment.html -->
+                <button type="submit" class="btn btn-primary d-block" id="bankSubmit">NEXT <img class="ml-1" src="../images/aof/arrow-right.svg" /></button>
               </div> 
                                   
             </form>
@@ -376,28 +265,32 @@
   </div>  
 </div>
 
+<div id="snackbar">Enter your Bank Account number</div>
 
 <script src="../js/jquery.min.js"></script>
 <script src="../js/aof/aof.js"></script>
-
-<!-- datepicker js -->
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+<script src="../js/validate.min.js"></script>
+<script src="../js/aof/bank-account.js"></script>
 
 
 
-  <script>
-  $(function() {
-    $('.datepicker').daterangepicker({
-        singleDatePicker: true,
-        showDropdowns: true,
-        minYear: 1901,
-        "autoApply": true,
-         "showISOWeekNumbers": true
-    });
+<script type="text/javascript">
+  
+  $(document).ready(function(){
+    setTimeout(function(){
+      $("#bank_account_number").focus();  
+    },100)
   });
-  </script>
 
+  $("#optional_check").change(function(){
+    if($(this).is(":checked")){
+      $("#otherBankDetails").show();
+    }else{
+      $("#otherBankDetails").hide();
+    }
+  })
+
+</script>
 
 </body>
 </html>

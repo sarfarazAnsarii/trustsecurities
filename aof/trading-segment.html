@@ -152,10 +152,8 @@
             <div class="gradient-line inherit"></div>
           </div>
           <div class="form-section">
-            <form>
-              
-              
-
+            <form id="tadingSegmentForm">
+            
               <div class="form-input">
                 <h4>Depository Name</h4>
                 <div class="mt-1 radio-group">
@@ -164,21 +162,7 @@
                 </div>
               </div>
 
-              <!-- <div class="form-input">
-                <h4 class="brand-color">Existing DP Details</h4>
-                <div class="mt-1">
-                  <h4>Do you have Existing Account in DP?</h4>
-                  <div class="mt-05">
-                    <div class="radio-group">
-                      <label><input required checked class="radio" type="radio" name="existing_dp_account" id="existing_dp_account_yes"> Yes</label>
-                      <label><input required class="radio" type="radio" name="existing_dp_account" id="existing_dp_account_no"> No</label>
-                    </div>
-                  </div>
-                </div>
-                
-              </div> -->
-
-              
+           
 
               <div class="form-input">                
                 <div class="mt-05">
@@ -198,46 +182,10 @@
 
               
 
-              <!-- <div class="form-input">
-                <h4>Do you want to Open same Account in DP?</h4>
-                <div class="mt-05 radio-group">
-                  <label><input checked class="radio" type="radio" name="same_account_in_dp" id="same_account_in_dp_yes"> Yes</label>
-                  <label><input class="radio" type="radio" name="same_account_in_dp" id="same_account_in_dp_no"> No</label>                                   
-                </div>
-              </div>
-
-              <div class="form-input">                
-                <h4 >Select DP</h4>
-                  <div class="mt-05">
-                    <select class="form-control">
-                    <option disabled selected>Select DP Id</option>
-                    <option>Samco Securities Limited</option>
-                    <option>5 Paisa Private Limited</option>
-                    <option>Zerodha</option>
-                  </select>
-                  </div>
-              </div>
-
-              
-
-              <div class="form-input">                
-                <h4>POA Flag</h4>
-                  <div class="radio-group mt-05">
-                    <label><input checked class="radio" type="radio" name="poa_flag" id="poa_flag_yes"> Yes</label>
-                    <label><input class="radio" type="radio" name="poa_flag" id="poa_flag_no"> No</label>                                   
-                </div>
-              </div>
-
-              <div class="form-input">
-                <h4>Brokerage Scheme</h4>
-                <div class="mt-05">
-                  <input type="text" class="form-control" name="brokerage_scheme" id="brokerage_scheme" placeholder="Not Applicable">
-                </div>
-              </div> -->
-            
               
               <div class="form-input b-sticky">
-                <a class="btn btn-primary d-block" href="additional-details.html">NEXT <img class="ml-1" src="../images/aof/arrow-right.svg" /></a>
+                <!-- additional-details.html -->
+                <button class="btn btn-primary d-block">NEXT <img class="ml-1" src="../images/aof/arrow-right.svg" /></button>
               </div> 
                                   
             </form>
@@ -304,12 +252,23 @@
   
 </div>
 
+<div id="snackbar">Enter your DP ID</div>
 
 <script src="../js/jquery.min.js"></script>
 <script src="../js/aof/aof.js"></script>
+<script src="../js/validate.min.js"></script>
+<script src="../js/aof/trading-segment.js"></script>
 
+<script type="text/javascript">
+  
+  $(document).ready(function(){
+    setTimeout(function(){
+      $("#dp_id").focus();  
+    },100)
+  });
 
-
+ 
+</script>
 
 </body>
 </html>
