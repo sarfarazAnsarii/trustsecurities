@@ -1,0 +1,170 @@
+.form-control.error {
+    background-image: url(../../images/aof/red-info.png) !important;
+    background-position: calc(100% - 13px) 16px !important;
+    background-repeat: no-repeat;
+    background-size: 16px !important;
+    border-color: var(--red);
+}
+@media (max-width: 991px){
+    .btn, .btn-border {
+        font-size: 1.2rem;
+    }
+}
+/*.form-input{margin-bottom: 1rem}*/
+.form-input > label{
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    font-size: .90rem;
+}
+.form-control {
+    background-color: var(--white);
+}
+.overflow-hidden{overflow: hidden !important;}
+.remove-applicant {
+    position: absolute !important;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.remove-applicant:is(:hover, :focus){
+    opacity: .5;
+}
+
+.series-list .bonds-card{margin-bottom: 1rem}
+.series-list .bonds-card:firs-child{margin-bottom:0}
+.b-title h3{white-space: normal;}
+@media(max-width:991px){
+    .sm-mt-1{margin-top: 1rem}
+}
+
+.bonds-card.inactive {
+    background: linear-gradient(25deg, white, white, rgb(143 143 143 / 27%));
+}
+
+.bonds-card.active {
+    background: linear-gradient(25deg, white, white, rgb(162 123 30 / 25%));
+}
+
+.bonds-card.active .title-4{
+    color: var(--brand-color);
+}
+
+select.form-control:not([size]):not([multiple]){
+    font-size: small;
+}
+.title-1{font-size: 1.5rem !important;}
+.b-sticky {   
+    bottom: 0;
+    background: #fff;
+    padding: 20px 0 5px 0;
+}
+.title-avaitar{
+    width: 27px;
+    vertical-align: -webkit-baseline-middle;
+}
+
+.radio-btn label {
+    border: solid 1px var(--dark-gray);
+    padding: 0.4rem 1rem;
+    border-radius: 2rem;
+}
+
+.radio-btn label:last-child{margin-right: 0}
+
+@media(max-width:767px){
+    .b-sticky{background-color: var(--gray-light)}
+    .fixed-btm {
+        bottom: 5rem;
+    }
+}
+
+.form-input{
+    position: relative;
+}
+.input-overlay {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    font-size: .90rem;
+    position: absolute;
+    left: 1px;
+    top: 12px;
+    background: #fff;
+    width: auto;
+    height: auto;
+    line-height: normal;
+    padding-left: 14px;
+    border: none;
+    border-radius: 0.3rem;
+    transition: 0.3s all;
+}
+
+.input-overlay.active {
+    top: -11px;
+    right: inherit;
+    bottom: inherit;
+    width: auto;
+    height: auto;
+    line-height: normal;
+    border: none;
+    padding: 0.1rem 0.3rem;
+    left: 13px;
+    font-size: 0.75rem;
+}
+
+
+.radio-btn label.active:after {
+        border: solid 0.1rem;
+    content: "";
+    left: 17px;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    top: 7px;
+    background-image: url(../../images/ipo/white-check.svg);
+    background-position: 0.1rem 0.25rem;
+    background-repeat: no-repeat;
+    background-size: 75%;
+}
+
+/*.radio-btn label.active:before{
+    content: "";
+
+}*/
+
+.radio-btn label {
+    border: solid 1px var(--dark-gray);
+    padding: 0.4rem 1rem;
+    border-radius: 2rem;
+    position: relative;
+    cursor: pointer;
+}
+.radio-btn label.active input {
+    position: absolute;
+    left: -5000px;
+    z-index: -100;
+}
+
+.radio-btn label.active span {
+    margin-left: 1.7rem;
+}
+
+.radio-btn label:hover{
+    background: var(var(--light-brand));
+}
+
+.radio-btn label.active {
+    background: var(--brand-color);
+    color: var(--white);
+    border-color: var(--brand-color);
+}
+
+.form-control:disabled, .form-control[readonly] {
+    background-color: #ffffff;
+    opacity: 1;
+    color: var(--gray-4);
+    border-color: var(--gray-4);
+}

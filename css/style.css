@@ -1444,6 +1444,7 @@ input[type=number] {
     border-radius: 0.3rem;
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
     font-weight: var(--w-600);
+    font-family: var(--font-family-poppins);
 }
 
 .form-control::-ms-expand {

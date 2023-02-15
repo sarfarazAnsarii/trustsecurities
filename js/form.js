@@ -94,6 +94,10 @@ $(document).ready(function() {
 
   });
 
+  
+
+  
+
 
   $("#loginForm").validate({
     rules:{     
@@ -137,13 +141,35 @@ $(document).ready(function() {
            
             }
         }
+
+
+        // function panCheck(){
+
+        //     let panCardNo = $("#pan_number").val();
+        //     let regex = new RegExp(/^[A-Z]{5}[0-9]{4}[A-Z]{1}$/);
+        //     if (panCardNo == null) { 
+
+        //         alert("Required");
+        //     }
+        //     if (regex.test(panCardNo) == true) {
+                
+        //         //        
+        //     }
+        //     else {
+                
+        //         pan_number:{
+        //            alert("Required");
+        //         }
+        //     }
+        //   }
+
         console.log(person);
         localStorage.setItem("person", JSON.stringify(person));
 
         $.ajax({
             url:"https://api.apispreadsheets.com/data/HjKnZOLJqlDeDv9V/",
             type:"post",
-            data:person,
+            data:person,         
             success: function(){ 
                 $("#loginBtn").text('Submit');
                 // $("#registerArea").remove();

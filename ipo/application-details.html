@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>KYC Check | Trust Securities</title>
+  <title>Application Details | Trust Securities</title>
   <meta name="robots" content="noindex,nofollow">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">  
@@ -9,11 +9,12 @@
   <!-- Google font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <!-- Css style -->
   <link rel="stylesheet" type="text/css" href="../css/style.css">
   <link rel="stylesheet" type="text/css" href="../css/aof/aof.css">
+  <link rel="stylesheet" type="text/css" href="../css/ipo/ipo.css">
 
   <!-- fave icons -->
   <link rel="apple-touch-icon" sizes="57x57" href="../images/faveicons/apple-icon-57x57.png">
@@ -58,7 +59,7 @@
                     <span class="name-text mr-1">Sarfaraz Ansari</span>
                     <img width="17" height="7" src="../images/dashboard/caret.svg">
                   </div>
-                  <div class="font12">Code:- FRM00448</div>
+                  <!-- <div class="font12">Code:- FRM00448</div> -->
                 </div> 
               </div> 
               <div class="ds-search-box">
@@ -108,64 +109,47 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-6 m-auto">
-        <div class="flex-wrap flex-center">
-          
-          <div class="font14 ml-auto">
-            Steps: 1 - 7 <span class="light-gray-color m-lr-1"> | </span> 14% <span class="circle-loader ml-1"></span>
-          </div>
-        </div>
-        <div class="bonds-card p-20 mt-1">
-          
-          <div>
-            <h3 class="title-3">KYC Check 
-              <div class="info-item" id="stepsList">
-                <img class="info" src="../images/aof/info.svg" />
-              </div>
-            </h3>
-            <div class="ds-search-box kyc-status p-relative">
-              <div class="search-mode slideDown" id="kycStatus">
-                <ul class="profile-activity">
-                  <li class="active">
-                    <h4>KYC Check</h4>
-                    <span>Enter personal and family details to proceed</span>
-                  </li>
-                  <li>
-                    <h4>Profile Creation</h4>
-                    <span>Enter profile Details for next step</span>
-                  </li>
-                  <li>
-                    <h4>Bank and Icome Details</h4>
-                    <span>Enter Bank and Income Details for bank verification</span>
-                  </li>
-                  <li>
-                    <h4>Trading Segment</h4>
-                    <span>Please verify all blank fields </span>
-                  </li>
-                </ul> 
+        <div class="bonds-card overflow-hidden">
+            <div class="brand-blur" style="background-image: url(../images/brands/muthot-logo.jpg);">
+              
+            </div>
+            <div>
+              <div class="p-15 p-relative">
+                <div class="flex-wrap flex-center">
+                  <div class="brand-img">
+                    <img src="../images/brands/muthot-logo.jpg">
+                  </div>
+                  <div class="b-title ml-1">
+                    <h3>MUTHOOT FINANCE LTD</h3>
+                    <p><span>15-Sep-2025</span></p>
+                  </div>
+                </div>
+                
               </div>
             </div>
-            
-            <span class="font14 light-gray-color">Finish the steps for Investing in Bonds</span>
           </div>
+        <div class="bonds-card p-20 mt-1">
+          <div class="flex-wrap flex-center">
+            <div>
+              <img src="../images/ipo/user-icon.svg" alt="User icon">
+            </div>
+            <div class="ml-1">
+              <h3 class="title-3">Application Details               
+              </h3>            
+              <span class="font14 light-gray-color">Provide Applicant Information for IPO Application</span>
+            </div>
+          </div>
+          
           <div class="mt-1">
             <div class="gradient-line inherit"></div>
           </div>
           <div class="form-section">
-            <form id="kycCheck">
-              <div class="form-input">
-                <label class="form-label">Enter your PAN number</label>
-                <input type="text" class="form-control" name="PAN" id="pan" placeholder="PAN" title="Enter Valid Pan Number" pattern="[A-Z]{5}-[0-9]{4}-[A-Z]{1}">
-                <div class="error d-none mt-05" id="pan_erro">Enter valid PAN Number</div>
-              </div>
 
-              <div class="form-input b-sticky"> 
-                <!-- profile-creation.html -->
-                <button type="submit" class="btn btn-primary d-block" id="kycSubmitPan">NEXT <img class="ml-1" src="../images/aof/arrow-right.svg" /></button>
-              </div> 
+            <form id="ipoApplication">
               
-              <div class="d-none form-input" id="kycCheckView">
-                <div class="form-input">
-                  <h4>Date of Birth</h4>
+                
+                <div class="form-input m-0">
+                  <label>Date of Birth</label>
                   <div class="flex-wrap flex-center mt-1">
                     <div class="dd unshift">
                       <input type="number" minlength="2" maxlength="2" class="form-control" name="dd" id="dd" placeholder="dd" required="" title="2 char only">
@@ -180,85 +164,82 @@
                 </div>
 
                 <div class="form-input">
-                  <input type="tel" class="form-control" value="7208707204" name="mobile" id="mobile" placeholder="Mobile" required="">
+                  <label>Applicant Name</label>
+                  <input type="text" class="form-control" value="Sarfaraz Ansari" name="name" id="name" placeholder="" required="">   
+                </div>
+
+                <div class="form-input">
+                  <label>PAN</label>
+                  <input type="text" class="form-control" value="AYOPA2175Q" name="pan" id="pan" placeholder="" required="">   
+                </div>
+
+                <div class="form-input">
+                  <label>Mobile Number</label>
+                  <input disabled type="tel" class="form-control" value="7208707204" name="mobile" id="mobile" placeholder="" required="">                  
+                </div>
+
+                <div class="form-input">
+                  <label>Email ID</label>
+                  <input disabled type="email" class="form-control" value="sarfaraz.ansari@trustgroup.in" name="email" id="email" placeholder="" required="">                                    
+                </div>
+
+                <div class="form-input">
+                  <div class="more-nominee-wrapper p-relative" id="moreApplicantList">
+                    
+                  </div>
+                  <div class="alert text-center mt-1" id="moreApplicantAlert">Only Three Applicant are allowed</div>
+                </div>
+
+                <div class="form-input">
+                  <div class="bg-light-brand p-1 text-center">
+                    <button class="btn btn-border" id="add_more_applicant">+ Add more Applicant</button>
+                  </div>
+                </div>
+
+                <div class="form-input">
+                  <h3 class="title-3">Depository Details</h3>    
                   
-                  <div class="mt-1 p-relative d-none new-input" id="newMobile">
-                    <input type="tel" class="form-control" name="new_mobile" id="new_mobile" placeholder="Mobile">
-                    <div class="close-input">
-                      <img src="../images/icons/close-icon.svg">
+
+                  <div class="form-input">                    
+                    <div class="mt-1 radio-group">
+                      <label><input required checked class="radio" type="radio" name="segment_type" id="NSDL"> NSDL</label>
+                      <label><input required class="radio" type="radio" name="segment_type" id="CDSL"> CDSL</label>                                   
                     </div>
                   </div>
-                  <div class="text-right mt-1 add-new-field">
-                    <button class="btn btn-sucess" id="addNewMobile">Add New</button>
-                  </div>
-                </div>
 
-                <div class="form-input">
-                  <input type="email" class="form-control" value="sarfaraz.ansari@trustgroup.in" name="email" id="email" placeholder="Email" required="">
-                  
-                  <div class="mt-1 p-relative d-none new-input" id="newEmail">
-                    <input type="email" class="form-control" name="new_email" id="new_email" placeholder="Email">
-                    <div class="close-input">
-                      <img src="../images/icons/close-icon.svg">
+                  <div class="form-input" id="nsdl_view">
+                    <div class="form-input">
+                      <label>NSDL DP ID</label>
+                      <input type="text" class="form-control" name="nsdl_dp_id" id="nsdl_dp_id" placeholder="Enter 8 digits DP ID" required>
+                    </div>
+                    <div class="form-input">
+                      <label>CDSL Client ID</label>
+                      <input type="text" class="form-control" name="client_id" id="client_id" placeholder="Enter Client ID" required>
+                    </div>
+                    <div class="form-input">
+                      <label>DP Name</label>
+                      <input type="text" class="form-control" name="nsdl_dp_name" id="nsdl_dp_name" placeholder="Enter DP Name" required>
                     </div>
                   </div>
-                  <div class="text-right mt-1 add-new-field">
-                    <button class="btn btn-sucess"  id="addNewEmail">Add New</button>
+
+                  <div class="form-input d-none" id="cdsl_view">
+                    <div class="form-input">
+                      <label>CDSL ID</label>
+                      <input type="text" class="form-control" name="cdsl_id" id="cdsl_id" placeholder="Enter 16 digits Client Code" required>
+                    </div>                   
+                    <div class="form-input">
+                      <label>DP Name</label>
+                      <input type="text" class="form-control" name="cdsl_dp_name" id="cdsl_dp_name" placeholder="Enter DP Name" required>
+                    </div>
                   </div>
-                </div>
 
-                <div class="form-input">
-                  <h4>Title</h4>
-                  <div class="mt-1 radio-group">
-                    <label><input checked class="radio" type="radio" name="name_title" id="title_mr"> Mr.</label>
-                    <label><input class="radio" type="radio" name="name_title" id="title_mrs"> Mrs.</label>                                   
-                  </div>
                 </div>
-
-                <div class="form-input">
-                  <input type="text" class="form-control pan_name" name="first_name" id="first_name" placeholder="First Name">
-                </div>
-
-                <div class="form-input">
-                  <input type="text" class="form-control pan_name" name="middle_name" id="middle_name" placeholder="Middle Name">
-                </div>
-
-                <div class="form-input">
-                  <input type="text" class="form-control pan_name" name="last_name" id="last_name" placeholder="Last Name">
-                </div>
-
-                <div class="form-input d-none" id="pan_name_area">
-                  <h4>Your Name As per PAN</h4>
-                  <p class="form-control mt-1 brand-color">
-                    <strong><span id="pan_first_name"></span> <span id="pan_middle_name"></span> <span id="pan_last_name"></span> </strong>
-                  </p>                
-                </div>
-
-                <div class="form-input">
-                  <h4>Gender</h4>
-                  <div class="mt-1 radio-group">
-                    <label><input checked class="radio" type="radio" name="gender" id="gen_male"> Male</label>
-                    <label><input class="radio" type="radio" name="gender" id="gen_female"> Female</label>                                   
-                  </div>
-                </div>
-
-                <div class="form-input">
-                  <input type="text" class="form-control pan_name" name="spouse_and_father_name" id="spouse_and_father_name" placeholder="Spouse/Father Name">
-                </div>
-
-                <div class="form-input">
-                  <input type="text" class="form-control pan_name" name="mother_name" id="mother_name" placeholder="Mother Full Name">
-                </div>
-
+                
                 <div class="form-input b-sticky"> 
                   <!-- profile-creation.html -->
                   <button type="submit" class="btn btn-primary d-block" id="kycSubmit">NEXT <img class="ml-1" src="../images/aof/arrow-right.svg" /></button>
-                </div> 
+                </div>
 
-
-              </div>
-
-              
                                   
             </form>
           </div>
@@ -323,7 +304,7 @@
   </div>  
 </div>
 
-<div id="snackbar">Enter your PAN number</div>
+<div id="snackbar">Enter your Date of Birth</div>
 
 
 <script src="../js/jquery.min.js"></script>
@@ -336,11 +317,11 @@
 <script type="text/javascript">
 
 
-  $(document).ready(function(){
-    setTimeout(function(){
-      $("#pan").focus();      
-    },100)
-  });
+  // $(document).ready(function(){
+  //   setTimeout(function(){
+  //     $("#dd").focus();      
+  //   },100)
+  // });
 
 
   
@@ -357,93 +338,61 @@
     let regex = new RegExp(/^[A-Z]{5}[0-9]{4}[A-Z]{1}$/);
     if (panCardNo == null) { 
         $("#pan_erro").show()
-        $("#kycCheckView").hide();
-        $("#kycSubmitPan").hide();
+        
     }
     if (regex.test(panCardNo) == true) {
         
         $("#pan_erro").hide();
-        $("#kycCheckView").show();
-        $("#kycSubmitPan").hide();
-        
         
     }
     else {
         
         $("#pan_erro").show()
-        $("#kycCheckView").hide();
-        $("#kycSubmitPan").show();
+        
     }
 
   });
 
 
 
-  $("input[name=mobile_details]").change(function(){
-    let m_family = $(this).attr("id");
-    if(m_family == "m_family"){
-      $("#family_mobile_input").fadeIn();
-      $("#family_mobile").focus();
+  $("input[name=segment_type]").change(function(){
+    let segmentType = $(this).attr("id");
+    if(segmentType == "CDSL"){
+      $("#cdsl_view").fadeIn();
+      $("#nsdl_view").hide()
+      $("#cdsl_id").focus();
     }else{
-      $("#family_mobile_input").hide();
+      $("#cdsl_view").hide();
+      $("#nsdl_view").fadeIn()
+      $("#nsdl_dp_id").focus();
     }
   });
 
-  $("input[name=email_details]").change(function(){
-    let m_family = $(this).attr("id");
-    if(m_family == "e_family"){
-      $("#family_email_input").fadeIn();
-      $("#family_email").focus();
+  $("#add_more_applicant").on("click", function(Event){
+    Event.preventDefault();
+    if($("#moreApplicantList > .nominee-list").length>=2){
+      $("#moreApplicantAlert").fadeIn();
+      setTimeout(function(){
+        $("#moreApplicantAlert").fadeOut();
+      }, 1000)
     }else{
-      $("#family_email_input").hide();
-    }
-  });
-
-  $("#addNewMobile").on("click", function(Event){
-    Event.preventDefault()
-    $("#newMobile").fadeIn();
-    $("#new_mobile").focus();
-    $(this).parent(".add-new-field").hide();
-  });
-  $("#addNewEmail").on("click", function(Event){
-    Event.preventDefault()
-    $("#newEmail").fadeIn();
-    $("#new_email").focus();
-    $(this).parent(".add-new-field").hide();
-  });
-
-  $(".close-input").on("click", function(){
-    $(this).parent(".new-input").hide();
-    $(this).parent().siblings(".add-new-field").fadeIn();
-  })
-
-
-  $("#first_name").on("input", function(){
-    $("#pan_first_name").text($(this).val());
-
-    if($(this).val()==''){
-      $("#pan_name_area").hide();
-    }else{
-      $("#pan_name_area").show();
+      $("#moreApplicantList").append('<div class="border-box nominee-list"><div class="form-input"> <label>Applicant Name</label> <input type="text" class="form-control" value="" name="more_name" id="more_name" placeholder="Enter.." required=""> </div> <div class="form-input m-0"> <label>PAN</label> <input type="text" class="form-control" value="" name="more_name" id="more_name" placeholder="Enter.." required=""> </div><div class="remove-applicant form-input"><img width="23px" height="23px" src="../images/aof/close-red.svg" /></div></div>');
     }
 
   });
-  $("#middle_name").on("input", function(){
-    $("#pan_middle_name").text($(this).val());
-    if($(this).val()==''){
-      $("#pan_name_area").hide();
-    }else{
-      $("#pan_name_area").show();
-    }
+
+  $(document).on("click", ".remove-applicant", function(){
+    $(this).parent().remove();
+    $("#moreApplicantAlert").hide();
   });
-  $("#last_name").on("input", function(){
-    $("#pan_last_name").text($(this).val());
-    if($(this).val()==''){
-      $("#pan_name_area").hide();
-    }else{
-      $("#pan_name_area").show();
-    }
-  });
+
+
+
+
+
+
+
+
 
 
 </script>
