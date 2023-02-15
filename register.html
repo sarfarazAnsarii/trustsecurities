@@ -59,6 +59,24 @@
         accent-color: var(--brand-color);
     }
 
+    .register-section {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
+    .center-content {
+        width: auto;
+        height: auto;
+        margin: auto;
+    }
+
     @media(max-width:768px){
       .register-section .col-lg-6 > .p-20{padding: 1rem}
       .google-btn{
@@ -79,111 +97,113 @@
 </head>
 <body>
   <section class="register-section">
-    <div class="container">
-      <div class="row reverse-mob">
-        <div class="col-lg-6 bg-white">
-          <div class="text-center p-20">
-            <a href="index.html">
-              <img width="136.56" height="152.33" src="images/trsut-group-logo.svg" alt="Trust Securities">
-            </a>
-            <p class="mt-2 font14">
-              Trust Securities Services is the Non-Institutional Clientele vertical of one of India's leading full-service financial houses, TRUST Group.
-            </p>
-            <div class="about-border mt-1">
-              <span class="gray-color">Lead Arranger to all marquee debt IPO</span>
-            </div>
-            <div class="abt-wrap mt-2">
-              <img class="mb-2" width="91" height="91" src="images/icons/about-experience-icon.svg" alt="Users trust us">
-              <h3 class="title m-0">20+</h3>
-              <p class="font14 gray-color">Years of experience</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6 bg-light-gold">
-          <div class="p-20">
-            <h1 class="title m-0">Open an Account with <span>TRUST</span></h1>          
-            <p class="termsBox pb-2">
-              Already have and account?  <a href="login.html">Sign in</a>
-            </p>            
-            <div class="pb-2" id="registerArea">
-              <!-- <div class="social-login">
-                <a class="google-btn">
-                  <img src="images/icons/google-icon.svg" alt="Google"><span class="ml-1">Sign up with Google</span>
-                </a>
-                <a class="facebook-btn ml-1">
-                  <img width="45" height="45" src="images/icons/facebook-icon.svg" alt="Facebbok">
-                </a>
-              </div> -->
-              <!-- <div class="p-tb-2">
-                <div class="beak-line-or text-center light-gray-color">
-                  - OR -
-                </div>
-              </div> -->
-              <div class="form-section">
-                <form id="registerForm">
-                  <div class="form-input">
-                    <input type="text" class="form-control" name="name" id="name" placeholder="Full Name" required>
-                  </div>
-                  <div class="form-input">
-                    <input type="number" minlength="10" maxlength="10" class="form-control" name="mobile" id="mobile" placeholder="Mobile" required>
-                  </div>
-                  <div class="form-input">
-                    <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
-                  </div>
-                  <div class="form-input user-terms">
-                    <div>
-                      <label class="form-check font14">
-                        <div class="flex-wrap">
-                          <input checked type="checkbox" value="Subscribed" name="whatsappOpt" id="whatsappOpt">
-                          <div class="col-lg-11">
-                            <span>Subscribe For Updates On</span>
-                            <img src="images/icons/whatsapp-icon.svg" alt="whatsApp">
-                            <strong>WhatsApp</strong>
-                          </div>
-                        </div>
-                      </label>
-                    </div>
-                    <div class="mt-1">
-                      <label class="form-check font14">
-                        <div class="flex-wrap">
-                          <input checked type="checkbox" name="termsCondition" id="termsCondition">
-                          <div class="col-lg-11">
-                            <span>By creating account you agree to our <a href="#">Privacy Policy</a>, <a href="#">Terms of Service</a> and <a href="#">Notification Setting</a>
-                          </div>
-                        </div>
-                        <div id="termsError"></div>
-                      </label>
-                    </div>
-                  </div>
-                  <div class="form-input sticky-bottom">
-                    <button id="registerBtn" class="btn btn-primary d-block">CREAT AN ACCOUNT</button>
-                  </div>
-                </form>                
+    <div class="center-content">
+      <div class="container">
+        <div class="row reverse-mob">
+          <div class="col-lg-6 bg-white">
+            <div class="text-center p-20">
+              <a href="index.html">
+                <img width="136.56" height="152.33" src="images/trsut-group-logo.svg" alt="Trust Securities">
+              </a>
+              <p class="mt-2 font14">
+                Trust Securities Services is the Non-Institutional Clientele vertical of one of India's leading full-service financial houses, TRUST Group.
+              </p>
+              <div class="about-border mt-1">
+                <span class="gray-color">Lead Arranger to all marquee debt IPO</span>
+              </div>
+              <div class="abt-wrap mt-2">
+                <img class="mb-2" width="91" height="91" src="images/icons/about-experience-icon.svg" alt="Users trust us">
+                <h3 class="title m-0">20+</h3>
+                <p class="font14 gray-color">Years of experience</p>
               </div>
             </div>
-            <div class="pb-2 d-none" id="otpArea">
-              <form id="optForm">
-                  <div class="form-input otp-text">
-                    <div class="text-left">
-                      <h3 class="title-3">OTP verification</h3>
-                      <p class="sucess-text mt-1">We have sent OTP on your Email Id and Mobile Number Please verify and proceed</p>
+          </div>
+          <div class="col-lg-6 bg-light-gold">
+            <div class="p-20">
+              <h1 class="title m-0">Open an Account with <span>TRUST</span></h1>          
+              <p class="termsBox pb-2">
+                Already have and account?  <a href="login.html">Sign in</a>
+              </p>            
+              <div class="pb-2" id="registerArea">
+                <!-- <div class="social-login">
+                  <a class="google-btn">
+                    <img src="images/icons/google-icon.svg" alt="Google"><span class="ml-1">Sign up with Google</span>
+                  </a>
+                  <a class="facebook-btn ml-1">
+                    <img width="45" height="45" src="images/icons/facebook-icon.svg" alt="Facebbok">
+                  </a>
+                </div> -->
+                <!-- <div class="p-tb-2">
+                  <div class="beak-line-or text-center light-gray-color">
+                    - OR -
+                  </div>
+                </div> -->
+                <div class="form-section">
+                  <form id="registerForm">
+                    <div class="form-input">
+                      <input type="text" class="form-control" name="name" id="name" placeholder="Full Name" required>
                     </div>
-                  </div>
-                  <div class="form-input">
-                    <input type="number" minlength="4" maxlength="4" class="form-control" name="mobileOTP" id="mobileOTP" placeholder="Mobile OTP" required>
-                  </div>
-                  <div class="form-input">
-                    <input type="number" minlength="4" maxlength="4" class="form-control" name="emailOTP" id="emailOTP" placeholder="Email OTP" required>
-                  </div>
-                  <div class="pb-2">
-                    <div class="text-left termsBox">
-                        <p>Didn’t recieve OTP? <a href="#">Resend OTP</a></p>
+                    <div class="form-input">
+                      <input type="number" minlength="10" maxlength="10" class="form-control" name="mobile" id="mobile" placeholder="Mobile" required>
+                    </div>
+                    <div class="form-input">
+                      <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-input user-terms">
+                      <div>
+                        <label class="form-check font14">
+                          <div class="flex-wrap">
+                            <input checked type="checkbox" value="Subscribed" name="whatsappOpt" id="whatsappOpt">
+                            <div class="col-lg-11">
+                              <span>Subscribe For Updates On</span>
+                              <img src="images/icons/whatsapp-icon.svg" alt="whatsApp">
+                              <strong>WhatsApp</strong>
+                            </div>
+                          </div>
+                        </label>
                       </div>
-                  </div>
-                  <div class="form-input sticky-bottom">
-                    <button id="submitOTP" class="btn btn-primary d-block">Verify OTP</button>
-                  </div>
-              </form>
+                      <div class="mt-1">
+                        <label class="form-check font14">
+                          <div class="flex-wrap">
+                            <input checked type="checkbox" name="termsCondition" id="termsCondition">
+                            <div class="col-lg-11">
+                              <span>By creating account you agree to our <a href="#">Privacy Policy</a>, <a href="#">Terms of Service</a> and <a href="#">Notification Setting</a>
+                            </div>
+                          </div>
+                          <div id="termsError"></div>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="form-input sticky-bottom">
+                      <button id="registerBtn" class="btn btn-primary d-block">CREAT AN ACCOUNT</button>
+                    </div>
+                  </form>                
+                </div>
+              </div>
+              <div class="pb-2 d-none" id="otpArea">
+                <form id="optForm">
+                    <div class="form-input otp-text">
+                      <div class="text-left">
+                        <h3 class="title-3">OTP verification</h3>
+                        <p class="sucess-text mt-1">We have sent OTP on your Email Id and Mobile Number Please verify and proceed</p>
+                      </div>
+                    </div>
+                    <div class="form-input">
+                      <input type="number" minlength="4" maxlength="4" class="form-control" name="mobileOTP" id="mobileOTP" placeholder="Mobile OTP" required>
+                    </div>
+                    <div class="form-input">
+                      <input type="number" minlength="4" maxlength="4" class="form-control" name="emailOTP" id="emailOTP" placeholder="Email OTP" required>
+                    </div>
+                    <div class="pb-2">
+                      <div class="text-left termsBox">
+                          <p>Didn’t recieve OTP? <a href="#">Resend OTP</a></p>
+                        </div>
+                    </div>
+                    <div class="form-input sticky-bottom">
+                      <button id="submitOTP" class="btn btn-primary d-block">Verify OTP</button>
+                    </div>
+                </form>
+              </div>
             </div>
           </div>
         </div>

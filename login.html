@@ -51,6 +51,24 @@
         color: var(--white);
     }
 
+        .register-section {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+    }
+    .center-content {
+        width: auto;
+        height: auto;
+        margin: auto;
+    }
+
     @media(max-width:768px){
       .register-section .col-lg-6 > .p-20{padding: 1rem}      
       
@@ -61,87 +79,89 @@
 </head>
 <body>
   <section class="register-section">
-    <div class="container">
-      <div class="row reverse-mob">
-        <div class="col-lg-6 bg-white">
-          <div class="text-center p-20">
-            <a href="index.html">
-              <img width="136.56" height="152.33" src="images/trsut-group-logo.svg" alt="Trust Securities">
-            </a>
-            <p class="mt-2 font14">
-              Trust Securities Services is the Non-Institutional Clientele vertical of one of India's leading full-service financial houses, TRUST Group.
-            </p>
-            <div class="about-border mt-1">
-              <span class="gray-color">Lead Arranger to all marquee debt IPO</span>
-            </div>
-            <div class="abt-wrap mt-2">
-              <img class="mb-2" width="91" height="91" src="images/icons/about-experience-icon.svg" alt="Users trust us">
-              <h3 class="title m-0">20+</h3>
-              <p class="font14 gray-color">Years of experience</p>
+    <div class="center-content">
+      <div class="container">
+        <div class="row reverse-mob">
+          <div class="col-lg-6 bg-white">
+            <div class="text-center p-20">
+              <a href="index.html">
+                <img width="136.56" height="152.33" src="images/trsut-group-logo.svg" alt="Trust Securities">
+              </a>
+              <p class="mt-2 font14">
+                Trust Securities Services is the Non-Institutional Clientele vertical of one of India's leading full-service financial houses, TRUST Group.
+              </p>
+              <div class="about-border mt-1">
+                <span class="gray-color">Lead Arranger to all marquee debt IPO</span>
+              </div>
+              <div class="abt-wrap mt-2">
+                <img class="mb-2" width="91" height="91" src="images/icons/about-experience-icon.svg" alt="Users trust us">
+                <h3 class="title m-0">20+</h3>
+                <p class="font14 gray-color">Years of experience</p>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-lg-6 bg-light-gold">
-          <div class="p-20">
-            <h1 class="title m-0">Login with <span>TRUST</span></h1>          
-            <p class="termsBox pb-2">
-              If you don’t have account?  <a href="register.html">Sign Up</a>
-            </p>
-            <div class="tab-section">
-              <ul class="tab-item tags-list mb-2">
-                <li class="active">
-                  <a  href="#client">Client</a>
-                </li>
-                <li>
-                  <a href="#partner">Partner</a>
-                </li>
-              </ul>
-              <div class="tab-list active" id="client">
-                <div class="form-section pb-2">
-                  <form id="loginForm">
-                    <div class="form-input">
-                      <input type="text" class="form-control" name="pan_number" id="pan_number" placeholder="PAN" minlength="10" maxlength="10" required>
-                    </div>
-                    <div class="form-input forgot-psw">
-                      <input type="password" class="form-control" name="password" id="password" placeholder="Password" minlength="6" maxlength="6" required>
-                      <div class="text-right termsBox">
-                        <a href="#">Forgot password?</a>
+          <div class="col-lg-6 bg-light-gold">
+            <div class="p-20">
+              <h1 class="title m-0">Login with <span>TRUST</span></h1>          
+              <p class="termsBox pb-2">
+                If you don’t have account?  <a href="register.html">Sign Up</a>
+              </p>
+              <div class="tab-section">
+                <ul class="tab-item tags-list mb-2">
+                  <li class="active">
+                    <a  href="#client">Client</a>
+                  </li>
+                  <li>
+                    <a href="#partner">Partner</a>
+                  </li>
+                </ul>
+                <div class="tab-list active" id="client">
+                  <div class="form-section pb-2">
+                    <form id="loginForm" oninvalid>
+                      <div class="form-input">
+                        <input type="text" class="form-control" name="pan_number" id="pan_number" placeholder="PAN" minlength="10" maxlength="10" pattern="[A-Za-z]{5}[0-9]{4}[A-Za-z]{1}" required>
                       </div>
-                    </div>                  
-                    <div class="form-input">
-                      <button class="btn btn-primary d-block" id="loginBtn">LOGIN</button>
-                    </div>
-                    <div class="pb-1">
-                      <div class="beak-line-or text-center light-gray-color">
-                        - OR -
+                      <div class="form-input forgot-psw">
+                        <input type="password" class="form-control" name="password" id="password" placeholder="Password" minlength="6" maxlength="6" required>
+                        <div class="text-right termsBox">
+                          <a href="#">Forgot password?</a>
+                        </div>
+                      </div>                  
+                      <div class="form-input">
+                        <button class="btn btn-primary d-block" id="loginBtn">LOGIN</button>
                       </div>
-                    </div>
-                    <div class="form-input index-btn p-relative">
-                      <button class="btn btn-border border-gradient d-block">LOGIN VIA OTP</button>
-                    </div>
-                  </form>
+                      <div class="pb-1">
+                        <div class="beak-line-or text-center light-gray-color">
+                          - OR -
+                        </div>
+                      </div>
+                      <div class="form-input index-btn p-relative">
+                        <button class="btn btn-border border-gradient d-block">LOGIN VIA OTP</button>
+                      </div>
+                    </form>
+                  </div>
                 </div>
-              </div>
-              <div class="tab-list" id="partner">
-                <div class="form-section pb-2">
-                  <form>
-                    <div class="form-input">
-                      <input type="text" class="form-control" name="DCCode" id="dc_code" placeholder="DC Code" required>
-                    </div>
-                    <div class="form-input forgot-psw">
-                      <input type="password" class="form-control" name="password" id="password" placeholder="Password" required>
-                      <div class="text-right termsBox">
-                        <a href="#">Forgot password?</a>
+                <div class="tab-list" id="partner">
+                  <div class="form-section pb-2">
+                    <form>
+                      <div class="form-input">
+                        <input type="text" class="form-control" name="DCCode" id="dc_code" placeholder="DC Code" required>
                       </div>
-                    </div>                  
-                    <div class="form-input">
-                      <button class="btn btn-primary d-block">LOGIN</button>
-                    </div>
-                    
-                  </form>
-                </div>
-              </div>              
-            </div>  
+                      <div class="form-input forgot-psw">
+                        <input type="password" class="form-control" name="password" id="password" placeholder="Password" required>
+                        <div class="text-right termsBox">
+                          <a href="#">Forgot password?</a>
+                        </div>
+                      </div>                  
+                      <div class="form-input">
+                        <button class="btn btn-primary d-block">LOGIN</button>
+                      </div>
+                      
+                    </form>
+                  </div>
+                </div>              
+              </div>  
+            </div>
           </div>
         </div>
       </div>
@@ -153,7 +173,15 @@
 <script src="js/validate.min.js"></script>
 <script src="js/form.js"></script>
 
+<script type="text/javascript">
+  $("#pan_number").on("input", function(){
+    $(this).val($(this).val().toUpperCase());
+  });
 
+
+
+
+</script>
 
 </body>
 </html>
