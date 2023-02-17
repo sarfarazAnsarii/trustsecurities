@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>IPO Order | Trust Securities</title>
+  <meta name="robots" content="noindex,nofollow">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
+
+  <!-- Google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Css style -->
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+
+  <link rel="stylesheet" type="text/css" href="../css/aof/aof.css">
+  <link rel="stylesheet" type="text/css" href="../css/ipo/ipo.css">
+  <link rel="stylesheet" type="text/css" href="../css/dashboard/dashboard.css">
+
+  <!-- fave icons -->
+  <link rel="apple-touch-icon" sizes="57x57" href="../images/faveicons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="../images/faveicons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="../images/faveicons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="../images/faveicons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="../images/faveicons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="../images/faveicons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="../images/faveicons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="../images/faveicons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../images/faveicons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/faveicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="../images/faveicons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../images/faveicons/favicon-16x16.png">
+  
+  <meta name="msapplication-TileColor" content="#AF862E">
+  <meta name="msapplication-TileImage" content="images/faveicons/ms-icon-144x144.png">
+  <meta name="theme-color" content="#AF862E">
+
+</head>
+<body>
+
+
+<div class="ds-main">
+  <div class="ds-sidebar">
+    <div class="flex-center flex-wrap p-1">
+      <div class="ds-brand">
+        <a href="dashboard.html">
+          <img width="82.68" class="logo-full" height="45" src="../images/trust-logo.svg" alt="Trust Securities">
+          <img width="25.08" class="logo-icon" height="45" src="../images/dashboard/menu-icons/logo-icon.svg" alt="Trust Securities">
+        </a>
+      </div>
+      <div class="ds-toggle ml-auto">
+        <div class="toggleMenu" id="daToggleMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+      </div>
+    </div>
+    <div class="ds-nav mt-1" id="dsToggleNav">
+      <ul class="ds-nav-items">
+        <li><a href="../dashboard.html"><img class="mr-1" width="19" height="19" src="../images/dashboard/menu-icons/dasbaord.svg" alt="Dashboard">
+          <span>Dashboard</span>
+        </a></li>
+        <li>
+          <a class="active" href="javascript:void(0)">
+            <img class="mr-1" width="19" height="19" src="../images/dashboard/menu-icons/discover-active.svg" alt="Discover">
+            <span>Primary Offerings</span>
+          </a>
+          <!-- <ul class="ds-drop-down">
+            <li>
+              <a href="javascript:void(0)">Primary Offerings</a>
+              <ul class="ds-drop-down ds-drop-down-list">
+                <li><a href="#">Debt NCD IPOs</a></li>
+                <li><a href="#">SGBs</a></li>
+                <li><a href="#">RBI Bonds</a></li>
+                <li><a href="#">54EC Bonds</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Secondary Offerings</a>             
+            </li>            
+          </ul> -->
+        </li>
+        <li>
+          <a href="ipo-order-book.html">
+            <img class="mr-1" width="19" height="19" src="../images/dashboard/menu-icons/collection.svg" alt="Collection">
+            <span>IPO Orders</span>
+          </a>          
+        </li>
+        <li>
+          <a href="debt-ipo-history.html">
+            <img class="mr-1" width="19" height="19" src="../images/dashboard/menu-icons/history.svg" alt="Historical">
+            <span>Historical Debt IPO</span>
+          </a>          
+        </li>
+        <!-- <li>
+          <a href="javascript:void(0)">          
+            <img class="mr-1" width="19" height="19" src="../images/dashboard/menu-icons/collection.svg" alt="Collection">
+            <span>Collection</span>
+          </a>          
+        </li>
+        <li>
+          <a href="#">          
+            <img class="mr-1" width="19" height="19" src="../images/dashboard/menu-icons/blogs.svg" alt="Blogs">
+            <span>Blogs</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img class="mr-1" width="19" height="19" src="../images/dashboard/menu-icons/faq.svg" alt="FAQs">
+            <span>FAQs</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img class="mr-1" width="19" height="19" src="../images/dashboard/menu-icons/media.svg" alt="Media">
+            <span>Media</span>
+          </a>
+        </li> -->
+      </ul>
+    </div>
+  </div>
+  <div class="ds-wrap">
+    <div class="ds-body-wrap">
+      <div class="sticky-head">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <header class="ds-main-header">
+                <section class="main-header">
+                  <div class="flex-wrap flex-center">                  
+                    <div class="toggleMenu toggle-btn" id="dashHeaderMenu">
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                    </div>
+                    <div class="ds-search-box" id="searchArea">
+                      <div class="ds-main-search flex-wrap flex-center">
+                          <img class="ds-search-icon" width="17px" height="17px" src="../images/icons/search-gray.svg">
+                          <img class="ds-search-icon-mob d-none" width="17px" height="17px" src="../images/icons/search-gray.svg">
+                          <input class="ds-search" type="text" placeholder="Search by ISIN / Issuer / Company" name="ds-search" id="ds-search" />
+                          <img class="d-none ds-search-close" src="../images/icons/close-icon.svg" />
+                      </div>
+                      <div class="search-mode" id="searchBox">
+                        <ul class="search-list overflow-item">
+                            <li>
+                              <a href="ipo-order.html">
+                                <img src="../images/icons/search-gray.svg">
+                                <span>Hero Fincorp Limited</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="ipo-order.html">
+                                <img src="../images/icons/search-gray.svg">
+                                <span>Union Bank of India</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="ipo-order.html">
+                                <img src="../images/icons/search-gray.svg">
+                                <span>Up Power Corporation Limited</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="ipo-order.html">
+                                <img src="../images/icons/search-gray.svg">
+                                <span>Aditya Birla Sun Life Insurance Company Limited</span>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="ipo-order.html">
+                                <img src="../images/icons/search-gray.svg">
+                                <span>HERO FINCORP LIMITED</span>
+                              </a>
+                            </li>
+                        </ul>
+                        <ul class="search-list not-found">
+                          
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="ds-profile">
+                      <div class="ml-auto flex-wrap flex-center" id="dashProfileTab">
+                        <div class="mr-1">
+                          <img src="../images/dashboard/menu-icons/profile.svg" />
+                        </div>
+                        <div class="ds-name">
+                          <div class="font12 sucess-text">Verified</div>
+
+                          <div class="flex-wrap flex-center">
+                            <span class="name-text mr-1">Sarfaraz Ansari</span>
+                            <img width="17" height="7" src="../images/dashboard/caret.svg">
+                          </div>
+                        </div> 
+                      </div> 
+                      <div class="ds-search-box">
+                        <div class="search-mode" id="dashProfile">
+                          <ul class="search-list profile-activity">
+                            
+                            <li>
+                              <a href="login.html">
+                                <img src="../images/dashboard/icons/logout.svg">
+                                <span>Sign out</span>
+                              </a>
+                            </li>                            
+                          </ul> 
+                        </div>
+                      </div>
+                                       
+                    </div>
+                  </div>
+                </section>
+              </header>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="form-section aof-form-main">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <div class="heading-box ds-heading-box"> 
+                <div class="flex-wrap flex-center">
+                  <h2 class="title-3">Current NCD IPOs</h2>
+                </div>
+              </div>
+            </div>            
+          </div>
+          <div class="row">
+            <div class="col-lg-4 pb-1">
+              <div class="bonds-card">
+                <div class="brand-blur" style="background-image: url(../images/brands/heroFincorp.jfif);"></div>
+                <div class="b-bottom">
+                  <div class="p-relative ipo-head">
+                    <div class="flex-wrap flex-center">
+                      <div class="brand-img">
+                        <img src="../images/brands/heroFincorp.jfif">
+                      </div>
+                      <div class="ml-auto">
+                        <div class="flex-wrap flex-center">
+                          <span class="font14">Closes on Dec 22</span>
+                          <div class="ml-auto ml-1">
+                            <img width="45" height="24" src="../images/dashboard/icons/ipo-icon.svg" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="b-title mt-1">
+                      <h3>Hero Fincorp Limited</h3>
+                      <p class="brand-color">Open</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="p-15">
+                    <div class="row">
+                      <div class="col-6">
+                        <div class="b-details">
+                          <p>Tenor</p>
+                          <h3>36.00 Months</h3>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="b-details">
+                          <p>Interest Frequency</p>
+                          <h3>Monthly</h3>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="row mt-1">
+                      <div class="col-6">
+                        <div class="b-details">
+                          <p>Min Investment</p>
+                          <h3>₹10,000.00</h3>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="b-details">
+                          <p>Yield</p>
+                          <h3>7.50</h3>
+                        </div>
+                      </div>
+                      
+                      
+                    </div>
+                    <div class="flex-wrap index-btn mt-1 p-relative">
+                      <a href="ipo-order.html" class="btn btn-border border-gradient d-block">Invest Now</a>
+                    </div>
+                  </div> 
+              </div>
+            </div>
+            <div class="col-lg-4 pb-1">
+              <div class="bonds-card">
+                <div class="brand-blur" style="background-image: url(../images/brands/unionbank-of-india.png);"></div>
+                <div class="b-bottom">
+                  <div class="ipo-head p-relative">
+                    <div class="flex-wrap flex-center">
+                      <div class="brand-img">
+                        <img src="../images/brands/unionbank-of-india.png">
+                      </div>
+                      <div class="ml-auto">
+                        <div class="flex-wrap flex-center">
+                          <span class="font14">Closes on Dec 22</span>
+                          <div class="ml-auto ml-1">
+                            <img width="45" height="24" src="../images/dashboard/icons/ipo-icon.svg" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="b-title mt-1">
+                      <h3>Union Bank of India</h3>
+                      <p class="brand-color">Open</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="p-15">
+                    <div class="row">
+                      <div class="col-6">
+                        <div class="b-details">
+                          <p>Tenor</p>
+                          <h3>36.00 Months</h3>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="b-details">
+                          <p>Interest Frequency</p>
+                          <h3>Monthly</h3>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="row mt-1">
+                      <div class="col-6">
+                        <div class="b-details">
+                          <p>Min Investment</p>
+                          <h3>₹10,000.00</h3>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="b-details">
+                          <p>Yield</p>
+                          <h3>7.50</h3>
+                        </div>
+                      </div>
+                      
+                      
+                    </div>
+                    <div class="flex-wrap index-btn mt-1 p-relative">
+                      <a href="ipo-order.html" class="btn btn-border border-gradient d-block">Invest Now</a>
+                    </div>
+                  </div>
+
+              </div>
+            </div>
+            <div class="col-lg-4 pb-1">
+              <div class="bonds-card">
+                <div class="brand-blur" style="background-image: url(../images/brands/up-power.jfif);"></div>
+                <div class="b-bottom">
+                  <div class="ipo-head p-relative">
+                    <div class="flex-wrap flex-center">
+                      <div class="brand-img">
+                        <img src="../images/brands/up-power.jfif">
+                      </div>
+                      <div class="ml-auto">
+                        <div class="flex-wrap flex-center">
+                          <span class="font14">Closes on Dec 22</span>
+                          <div class="ml-auto ml-1">
+                            <img width="45" height="24" src="../images/dashboard/icons/ipo-icon.svg" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="b-title mt-1">
+                      <h3>Up Power Corporation Limited</h3>
+                      <p class="brand-color">Open</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="p-15">
+                    <div class="row">
+                      <div class="col-6">
+                        <div class="b-details">
+                          <p>Tenor</p>
+                          <h3>36.00 Months</h3>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="b-details">
+                          <p>Interest Frequency</p>
+                          <h3>Monthly</h3>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="row mt-1">
+                      <div class="col-6">
+                        <div class="b-details">
+                          <p>Min Investment</p>
+                          <h3>₹10,000.00</h3>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="b-details">
+                          <p>Yield</p>
+                          <h3>7.50</h3>
+                        </div>
+                      </div>
+                      
+                      
+                    </div>
+                    <div class="flex-wrap index-btn mt-1 p-relative">
+                      <a href="ipo-order.html" class="btn btn-border border-gradient d-block">Invest Now</a>
+                    </div>
+                  </div>
+
+              </div>
+            </div>
+            <div class="col-lg-4 pb-1">
+              <div class="bonds-card">
+                <div class="brand-blur" style="background-image: url(../images/brands/aditya-birla.jpg);"></div>
+                <div class="b-bottom">
+                  <div class="ipo-head p-relative">
+                    <div class="flex-wrap flex-center">
+                      <div class="brand-img">
+                        <img src="../images/brands/aditya-birla.jpg">
+                      </div>
+                      <div class="ml-auto">
+                        <div class="flex-wrap flex-center">
+                          <span class="font14">Closes on Dec 22</span>
+                          <div class="ml-auto ml-1">
+                            <img width="45" height="24" src="../images/dashboard/icons/ipo-icon.svg" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="b-title mt-1">
+                      <h3>Aditya Birla Sun Life Insurance Company Limited</h3>
+                      <p class="brand-color">Open</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="p-15">
+                    <div class="row">
+                      <div class="col-6">
+                        <div class="b-details">
+                          <p>Tenor</p>
+                          <h3>36.00 Months</h3>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="b-details">
+                          <p>Interest Frequency</p>
+                          <h3>Monthly</h3>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="row mt-1">
+                      <div class="col-6">
+                        <div class="b-details">
+                          <p>Min Investment</p>
+                          <h3>₹10,000.00</h3>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="b-details">
+                          <p>Yield</p>
+                          <h3>7.50</h3>
+                        </div>
+                      </div>
+                      
+                      
+                    </div>
+                    <div class="flex-wrap index-btn mt-1 p-relative">
+                      <a href="ipo-order.html" class="btn btn-border border-gradient d-block">Invest Now</a>
+                    </div>
+                  </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<footer class="p-0">
+  <div class="copyright mt-2">
+    <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <p class="cp-list">
+              © <span id="fullYear"></span> All Rights Reserved.
+            </p>     
+          </div>
+          <div class="col-lg-6">
+            <ul class="cp-list">
+              <li><a href="#">Terms of use</a></li>
+              <li><a href="#">Disclaimer</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Regulatory</a></li>
+              <li><a href="#">Disclosures</a></li>
+            </ul>
+          </div>
+        </div>
+    </div>
+  </div>
+</footer>
+
+<div class="st-modal" data-modal="residentAddress">
+  <div class="ds-card-box">
+    <div class="square-card">
+      <div class="ds-close">
+        <img src="../images/icons/close-icon.svg">
+      </div>
+      <div class="md-hading b-bottom">
+        <div class="flex-wrap flex-center">          
+          <h3 class="title-2" id="dataTitle">Your Address..</h3>   
+        </div>      
+      </div>
+      <div class="md-body" id="dataInfo mt-2">
+        
+        <div class="form-input">
+          <div class="form-input">
+            <label class="input-overlay">Address line 1</label>
+            <input class="form-control" type="text" name="addressLine1" id="addressLine1">
+          </div>
+          <div class="form-input">
+            <label class="input-overlay">Address line 2</label>
+            <input class="form-control" type="text" minlength="8" maxlength="16" name="addressLine2" id="addressLine2" >
+          </div>
+          <div class="form-input">
+            <label class="input-overlay">City</label>
+            <input class="form-control" type="text" minlength="8" maxlength="16" name="enter_city" id="enter_city" >
+          </div>
+          <div class="form-input">
+            <label class="input-overlay">Pincode</label>
+            <input class="form-control" type="text" minlength="8" maxlength="16" name="enter_pincode" id="enter_pincode" >
+          </div>
+        </div>
+        
+        <div class="index-btn mt-1">
+          <button class="btn btn-border border-gradient d-block" id="uploadPan">SUBMIT</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="fixed-btm">
+  <div class="question-chat-box">
+    <div class="answer-chat-box d-none" id="answerChatBox">
+      <div class="bonds-card">
+        <div class="help-head">
+          <div class="flex-wrap flex-center">
+            <img class="mr-1" src="../images/aof/help.svg" /><h3>Help</h3>
+          </div>
+        </div>
+        <div class="help-body p-1">
+          <h3 class="brand-color">For ASBA applications:</h3>
+          <ol class="help-list mt-1">
+            <li>Pre-filled application form will be emailed to the Clients registered email id post bidding of IPO application.</li>
+            <li>You can take printout of the application form and check all the details as appearing in the application form i.e. Applicant Name, PAN, Demat, Bank, Bank Branch, category, sub-category, series and amount.</li>
+            <li>
+              Put Bid Number at the top of the application form & submit the application form to the Bank Location selected at the time of online application bidding.
+            </li>
+            <li>
+              If all the details are correct in the application form, please sign [signatures – 5A/5B/5C for First/Second/Third Applicant & 5D for ASBA Bank account holder(s)].
+            </li>
+            <li>
+              If any details are in-correct or wish to modify / cancel the bid, kindly send the email on <a href="mailto:trustsecurities@trustgroup.in">trustsecurities@trustgroup.in</a> alongwith the IPO bidding details from the email id which was captured while submission of bidding.
+            </li>
+          </ol>
+          <h3 class="brand-color mt-1">For UPI Applications:</h3>
+          <ol class="help-list mt-1">
+            <li>
+              No need to submit physical application anywhere if mode of payment is selected as UPI.
+            </li>
+            <li>
+              Request you to accept / authorise blocking of funds as per request received from UPI handle for completion of IPO bidding
+            </li>            
+          </ol>
+          <p class="font14 mt-1">
+            For any information/clarification, you can get in touch with us at <a href="mailto:trustsecurities@trustgroup.in">trustsecurities@trustgroup.in</a> or contact us on 022 - 4084 5000 / 2656 7536.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="q-img text-right" id="questionMark">
+      <img src="../images/aof/question-mark.svg" alt="Question Mark">
+    </div>    
+  </div>  
+</div>
+
+
+
+<script src="../js/jquery.min.js"></script>
+<script src="../js/aof/aof.js"></script>
+<script src="../js/dashboard/dashboard.js"></script>
+<script src="../js/validate.min.js"></script>
+<script src="../js/aof/kyc-check.js"></script>
+
+
+
+<script type="text/javascript">
+
+
+$(".st-open-modal").on("click", function () {
+  var dataModal = $(this).attr("id");
+  $("body").addClass("over-hide");
+  $("body").find('.st-modal[data-modal="' + dataModal + '"]').addClass("active");
+});
+
+
+$(".ds-close").on("click", function () {
+  $(this).parents(".st-modal").removeClass("active");
+  $("body").removeClass("over-hide");
+});
+
+$(".bond-series").change(function(){
+
+  if($(this).is(":checked")){
+    $(this).parents(".bonds-card").addClass("active");
+    $(this).parents(".bonds-card").removeClass("inactive");
+
+    $(this).parents(".bonds-card").find(".bond-amount").attr("disabled", false);
+    $(this).parents(".bonds-card").find(".bond-amount").focus();
+    $(this).parents(".bonds-card").find(".bond-amount").attr("required", true);
+
+  }else{
+    $(this).parents(".bonds-card").removeClass("active");
+    $(this).parents(".bonds-card").addClass("inactive");
+    $(this).parents(".bonds-card").find(".bond-amount").attr("disabled", true)
+    $(this).parents(".bonds-card").find(".bond-amount").attr("required", false);
+  }
+})
+
+  
+  $("#pan").on("input", function(){
+    $(this).val($(this).val().toUpperCase());
+
+  })
+
+  $("#kycSubmit").on("click", function(){
+    // let panCardNo = $("#pan").val();
+    $("#pan").focus();
+
+    let panCardNo = $("#pan").val();
+    let regex = new RegExp(/^[A-Z]{5}[0-9]{4}[A-Z]{1}$/);
+    if (panCardNo == null) { 
+        $("#pan_erro").show()
+        
+    }
+    if (regex.test(panCardNo) == true) {
+        
+        $("#pan_erro").hide();
+        
+    }
+    else {
+        
+        $("#pan_erro").show()
+        
+    }
+
+  });
+
+
+
+  $("input[name=segment_type]").change(function(){
+    let segmentType = $(this).attr("id");
+    if(segmentType == "CDSL"){
+      $("#cdsl_view").fadeIn();
+      $("#nsdl_view").hide()
+      $("#cdsl_id").focus();
+    }else{
+      $("#cdsl_view").hide();
+      $("#nsdl_view").fadeIn()
+      $("#nsdl_dp_id").focus();
+    }
+  });
+
+  $("input[name=payment_method]").change(function(){
+    let paymentType = $(this).attr("id");
+    if(paymentType == "ASBA"){
+      $("#asba_box").fadeIn();
+      $("#upi_box").hide()
+      
+    }else{
+      $("#asba_box").hide();
+      $("#upi_box").fadeIn()
+    }
+  });
+
+  $("#add_more_applicant").on("click", function(Event){
+    Event.preventDefault();
+    if($("#moreApplicantList > .nominee-list").length>=2){
+      $("#moreApplicantAlert").fadeIn();
+      setTimeout(function(){
+        $("#moreApplicantAlert").fadeOut();
+      }, 1000)
+    }else{
+      $("#moreApplicantList").append('<div class="border-box nominee-list"><div class="form-input"> <label class="input-overlay">Applicant Name</label> <input type="text" class="form-control" value="" name="more_name" id="more_name" placeholder="Enter.." required=""> </div> <div class="form-input m-0"> <label class="input-overlay">PAN</label> <input type="text" class="form-control" value="" name="more_name" id="more_name" placeholder="Enter.." required=""> </div><div class="remove-applicant form-input"><img width="23px" height="23px" src="../images/aof/close-red.svg" /></div></div>');
+    }
+
+  });
+
+  $(document).on("click", ".remove-applicant", function(){
+    $(this).parent().remove();
+    $("#moreApplicantAlert").hide();
+  });
+
+
+  $(".radio-btn input[type=radio]").change(function(){
+    if($(this).is(":checked")){
+      $(this).parent("label").addClass("active");
+      $(this).parent("label").siblings().removeClass("active");
+    }
+  })
+
+  $(document).on("click",".input-overlay", function(){
+      $(this).addClass("active");
+      $(this).siblings(".form-control").focus();
+  });
+
+  $(document).on("focus", ".form-control", function(){
+      
+      $(this).siblings(".input-overlay").addClass("active");
+  });
+
+
+  $(".form-control").each(function(){
+
+    let inputVal = $(this).val()
+    if(inputVal==""){
+      $(this).siblings(".input-overlay").removeClass("active");     
+    }else{
+       $(this).siblings(".input-overlay").addClass("active");
+      
+    }
+  });
+
+
+$(document).on("blur", ".form-control", function(){
+  let inputVal = $(this).val()
+  if(inputVal==""){
+    $(this).siblings(".input-overlay").removeClass("active");     
+  }else{
+     $(this).siblings(".input-overlay").addClass("active");
+    
+  }
+});
+
+
+
+$(".bond-amount").on("input", function(){
+  let bondUnits = $(this).val() / 1000;
+  $(this).parents(".bonds-card").find(".b-details").children(".bond-units").text(bondUnits);
+})
+
+
+
+
+
+</script>
+
+
+</body>
+</html>
