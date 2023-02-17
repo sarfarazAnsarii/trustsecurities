@@ -1355,10 +1355,10 @@ h2{
     z-index: -1;
     border-radius: 10px;
     background: linear-gradient(to bottom right, #B3721D, #E0B444, #B3721D, #E0B444);
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
+    top: -0.15rem;
+    left: -0.15rem;
+    right: -0.15rem;
+    bottom: -0.15rem;
     border-radius: 2rem;
     transition: .5s all;
 }
