@@ -112,6 +112,7 @@ select.form-control:not([size]):not([multiple]){
     padding: 0.1rem 0.3rem;
     left: 13px;
     font-size: 0.75rem;
+    color: var(--brand-color);
 }
 
 
@@ -255,5 +256,8 @@ select.form-control:not([size]):not([multiple]){
     }
     .aof-form-main {
         margin-top: 5rem;
+    }
+    .input-overlay, .form-control{
+        background: var(--gray-light);
     }
 }
