@@ -11,12 +11,17 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
+  <!-- upload plugins -->
+  <link rel="stylesheet" href="https://kendo.cdn.telerik.com/2022.3.1109/styles/kendo.default-ocean-blue.min.css" />
+
   <!-- Css style -->
   <link rel="stylesheet" type="text/css" href="../css/style.css">
 
   <link rel="stylesheet" type="text/css" href="../css/aof/aof.css">
   <link rel="stylesheet" type="text/css" href="../css/ipo/ipo.css">
   <link rel="stylesheet" type="text/css" href="../css/dashboard/dashboard.css">
+
+
 
   <!-- fave icons -->
   <link rel="apple-touch-icon" sizes="57x57" href="../images/faveicons/apple-icon-57x57.png">
@@ -287,9 +292,9 @@
                         </ul>
                       </div> -->
                       <div class="index-btn p-relative">
-                        <a class="btn btn-border" href="#">
+                        <button class="btn btn-border st-open-modal" id="uploadDocument">
                           <img src="../images/ipo/view-icon.svg"> View Details
-                        </a>  
+                        </button>  
                       </div>                   
                     </div>                   
                   </div>                  
@@ -527,7 +532,7 @@
   </div>
 </footer>
 
-<div class="st-modal" data-modal="residentAddress">
+<div class="st-modal" data-modal="uploadDocument">
   <div class="ds-card-box">
     <div class="square-card">
       <div class="ds-close">
@@ -535,32 +540,26 @@
       </div>
       <div class="md-hading b-bottom">
         <div class="flex-wrap flex-center">          
-          <h3 class="title-2" id="dataTitle">Your Address..</h3>   
+          <h3 class="title-2" id="dataTitle">Upload Document</h3>   
         </div>      
       </div>
-      <div class="md-body" id="dataInfo mt-2">
-        
-        <div class="form-input">
-          <div class="form-input">
-            <label class="input-overlay">Address line 1</label>
-            <input class="form-control" type="text" name="addressLine1" id="addressLine1">
-          </div>
-          <div class="form-input">
-            <label class="input-overlay">Address line 2</label>
-            <input class="form-control" type="text" minlength="8" maxlength="16" name="addressLine2" id="addressLine2" >
-          </div>
-          <div class="form-input">
-            <label class="input-overlay">City</label>
-            <input class="form-control" type="text" minlength="8" maxlength="16" name="enter_city" id="enter_city" >
-          </div>
-          <div class="form-input">
-            <label class="input-overlay">Pincode</label>
-            <input class="form-control" type="text" minlength="8" maxlength="16" name="enter_pincode" id="enter_pincode" >
-          </div>
+      <div class="md-body" id="dataInfo">
+        <ul class="font12 form-list">
+          <li>
+            You can upload multiple pages/images by selecting "Choose file" multiple times.
+          </li>
+          <li>
+            Following file formates are supported for upload .bmp,.png,.jpeg,.jpg - Maximum file size limit is 5MB and minimum file size limit is 10kb.
+          </li>
+          <li>
+            Please ensure that yout Photo,Document number, Name, Date of birth and address is clear on the document uploaded.
+          </li>
+        </ul>
+        <div class="upload-file-section mt-1">
+          <input name="files" class="files" type="file" />
         </div>
-        
-        <div class="index-btn mt-1">
-          <button class="btn btn-border border-gradient d-block" id="uploadPan">SUBMIT</button>
+        <div class="index-btn mt-2">
+          <button class="btn btn-border border-gradient d-block close-modal" id="uploadPan">Submit</button>
         </div>
       </div>
     </div>
@@ -587,7 +586,7 @@ $(".st-open-modal").on("click", function () {
 });
 
 
-$(".ds-close").on("click", function () {
+$(".ds-close, .close-modal").on("click", function () {
   $(this).parents(".st-modal").removeClass("active");
   $("body").removeClass("over-hide");
 });
@@ -612,6 +611,27 @@ $(document).mouseup(function(e)
 
 </script>
 
+<script src="https://kendo.cdn.telerik.com/2022.3.1109/js/kendo.all.min.js"></script>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+
+
+      $(".files").kendoUpload({
+          async: {
+              chunkSize: 11000,// bytes
+              saveUrl: "save",
+              removeUrl: "remove",
+              autoUpload: true         },
+          validation: {
+              maxFileSize: 20000000
+          }
+      });
+
+      $(".k-button span").html('<img src="../images/aof/upload.svg" /> Select files...')
+
+  });
+</script>
 
 </body>
 </html>
