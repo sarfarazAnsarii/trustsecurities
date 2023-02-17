@@ -241,7 +241,6 @@ select.form-control:not([size]):not([multiple]){
 
 .action-icon a{text-decoration: none; color: var(--gray-dark);}
 
-
 @media(max-width:768px){
     .justify-between.normal-sm{
         justify-content: normal;
@@ -252,5 +251,8 @@ select.form-control:not([size]):not([multiple]){
     }
     .bid-series{
         width:100%;
+    }
+    .aof-form-main {
+        margin-top: 5rem;
     }
 }
