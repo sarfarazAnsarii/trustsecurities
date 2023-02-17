@@ -234,10 +234,10 @@ header.ds-main-header {
     text-overflow: inherit;
     overflow: unset;
 }
-
+/*
 .ds-add-banner.owl-carousel .owl-item img{
     height: 240px;
-}
+}*/
 
 @media(max-width:991px){
     .ds-main-header .main-header{
@@ -270,11 +270,11 @@ header.ds-main-header {
 .ds-body-wrap .invest-bond .bonds-card .b-title h3{
     font-size: 1rem;
 }
-.ds-body-wrap .invest-bond .bonds-card .b-title p,
+/*.ds-body-wrap .invest-bond .bonds-card .b-title p,
 .ds-body-wrap .invest-bond .bonds-card .b-details h3,
 .ds-body-wrap .invest-bond .bonds-card .b-details p{
     font-size: .8rem;
-}
+}*/
 
 .ipo-head {
     padding: 1.5rem 0 1.5rem 1.5rem;

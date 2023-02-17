@@ -54,7 +54,7 @@ $('.main-nav li').hover(function () {
 
 
 $(".st-open-modal").on("click", function () {
-  var dataModal = $(this).attr("href").split('#')[1];
+  var dataModal = $(this).attr("id");
   $("body").addClass("over-hide");
   $("body").find('.st-modal[data-modal="' + dataModal + '"]').addClass("active");
 });

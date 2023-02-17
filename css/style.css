@@ -1519,6 +1519,12 @@ select.form-control:focus::-ms-value {
     font-size: 1rem;
     font-weight: var(--w-600);
 }
+.pending-text{
+    color: var(--yellow);
+}
+.danger-text{
+    color: var(--red) !important;
+}
 /*new css*/
 
 
@@ -1717,7 +1723,7 @@ header{
 
 .drop-down li a {
     display: block;
-    padding: 0.4rem 1rem;
+    padding: 0.6rem 1rem;
     border-bottom: solid 1px var(--gray-5);
     font-size: .99rem;
     font-weight: var(--w-600);
@@ -2230,7 +2236,9 @@ header.active + .main-section {
     filter: blur(25px);
     background-position: bottom right;
     background-repeat: no-repeat;
+       
 }
+
 .b-bottom {
     border-bottom: solid 0.1rem var(--gray-light);
 }
