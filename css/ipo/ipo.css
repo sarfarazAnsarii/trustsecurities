@@ -240,6 +240,7 @@ select.form-control:not([size]):not([multiple]){
 }
 
 .action-icon a{text-decoration: none; color: var(--gray-dark);}
+.full-loader{z-index: 9999}
 
 @media(max-width:768px){
     .justify-between.normal-sm{
